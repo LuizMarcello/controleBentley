@@ -32,3 +32,7 @@ Route::get('/tecnicos', function () {
 Route::get('/modens', function () {
     return view('modens');
 });
+
+Route::get('/designacao', function () {
+    return view('designacao');
+});
