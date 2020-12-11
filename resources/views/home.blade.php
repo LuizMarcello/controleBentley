@@ -1,68 +1,97 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
+<html>
 
+<head>
+    <title>Controle Bentley Brasil</title>
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {{-- importando css do bootstrap --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta charset="utf-8">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Controle Bentley Brasil</title>
-    </head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1;shrink-to-fit=no" />
+
+    <style>
+        .destaque {
+            background-color: yellow;
+            border: solid 1px black;
+        }
+
+    </style>
+</head>
+{{-- breakpoints do Bootstrap
+- xs (extra-small devices) - <576px - sm (small devices) - 576px <=vwp <=767px - md (medium devices) - 768px <=vwp
+    <=991px - lg (large devices) - 992px <=vwp <=1999px - xg (extra-large devices) - vwp=> 1200px
+    --}}
 
     <body>
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo">Logo</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
-              </ul>
+        <div class="container destaque">
+            <h3>Grid System</h3>
+            <div class="row destaque">
+                <div class="col destaque">
+                    parte 1
+                </div>
+                <div class="col destaque">
+                    parte 2
+                </div>
+                <div class="col destaque">
+                    parte 3
+                </div>
+                <div class="col destaque">
+                    parte 4
+                </div>
             </div>
-            <div class="nav-content">
-              <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#test1">Test 1</a></li>
-                <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-                <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-                <li class="tab"><a href="#test4">Test 4</a></li>
-              </ul>
+
+            <div class="row destaque">
+                <div class="col destaque">
+                    parte 1
+                </div>
+                <div class="col destaque">
+                    parte 2
+                </div>
+                <div class="col destaque">
+                    <input type="text" style="width: 100%">
+                </div>
             </div>
-          </nav>
 
-          <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
+            <div class="row destaque">
+                <div class="col-md-3 col-sm-12 destaque">
+                    <input type="text" style="width: 100%">
+                </div>
+                <div class="col-md-6 col-sm-12 destaque">
+                    <input type="text" style="width: 100%">
+                </div>
+                <div class="col-md-3 col-sm-12 destaque">
+                    <input type="text" style="width: 100%">
+                </div>
+            </div>
 
-          <div id="test1" class="col s12">Test 1</div>
-          <div id="test2" class="col s12">Test 2</div>
-          <div id="test3" class="col s12">Test 3</div>
-          <div id="test4" class="col s12">Test 4</div>
-      <!--JavaScript at end of body for optimized loading-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script type="text/javascript">
-            $(document).ready(function() {
-                Materialize.updateTextFields();
-                $(".dropdown-trigger").dropdown();
-            });
-      </script>
+            <div class="row destaque">
+                <div class="col-md-3 col-sm-4 col-12 destaque">
+                    parte 1
+                </div>
+                <div class="col-md-6 col-sm-4 col-12 destaque">
+                    parte 2
+                </div>
+                <div class="col-md-3 col-sm-4 col-12 destaque">
+                    parte 3
+                </div>
+            </div>
+        </div>
 
 
-</body>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+        </script>
+    </body>
+
 </html>
-
-
-
-
-
-
-
-
-
