@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCepToDistribuidoresTable extends Migration
+class CreateModemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class AddCepToDistribuidoresTable extends Migration
      */
     public function up()
     {
-        Schema::table('distribuidores', function (Blueprint $table) {
-            $table->string('cep')->after('numero');
+        Schema::create('modems', function (Blueprint $table) {
+            $table->id();
+            $table->string('marca');
+            $table->string('modelo');
+            $table->string('serial');
+            $table->string('banda');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +30,6 @@ class AddCepToDistribuidoresTable extends Migration
      */
     public function down()
     {
-        Schema::table('distribuidores', function (Blueprint $table) {
-            $table->dropColumn('cep');
-        });
+        Schema::dropIfExists('modems');
     }
 }
