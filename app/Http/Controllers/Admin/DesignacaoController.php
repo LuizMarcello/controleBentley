@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class DesignacaoController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('admin.designacao');
+    }
 }

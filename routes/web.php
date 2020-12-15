@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('admin.home');
 });
 
 Route::get('/admin/clientes',['as'=>'admin.clientes','uses'=>'Admin\ClienteController@index']);
-Route::get('/admin/clientes/adicionar',['as'=>'admin.cursos.adicionar','uses'=>'Admin\ClienteController@adicionar']);
-Route::post('/admin/clientes/salvar',['as'=>'admin.cursos.salvar','uses'=>'Admin\ClienteController@salvar']);
-Route::get('/admin/clientes/editar/{id}',['as'=>'admin.cursos.editar','uses'=>'Admin\ClienteController@editar']);
-Route::put('/admin/clientes/atualizar/{id}',['as'=>'admin.cursos.atualizar','uses'=>'Admin\ClienteController@atualizar']);
-Route::get('/admin/clientes/deletar/{id}',['as'=>'admin.cursos.deletar','uses'=>'Admin\ClienteController@deletar']);
+Route::get('/admin/clientes/adicionar',['as'=>'admin.clientes.adicionar','uses'=>'Admin\ClienteController@adicionar']);
+Route::post('/admin/clientes/salvar',['as'=>'admin.clientes.salvar','uses'=>'Admin\ClienteController@salvar']);
+Route::get('/admin/clientes/editar/{id}',['as'=>'admin.clientes.editar','uses'=>'Admin\ClienteController@editar']);
+Route::put('/admin/clientes/atualizar/{id}',['as'=>'admin.clientes.atualizar','uses'=>'Admin\ClienteController@atualizar']);
+Route::get('/admin/clientes/deletar/{id}',['as'=>'admin.clientes.deletar','uses'=>'Admin\ClienteController@deletar']);
 
 Route::get('/admin/designacao',['as'=>'admin.designacao','uses'=>'Admin\DesignacaoController@index']);
 Route::get('/admin/designacao/adicionar',['as'=>'admin.designacao.adicionar','uses'=>'Admin\DesignacaoController@adicionar']);
