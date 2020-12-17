@@ -9,6 +9,8 @@ class DesignacaoController extends Controller
 {
     public function index()
     {
-        return view('admin.designacao');
+        $registros = Designacao::all();
+        return view('admin.designacao', compact('registros'));
     }
 }
+

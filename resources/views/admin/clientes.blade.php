@@ -42,9 +42,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    {{-- Menu filho - Sub menu dropdown--}}
+                    {{-- Menu filho - Sub menu
+                    dropdown--}}
                     <li class="nav-item dropdown">
-                        {{-- role: indica que não é um link normal, mas é um botão para
+                        {{-- role: indica que não é um link normal, mas é um botão
+                        para
                         rolagem(perfil de botão) --}}
                         {{-- Html5 não tem um atributo toggle: Data- api: Maneira de
                         passar meta informações para os elementos html,
@@ -122,22 +124,6 @@
                 <a class="btn btn-outline-success" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

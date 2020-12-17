@@ -24,11 +24,12 @@
     --}}
 
     <body>
+
         {{-- tirado o fixed-top na nav abaixo --}}
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <a class="navbar-brand" href="#">
                 <img src="{{ '../img/logobentley.png' }}" alt="Responsive image" width="190" height="60"
-                class="d-inline-block align-center"></a>
+                    class="d-inline-block align-center"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudo-navbar"
                 aria-controls="conteudo-navbar" aria-expanded="false" aria-label="Botão para expansão do menu">
                 <span class="navbar-toggler-icon"></span>
@@ -42,9 +43,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    {{-- Menu filho - Sub menu dropdown--}}
+                    {{-- Menu filho - Sub menu
+                    dropdown--}}
                     <li class="nav-item dropdown">
-                        {{-- role: indica que não é um link normal, mas é um botão para
+                        {{-- role: indica que não é um link normal, mas é um botão
+                        para
                         rolagem(perfil de botão) --}}
                         {{-- Html5 não tem um atributo toggle: Data- api: Maneira de
                         passar meta informações para os elementos html,
@@ -79,9 +82,51 @@
             </div>
         </nav>
 
-        <h3>Esta é a view designação</h3>
-
-
+        <div class="container">
+            <div class="container">
+                <h3>Designação</h3>
+                <div class="row">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Rua</th>
+                                <th scope="col">Numero</th>
+                                <th scope="col">Bairro</th>
+                                <th scope="col">Cidade</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Ativo</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            @foreach ($registros as $registro)
+                                <tr>
+                                    <td>{{ $registro->id }}</td>
+                                    <td>{{ $registro->nome }}</td>
+                                    <td>{{ $registro->rua }}</td>
+                                    <td>{{ $registro->numero }}</td>
+                                    <td>{{ $registro->bairro }}</td>
+                                    <td>{{ $registro->cidade }}</td>
+                                    <td>{{ $registro->estado }}</td>
+                                    <td>{{ $registro->ativo }}</td>
+                                    <td>
+                                        <a class="btn btn-outline-warning"
+                                            href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
+                                        <a class="btn btn-outline-danger"
+                                            href="{{ route('admin.clientes.deletar', $registro->id) }}">Editar</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <a class="btn btn-outline-success" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
+                </div>
+            </div>
+        </div>
 
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
