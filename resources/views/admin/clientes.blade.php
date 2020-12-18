@@ -10,17 +10,14 @@
 
 
     {{-- importando css do bootstrap --}}
-   {{--  <link rel="stylesheet" href="{{ url('css/app.css') }}"> --}}
+    {{--
+    <link rel="stylesheet" href="{{ url('css/app.css') }}"> --}}
 
     <meta charset="utf-8">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1;shrink-to-fit=no" />
 
-    <style>
-
-
-    </style>
 </head>
 {{-- breakpoints do Bootstrap
 - xs (extra-small devices) - <576px - sm (small devices) - 576px <=vwp <=767px - md (medium devices) - 768px <=vwp
@@ -87,7 +84,7 @@
 
         <div class="container">
             <div class="row d-flex justify-content-center">
-            <h3>Lista de Clientes</h3>
+                <h3>Lista de Clientes</h3>
             </div>
             <div class="row">
                 <table class="table">
@@ -116,10 +113,10 @@
                                 <td>{{ $registro->estado }}</td>
                                 <td>{{ $registro->ativo }}</td>
                                 <td>
-                                    <a class="btn btn-outline-warning"
+                                    <a class="btn btn-outline-info"
                                         href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
                                     <a class="btn btn-outline-danger"
-                                        href="{{ route('admin.clientes.deletar', $registro->id) }}">Editar</a>
+                                        href="{{ route('admin.clientes.deletar', $registro->id) }}">Deletar</a>
                                 </td>
                             </tr>
                         @endforeach

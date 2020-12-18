@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Clientes</title>
+    <title>Adicionar clientes</title>
 
     {{-- importando css do bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -94,7 +94,7 @@
             <div class="row">
                 <form class="" action="{{ route('admin.clientes.salvar') }}" method="POST">
                     {{ csrf_field() }}
-                    @include('admin._form')
+                    @include('admin._formCliente')
 
                     <button class="btn btn-outline-success">Salvar</button>
                 </form>
@@ -102,7 +102,7 @@
 
         </div>
 
-       
+
 
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

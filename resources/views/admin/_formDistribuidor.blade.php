@@ -24,20 +24,11 @@
 </div>
 
 <div class="input-group mb-3">
-    
+
     <input type="text" name="estado" class="form-control" placeholder="Estado" value="{{ isset($registro->estado) ? $registro->estado : '' }}">
     {{-- <label for="">Estado</label> --}}
 </div>
 
-{{-- <div class="input-group mb-3">
-    <input type="text" name="ativo" class="form-control" placeholder="Ativo" value="{{ isset($registro->ativo) ? $registro->ativo : '' }}">
-    <label for="">Ativo</label>
-</div> --}}
 
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked {{ isset($registro->ativo) && $registro->ativo == 'sim' ? 'checked' : '' }} value="true">
-    <label class="form-check-label" for="flexCheckChecked">
-      Cliente Ativo?
-    </label>
-    <br><br>
-</div>
+
+

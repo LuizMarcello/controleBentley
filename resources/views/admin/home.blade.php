@@ -79,7 +79,30 @@
     </nav>
 
     <div class="container">
-        <h3>Esta é a view home</h3>
+        <div class="row d-flex justify-content-center">
+        <h2>Sistema de Gerenciamento </h2>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bentley Brasil</h5>
+              <p class="card-text">+55 (43) 4052 - 9829<br>
+                Rolandia, Parana, Brazil
+                contato@bentleybrasil.com.br
+                Segunda - Sexta  - 08:00-18:00
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cobertura KU</li>
+              <li class="list-group-item">Velocidade de até 10 Mbps</li>
+              <li class="list-group-item">Cobertura KA</li>
+              <li class="list-group-item">Velocidade de até 25 Mbps</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">link Card</a>
+              <a href="#" class="card-link">Outro link</a>
+            </div>
+          </div>
     </div>
 
 
@@ -96,3 +119,5 @@
 </body>
 
 </html>
+
+
