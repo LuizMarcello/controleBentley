@@ -82,52 +82,56 @@
             </div>
         </nav>
 
+        
+
         <div class="container">
-            <div class="container">
-                <h3>Designação</h3>
-                <div class="row">
-                    <table class="table">
-                        <thead>
+            <div class="row d-flex justify-content-center">
+            <h3>Designação</h3>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">modeloModem</th>
+                            <th scope="col">SerialModem</th>
+                            <th scope="col">BandaModem</th>
+                            <th scope="col">ModeloNLB</th>
+                            <th scope="col">serialNLB</th>
+                            <th scope="col">ModeloAntena</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach ($registros as $registro)
                             <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Rua</th>
-                                <th scope="col">Numero</th>
-                                <th scope="col">Bairro</th>
-                                <th scope="col">Cidade</th>
-                                <th scope="col">Estado</th>
-                                <th scope="col">Ativo</th>
+                                <td>{{ $registro->id }}</td>
+                                <td>{{ $registro->modeloModem }}</td>
+                                <td>{{ $registro->serialModem }}</td>
+                                <td>{{ $registro->BandaModem }}</td>
+                                <td>{{ $registro->ModeloNLB }}</td>
+                                <td>{{ $registro->serialNLB }}</td>
+                                <td>{{ $registro->modeloAntena }}</td>
+                                
+                                <td>
+                                    <a class="btn btn-outline-warning"
+                                        href="{{ route('admin.designacao.editar', $registro->id) }}">Editar</a>
+                                    <a class="btn btn-outline-danger"
+                                        href="{{ route('admin.designacao.deletar', $registro->id) }}">Deletar</a>
+                                </td>
                             </tr>
-                        </thead>
-    
-                        <tbody>
-                            @foreach ($registros as $registro)
-                                <tr>
-                                    <td>{{ $registro->id }}</td>
-                                    <td>{{ $registro->nome }}</td>
-                                    <td>{{ $registro->rua }}</td>
-                                    <td>{{ $registro->numero }}</td>
-                                    <td>{{ $registro->bairro }}</td>
-                                    <td>{{ $registro->cidade }}</td>
-                                    <td>{{ $registro->estado }}</td>
-                                    <td>{{ $registro->ativo }}</td>
-                                    <td>
-                                        <a class="btn btn-outline-warning"
-                                            href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
-                                        <a class="btn btn-outline-danger"
-                                            href="{{ route('admin.clientes.deletar', $registro->id) }}">Editar</a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-                <div class="row">
-                    <a class="btn btn-outline-success" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
-                </div>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <a class="btn btn-outline-success" href="{{ route('admin.designacao.adicionar') }}">Adicionar</a>
             </div>
         </div>
+        
 
+        
+       
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -141,3 +145,6 @@
     </body>
 
 </html>
+           
+                                
+

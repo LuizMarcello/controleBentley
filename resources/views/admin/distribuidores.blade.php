@@ -79,8 +79,55 @@
             </div>
         </nav>
 
-        <h3>Esta é a view distribuidores</h3>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+            <h3>Distribuidores</h3>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Rua</th>
+                            <th scope="col">Numero</th>
+                            <th scope="col">Bairro</th>
+                            <th scope="col">Cidade</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
 
+                    <tbody>
+                        @foreach ($registros as $registro)
+                            <tr>
+                                <td>{{ $registro->id }}</td>
+                                <td>{{ $registro->nome }}</td>
+                                <td>{{ $registro->rua }}</td>
+                                <td>{{ $registro->numero }}</td>
+                                <td>{{ $registro->bairro }}</td>
+                                <td>{{ $registro->cidade }}</td>
+                                <td>{{ $registro->estado }}</td>
+                                
+                                <td>
+                                    <a class="btn btn-outline-warning"
+                                        href="{{ route('admin.distribuidores.editar', $registro->id) }}">Editar</a>
+                                    <a class="btn btn-outline-danger"
+                                        href="{{ route('admin.distribuidores.deletar', $registro->id) }}">Deletar</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            
+            </div>
+       
+            <div class="row">
+                <a class="btn btn-outline-success" href="{{ route('admin.distribuidores.adicionar') }}">Adicionar</a>
+            </div>
+        
+        </div>
+        
+    
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -94,3 +141,11 @@
     </body>
 
 </html>
+        
+        
+
+            
+                            
+            
+
+

@@ -79,8 +79,50 @@
             </div>
         </nav>
 
-        <h3>Esta é a view modens</h3>
-
+        <div class="container">
+                <div class="row d-flex justify-content-center">
+                <h3>Modens</h3>
+                </div>
+                <div class="row">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Serial</th>
+                                <th scope="col">Banda</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            @foreach ($registros as $registro)
+                                <tr>
+                                    <td>{{ $registro->id }}</td>
+                                    <td>{{ $registro->nome }}</td>
+                                    <td>{{ $registro->rua }}</td>
+                                    <td>{{ $registro->numero }}</td>
+                                    <td>{{ $registro->bairro }}</td>
+                                    <td>{{ $registro->cidade }}</td>
+                                    <td>{{ $registro->estado }}</td>
+                                    
+                                    <td>
+                                        <a class="btn btn-outline-warning"
+                                            href="{{ route('admin.modens.editar', $registro->id) }}">Editar</a>
+                                        <a class="btn btn-outline-danger"
+                                            href="{{ route('admin.modens.deletar', $registro->id) }}">Deletar</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+           
+                <div class="row">
+                    <a class="btn btn-outline-success" href="{{ route('admin.modens.adicionar') }}">Adicionar</a>
+                </div>
+        </div>
+        
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -94,3 +136,6 @@
     </body>
 
 </html>
+
+                                
+                

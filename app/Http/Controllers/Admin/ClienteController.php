@@ -13,4 +13,9 @@ class ClienteController extends Controller
         $registros = Cliente::all();
         return view('admin.clientes', compact('registros'));
     }
+
+    public function adicionar()
+    {
+        return view('admin.adicionarCliente');
+    }
 }

@@ -2,11 +2,16 @@
 <html>
 
 <head>
-    <title>Tecnicos</title>
+    <title>Clientes</title>
 
     {{-- importando css do bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    {{-- importando css do bootstrap --}}
+    {{--
+    <link rel="stylesheet" href="{{ url('css/app.css') }}"> --}}
 
     <meta charset="utf-8">
 
@@ -28,7 +33,7 @@
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <a class="navbar-brand" href="#">
                 <img src="{{ '../img/logobentley.png' }}" alt="Responsive image" width="190" height="60"
-                class="d-inline-block align-center"></a>
+                    class="d-inline-block align-center"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudo-navbar"
                 aria-controls="conteudo-navbar" aria-expanded="false" aria-label="Botão para expansão do menu">
                 <span class="navbar-toggler-icon"></span>
@@ -42,9 +47,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    {{-- Menu filho - Sub menu dropdown--}}
+                    {{-- Menu filho - Sub menu
+                    dropdown--}}
                     <li class="nav-item dropdown">
-                        {{-- role: indica que não é um link normal, mas é um botão para
+                        {{-- role: indica que não é um link normal, mas é um botão
+                        para
                         rolagem(perfil de botão) --}}
                         {{-- Html5 não tem um atributo toggle: Data- api: Maneira de
                         passar meta informações para os elementos html,
@@ -81,53 +88,21 @@
 
         <div class="container">
             <div class="row d-flex justify-content-center">
-            <h3>Modens</h3>
+                <h3>Adicionar Clientes</h3>
             </div>
-            <div class="row">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Rua</th>
-                            <th scope="col">Numero</th>
-                            <th scope="col">Cidade</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Telefone</th>
-                            <th scope="col">Ativo</th>
-                        </tr>
-                    </thead>
 
-                    <tbody>
-                        @foreach ($registros as $registro)
-                            <tr>
-                                {{-- <td>{{ $registro->id }}</td> --}}
-                                <td>{{ $registro->nome }}</td>
-                                <td>{{ $registro->rua }}</td>
-                                <td>{{ $registro->numero }}</td>
-                                {{-- <td>{{ $registro->bairro }}</td> --}}
-                                <td>{{ $registro->cidade }}</td>
-                                <td>{{ $registro->estado }}</td>
-                                <td>{{ $registro->telefone }}</td>
-                                <td>{{ $registro->ativo }}</td>
-                                
-                                <td>
-                                    <a class="btn btn-outline-warning"
-                                        href="{{ route('admin.tecnicos.editar', $registro->id) }}">Editar</a>
-                                    <a class="btn btn-outline-danger"
-                                        href="{{ route('admin.tecnicos.deletar', $registro->id) }}">Deletar</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+            <div class="row">
+                <form class="" action="{{ route('admin.clientes.salvar') }}" method="POST">
+                    {{ csrf_field() }}
+                    @include('admin._form')
+
+                    <button class="btn btn-outline-success">Salvar</button>
+                </form>
             </div>
+
+        </div>
+
        
-            <div class="row">
-                <a class="btn btn-outline-success" href="{{ route('admin.tecnicos.adicionar') }}">Adicionar</a>
-            </div>
-    </div>
-
 
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
