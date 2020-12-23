@@ -50,6 +50,13 @@ class DistribuidorController extends Controller
 
         return redirect()->route('admin.distribuidores');
     }
+
+    public function deletar($id)
+    {
+        Distribuidor::find($id)->delete();
+
+        return redirect()->route('admin.distribuidores');
+    }
 }
 
 

@@ -95,7 +95,7 @@
                 <form class="" action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="POST">
                     {{ csrf_field() }}
                     <input type="hidden" name="_method" value="put">
-                    @include('admin._form')
+                    @include('admin._formCliente')
 
                     <button class="btn btn-outline-success">Atualizar</button>
                 </form>

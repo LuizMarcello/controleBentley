@@ -81,7 +81,7 @@
 
         <div class="container">
             <div class="row d-flex justify-content-center">
-            <h3>Modens</h3>
+            <h3>Técnico</h3>
             </div>
             <div class="row">
                 <table class="table">
@@ -101,7 +101,7 @@
                     <tbody>
                         @foreach ($registros as $registro)
                             <tr>
-                                {{-- <td>{{ $registro->id }}</td> --}}
+                                <td>{{ $registro->id }}</td>
                                 <td>{{ $registro->nome }}</td>
                                 <td>{{ $registro->rua }}</td>
                                 <td>{{ $registro->numero }}</td>

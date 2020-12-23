@@ -93,12 +93,12 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">modeloModem</th>
-                            <th scope="col">SerialModem</th>
-                            <th scope="col">BandaModem</th>
-                            <th scope="col">ModeloNLB</th>
-                            <th scope="col">serialNLB</th>
-                            <th scope="col">ModeloAntena</th>
+                            <th scope="col">modelo Modem</th>
+                            <th scope="col">Serial Modem</th>
+                            <th scope="col">Banda Modem</th>
+                            <th scope="col">Modelo NLB</th>
+                            <th scope="col">serial NLB</th>
+                            <th scope="col">Modelo Antena</th>
                         </tr>
                     </thead>
 
@@ -108,9 +108,9 @@
                                 <td>{{ $registro->id }}</td>
                                 <td>{{ $registro->modeloModem }}</td>
                                 <td>{{ $registro->serialModem }}</td>
-                                <td>{{ $registro->BandaModem }}</td>
-                                <td>{{ $registro->ModeloNLB }}</td>
-                                <td>{{ $registro->serialNLB }}</td>
+                                <td>{{ $registro->bandaModem }}</td>
+                                <td>{{ $registro->modeloNlb }}</td>
+                                <td>{{ $registro->serialNlb }}</td>
                                 <td>{{ $registro->modeloAntena }}</td>
                                 
                                 <td>
