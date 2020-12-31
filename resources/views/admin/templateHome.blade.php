@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Controle Bentley Brasil</title>
+    <title>@yield('titulo-pagina')</title>
 
     {{-- importando css do bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -49,7 +49,7 @@
 
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="admin/clientes">Clientes</a>
+                        <a class="dropdown-item" href="admin/clientes">Cllientes</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="admin/designacao">Fornecedores</a>
                         <div class="dropdown-divider"></div>
@@ -114,49 +114,42 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <h2>Sistema de Administração</h2>
-        </div>
+    <main class="py-4">
+        <div class="container">
 
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Bentley Brasil</h5>
-                <p class="card-text">+55 (43) 4052 - 9829<br>
-                    Rolandia, Parana, Brazil
-                    contato@bentleybrasil.com.br
-                    Segunda - Sexta - 08:00-18:00
+            <div class="row">
+                <div class="col-md-12">
+                    @yield('conteudo')
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cobertura KU</li>
-                <li class="list-group-item">Velocidade de até 10 Mbps</li>
-                <li class="list-group-item">Cobertura KA</li>
-                <li class="list-group-item">Velocidade de até 25 Mbps</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">link Card</a>
-                <a href="#" class="card-link">Outro link</a>
-            </div>
+
         </div>
-    </div>
-
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
-    </script>
+   </main>
+        
+   <!--JavaScript at end of body for optimized loading-->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+   </script>
 </body>
 
 </html>
+    
+           
 
    
 
+
+
+    
+
+
+
+        
                             
                         

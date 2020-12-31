@@ -96,14 +96,18 @@
                     {{ csrf_field() }}
                     @include('admin._formCliente')
 
-                    <button class="btn btn-outline-success">Salvar</button>
+                    <button class="col-6 mx-auto btn btn-outline-success">Salvar</button>
                 </form>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-sm col-6 mx-auto" href="{{ route('admin.home') }}" role="button">
+                    Voltar a página principal
+                </a>
             </div>
 
         </div>
-
-
-
+        
+        
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

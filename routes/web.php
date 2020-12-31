@@ -8,6 +8,14 @@ Route::get('/', function () {
     return view('admin.home');
 });
 
+Route::get('/',['as'=>'admin.home','uses'=>'Admin\EstoquetotalController@index']);
+Route::get('/admin/estoquetotal',['as'=>'admin.estoquetotal','uses'=>'Admin\EstoquetotalController@estoquetotal']);
+Route::get('/admin/estoquetotal/adicionar',['as'=>'admin.estoquetotal.adicionar','uses'=>'Admin\EstoquetotalController@adicionar']);
+Route::post('/admin/estoquetotal/salvar',['as'=>'admin.estoquetotal.salvar','uses'=>'Admin\EstoquetotalController@salvar']);
+Route::get('/admin/estoquetotal/editar/{id}',['as'=>'admin.estoquetotal.editar','uses'=>'Admin\EstoquetotalController@editar']);
+Route::put('/admin/estoquetotal/atualizar/{id}',['as'=>'admin.estoquetotal.atualizar','uses'=>'Admin\EstoquetotalController@atualizar']);
+Route::get('/admin/estoquetotal/deletar/{id}',['as'=>'admin.estoquetotal.deletar','uses'=>'Admin\EstoquetotalController@deletar']);
+
 Route::get('/admin/clientes',['as'=>'admin.clientes','uses'=>'Admin\ClienteController@index']);
 Route::get('/admin/clientes/adicionar',['as'=>'admin.clientes.adicionar','uses'=>'Admin\ClienteController@adicionar']);
 Route::post('/admin/clientes/salvar',['as'=>'admin.clientes.salvar','uses'=>'Admin\ClienteController@salvar']);
