@@ -24,9 +24,13 @@
 </div>
 
 <div class="input-group mb-3">
-
     <input type="text" name="estado" class="form-control" placeholder="Estado" value="{{ isset($registro->estado) ? $registro->estado : '' }}">
     {{-- <label for="">Estado</label> --}}
+</div>
+
+<div class="input-group mb-3">
+    <input type="text" name="telefone" class="form-control" placeholder="Telefone" value="{{ isset($registro->telefone) ? $registro->telefone : '' }}">
+    {{-- <label for="">Telefone</label> --}}
 </div>
 
 {{-- <div class="input-group mb-3">
@@ -41,3 +45,4 @@
     </label>
     <br><br>
 </div>
+

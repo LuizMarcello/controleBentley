@@ -1,12 +1,11 @@
-        @extends('admin.templateHome')
+        @extends('admin.home')
 
         @section('titulo-pagina')
-                Clientes
+            Clientes
         @endsection
 
         @section('conteudo')
-   
-        <div class="container">
+
             <div class="row d-flex justify-content-center">
                 <h3>Lista de Clientes</h3>
             </div>
@@ -21,6 +20,7 @@
                             <th scope="col">Bairro</th>
                             <th scope="col">Cidade</th>
                             <th scope="col">Estado</th>
+                            <th scope="col">Telefone</th>
                             <th scope="col">Ativo</th>
                         </tr>
                     </thead>
@@ -35,11 +35,12 @@
                                 <td>{{ $registro->bairro }}</td>
                                 <td>{{ $registro->cidade }}</td>
                                 <td>{{ $registro->estado }}</td>
+                                <td>{{ $registro->telefone }}</td>
                                 <td>{{ $registro->ativo }}</td>
                                 <td>
-                                    <a class="btn btn-outline-info"
+                                    <a class="btn btn-outline-info btn-sm"
                                         href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
-                                    <a class="btn btn-outline-danger"
+                                    <a class="btn btn-outline-danger btn-sm"
                                         href="{{ route('admin.clientes.deletar', $registro->id) }}">Deletar</a>
                                 </td>
                             </tr>
@@ -48,16 +49,12 @@
                 </table>
             </div>
             <div class="row">
-                <a class="btn btn-outline-success" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
+                <a class="btn btn-outline-success btn-sm" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
             </div>
             <div>
-                <a class="btn btn-primary btn-sm col-6 mx-auto" href="{{ route('admin.home') }}" role="button">
+                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.home') }}" role="button">
                     Voltar a página principal
                 </a>
             </div>
 
-            @endsection
-           
-
-
-        
+        @endsection

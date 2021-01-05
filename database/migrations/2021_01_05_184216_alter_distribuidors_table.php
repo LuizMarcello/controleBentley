@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCreatedAtToTecnicosTable extends Migration
+class AlterDistribuidorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddCreatedAtToTecnicosTable extends Migration
      */
     public function up()
     {
-        Schema::table('tecnicos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('distribuidors', function (Blueprint $table) {
+            $table->string('telefone', 25);
         });
     }
 
@@ -26,8 +25,8 @@ class AddCreatedAtToTecnicosTable extends Migration
      */
     public function down()
     {
-        Schema::table('tecnicos', function (Blueprint $table) {
-            //
+        Schema::table('distribuidors', function (Blueprint $table) {
+            $table->dropColumn('telefone');
         });
     }
 }
