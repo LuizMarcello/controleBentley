@@ -1,13 +1,13 @@
 @extends('admin.home')
 
 @section('titulo-pagina')
-    Modens
+    Trias
 @endsection
 
 @section('conteudo')
 
     <div class="row d-flex justify-content-center">
-        <h3>Listagem de Modens</h3>
+        <h3>Listagem de Trias</h3>
     </div>
 
     <div class="row">
@@ -19,9 +19,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Banda</th>
                             <th scope="col">Fabricante</th>
-                            <th scope="col">Modelo</th>
                             <th scope="col">Serial</th>
-                            <th scope="col">Mac Address></th>
                         </tr>
                     </thead>
 
@@ -31,14 +29,12 @@
                                 <td>{{ $registro->id }}</td>
                                 <td>{{ $registro->banda }}</td>
                                 <td>{{ $registro->fabricante }}</td>
-                                <td>{{ $registro->modelo }}</td>
                                 <td>{{ $registro->serial }}</td>
-                                <td>{{ $registro->macaddress }}</td>
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
-                                        href="{{ route('admin.modens.editar', $registro->id) }}">Editar</a>
+                                        href="{{ route('admin.trias.editar', $registro->id) }}">Editar</a>
                                     <a class="btn btn-outline-danger btn-sm"
-                                        href="{{ route('admin.modens.deletar', $registro->id) }}">Deletar</a>
+                                        href="{{ route('admin.trias.deletar', $registro->id) }}">Deletar</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -47,8 +43,8 @@
             </div>
 
             <div class="col-md-10">
-                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.modens.adicionar') }}" role="button">
-                    Incluir modem
+                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.trias.adicionar') }}" role="button">
+                    Incluir tria
                 </a>
             </div>
 
@@ -59,7 +55,6 @@
                     Voltar a página principal
                 </a>
             </div>
-
         </div>
     </div>
 

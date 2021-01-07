@@ -82,11 +82,11 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="admin/antenas">Antena</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/distribuidores">Tria</a>
+                        <a class="dropdown-item" href="admin/trias">Tria</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/designacao">Modem</a>
+                        <a class="dropdown-item" href="admin/modens">Modem</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/designacao">Fonte</a>
+                        <a class="dropdown-item" href="admin/fontes">Fonte</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="admin/designacao">Cabo</a>
                         <div class="dropdown-divider"></div>

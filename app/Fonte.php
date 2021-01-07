@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Modem extends Model
+class Fonte extends Model
 {
     protected $fillable = [
-        'banda','modelo','serial','fabricante','macaddress'
+        'banda','fabricante','modelo','serial'
     ];
 }

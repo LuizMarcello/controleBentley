@@ -10,7 +10,7 @@
 
 <div class="input-group mb-3">
     <input type="text" name="modelo" class="form-control" placeholder="Modelo" value="{{ isset($registro->modelo) ? $registro->modelo : '' }}">
-    {{-- <label for="">Numero</label> --}}
+    {{-- <label for="">Rua</label> --}}
 </div>
 
 <div class="input-group mb-3">
@@ -18,10 +18,7 @@
     {{-- <label for="">Bairro</label> --}}
 </div>
 
-<div class="input-group mb-3">
-    <input type="text" name="macaddress" class="form-control" placeholder="Mac Address" value="{{ isset($registro->macaddress) ? $registro->macaddress : '' }}">
-    {{-- <label for="">Bairro</label> --}}
-</div>
+
 
 
 

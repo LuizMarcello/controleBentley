@@ -14,17 +14,9 @@
 </div>
 
 <div class="input-group mb-3">
-    <input type="text" name="serial" class="form-control" placeholder="Serial" value="{{ isset($registro->serial) ? $registro->serial : '' }}">
+    <input type="text" name="diametro" class="form-control" placeholder="Diâmetro" value="{{ isset($registro->diametro) ? $registro->diametro : '' }}">
     {{-- <label for="">Bairro</label> --}}
 </div>
-
-<div class="input-group mb-3">
-    <input type="text" name="macaddress" class="form-control" placeholder="Mac Address" value="{{ isset($registro->macaddress) ? $registro->macaddress : '' }}">
-    {{-- <label for="">Bairro</label> --}}
-</div>
-
-
-
 
 
 

@@ -1,23 +1,22 @@
 @extends('admin.home')
 
 @section('titulo-pagina')
-    Editar modens
+    Editar antenas
 @endsection
 
 @section('conteudo')
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="row d-flex justify-content-center">
-                <h3>Editando Modem</h3>
+                <h3>Editando antena</h3>
             </div>
 
-            <div class="col-md-12">
-                <form class="" action="{{ route('admin.modens.atualizar', $registro->id) }}" method="POST">
+            <div class="col-md-10">
+                <form class="" action="{{ route('admin.antenas.atualizar', $registro->id) }}" method="POST">
                     {{ csrf_field() }}
                     <input type="hidden" name="_method" value="put">
-                    @include('admin._formModem')
-
+                    @include('admin._formTria')
                     <button class="btn btn-outline-success">Atualizar</button>
                 </form>
             </div>

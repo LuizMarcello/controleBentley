@@ -4,19 +4,19 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Antena;
+use App\Tria;
 
-class AntenaController extends Controller
+class TriaController extends Controller
 {
     public function index()
     {
-        $registros = Antena::all();
-        return view('admin.antenas', compact('registros'));
+        $registros = Tria::all();
+        return view('admin.trias', compact('registros'));
     }
 
     public function adicionar()
     {
-        return view('admin.adicionarAntena');
+        return view('admin.adicionarTria');
     }
 
     public function salvar(Request $req)
@@ -31,15 +31,15 @@ class AntenaController extends Controller
             $dados['ativo'] = 'nao';
         } */
 
-        Antena::Create($dados);
+        Tria::Create($dados);
 
-        return redirect()->route('admin.antenas');
+        return redirect()->route('admin.trias');
     }
 
     public function editar($id)
     {
-        $registro = Antena::find($id);
-        return view('admin.editarAntena', compact('registro'));
+        $registro = Tria::find($id);
+        return view('admin.editarTria', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)
@@ -54,15 +54,15 @@ class AntenaController extends Controller
             $dados['ativo'] = 'nao';
         } */
 
-        Antena::find($id)->update($dados);
+        Tria::find($id)->update($dados);
 
-        return redirect()->route('admin.antenas');
+        return redirect()->route('admin.trias');
     }
 
     public function deletar($id)
     {
-        Antena::find($id)->delete();
+        Tria::find($id)->delete();
 
-        return redirect()->route('admin.antenas');
+        return redirect()->route('admin.trias');
     }
 }

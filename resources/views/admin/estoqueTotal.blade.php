@@ -5,14 +5,14 @@
 @endsection
 
 @section('conteudo')
- 
+
 <div class="row">
     <div class="col-md-8">
             <div class="row justify-content-center">
                 <h5>Todos os componentes cadastrados</h5>
-                
+
             </div>
-           
+
             <table class="table table-striped table table-sm">
 
                 <thead>
@@ -48,41 +48,47 @@
                 </tbody>
             </table>
 
-           
+
             <div class="col-md-8">
                 <h6>Para detalhes dos componentes, clique no seu nome</h6>
             </div>
-            
+
             <div class="col-md-10">
-                <a class="btn btn-primary btn-sm col-6 mx-auto" href="{{ route('admin.estoquetotal.adicionar') }}"
-                   role="button">
-                    Cadastrar novo tipo de componente</a>
+                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.estoquetotal.adicionar') }}" role="button">
+                    Cadastrar novo tipo de componente
+                </a>
             </div>
             <br>
-            
-            
-            
+
             {{-- <a href="{{ route('componentes.create') }}">Cadastrar novo tipo de componente</a> --}}
-    
+
+            <div class="col-md-10">
+                <a class="btn btn-primary btn-sm mx-auto" href="/" role="button">
+                    Voltar a página principal
+                </a>
+            </div>
     </div>
+
 </div>
 
 @endsection
 
-                
-
-
-     
-                    
-                            
-                           
 
 
 
-                            
-                            
-       
-                        
-                        
-                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

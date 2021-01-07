@@ -4,19 +4,19 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Antena;
+use App\Fonte;
 
-class AntenaController extends Controller
+class FonteController extends Controller
 {
     public function index()
     {
-        $registros = Antena::all();
-        return view('admin.antenas', compact('registros'));
+        $registros = Fonte::all();
+        return view('admin.fontes', compact('registros'));
     }
 
     public function adicionar()
     {
-        return view('admin.adicionarAntena');
+        return view('admin.adicionarFonte');
     }
 
     public function salvar(Request $req)
@@ -31,15 +31,15 @@ class AntenaController extends Controller
             $dados['ativo'] = 'nao';
         } */
 
-        Antena::Create($dados);
+        Fonte::Create($dados);
 
-        return redirect()->route('admin.antenas');
+        return redirect()->route('admin.fontes');
     }
 
     public function editar($id)
     {
-        $registro = Antena::find($id);
-        return view('admin.editarAntena', compact('registro'));
+        $registro = Fonte::find($id);
+        return view('admin.editarFonte', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)
@@ -54,15 +54,15 @@ class AntenaController extends Controller
             $dados['ativo'] = 'nao';
         } */
 
-        Antena::find($id)->update($dados);
+        Fonte::find($id)->update($dados);
 
-        return redirect()->route('admin.antenas');
+        return redirect()->route('admin.fontes');
     }
 
     public function deletar($id)
     {
-        Antena::find($id)->delete();
+        Fonte::find($id)->delete();
 
-        return redirect()->route('admin.antenas');
+        return redirect()->route('admin.fontes');
     }
 }

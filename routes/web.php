@@ -57,3 +57,17 @@ Route::post('/admin/antenas/salvar',['as'=>'admin.antenas.salvar','uses'=>'Admin
 Route::get('/admin/antenas/editar/{id}',['as'=>'admin.antenas.editar','uses'=>'Admin\AntenaController@editar']);
 Route::put('/admin/antenas/atualizar/{id}',['as'=>'admin.antenas.atualizar','uses'=>'Admin\AntenaController@atualizar']);
 Route::get('/admin/antenas/deletar/{id}',['as'=>'admin.antenas.deletar','uses'=>'Admin\AntenaController@deletar']);
+
+Route::get('/admin/trias',['as'=>'admin.trias','uses'=>'Admin\TriaController@index']);
+Route::get('/admin/trias/adicionar',['as'=>'admin.trias.adicionar','uses'=>'Admin\TriaController@adicionar']);
+Route::post('/admin/trias/salvar',['as'=>'admin.trias.salvar','uses'=>'Admin\TriaController@salvar']);
+Route::get('/admin/trias/editar/{id}',['as'=>'admin.trias.editar','uses'=>'Admin\TriaController@editar']);
+Route::put('/admin/trias/atualizar/{id}',['as'=>'admin.trias.atualizar','uses'=>'Admin\TriaController@atualizar']);
+Route::get('/admin/trias/deletar/{id}',['as'=>'admin.trias.deletar','uses'=>'Admin\TriaController@deletar']);
+
+Route::get('/admin/fontes',['as'=>'admin.fontes','uses'=>'Admin\FonteController@index']);
+Route::get('/admin/fontes/adicionar',['as'=>'admin.fontes.adicionar','uses'=>'Admin\FonteController@adicionar']);
+Route::post('/admin/fontes/salvar',['as'=>'admin.fontes.salvar','uses'=>'Admin\FonteController@salvar']);
+Route::get('/admin/fontes/editar/{id}',['as'=>'admin.fontes.editar','uses'=>'Admin\FonteController@editar']);
+Route::put('/admin/fontes/atualizar/{id}',['as'=>'admin.fontes.atualizar','uses'=>'Admin\FonteController@atualizar']);
+Route::get('/admin/fontes/deletar/{id}',['as'=>'admin.fontes.deletar','uses'=>'Admin\FonteController@deletar']);
