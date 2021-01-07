@@ -80,7 +80,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"
                         data-toggle="dropdown">Produtos</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="admin/clientes">Antena</a>
+                        <a class="dropdown-item" href="admin/antenas">Antena</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="admin/distribuidores">Tria</a>
                         <div class="dropdown-divider"></div>

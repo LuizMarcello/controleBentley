@@ -50,3 +50,10 @@ Route::post('/admin/tecnicos/salvar',['as'=>'admin.tecnicos.salvar','uses'=>'Adm
 Route::get('/admin/tecnicos/editar/{id}',['as'=>'admin.tecnicos.editar','uses'=>'Admin\TecnicoController@editar']);
 Route::put('/admin/tecnicos/atualizar/{id}',['as'=>'admin.tecnicos.atualizar','uses'=>'Admin\TecnicoController@atualizar']);
 Route::get('/admin/tecnicos/deletar/{id}',['as'=>'admin.tecnicos.deletar','uses'=>'Admin\TecnicoController@deletar']);
+
+Route::get('/admin/antenas',['as'=>'admin.antenas','uses'=>'Admin\AntenaController@index']);
+Route::get('/admin/antenas/adicionar',['as'=>'admin.antenas.adicionar','uses'=>'Admin\AntenaController@adicionar']);
+Route::post('/admin/antenas/salvar',['as'=>'admin.antenas.salvar','uses'=>'Admin\AntenaController@salvar']);
+Route::get('/admin/antenas/editar/{id}',['as'=>'admin.antenas.editar','uses'=>'Admin\AntenaController@editar']);
+Route::put('/admin/antenas/atualizar/{id}',['as'=>'admin.antenas.atualizar','uses'=>'Admin\AntenaController@atualizar']);
+Route::get('/admin/antenas/deletar/{id}',['as'=>'admin.antenas.deletar','uses'=>'Admin\AntenaController@deletar']);

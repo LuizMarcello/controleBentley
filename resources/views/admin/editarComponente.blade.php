@@ -1,4 +1,4 @@
-< @extends('admin.templateHome') 
+< @extends('admin.home') 
 
 @section('titulo-pagina')
  Editar componente
