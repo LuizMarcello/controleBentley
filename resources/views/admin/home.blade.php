@@ -88,11 +88,11 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="admin/fontes">Fonte</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/designacao">Cabo</a>
+                        <a class="dropdown-item" href="admin/cabos">Cabo</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/designacao">Lnb</a>
+                        <a class="dropdown-item" href="admin/lnbs">Lnb</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/designacao">iLnb</a>
+                        <a class="dropdown-item" href="admin/ilnbs">iLnb</a>
 
                     </div>
                 </li>

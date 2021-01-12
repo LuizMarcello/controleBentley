@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterModemsTable extends Migration
+class AlterFontesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AlterModemsTable extends Migration
      */
     public function up()
     {
-        Schema::table('modems', function (Blueprint $table) {
-            $table->string('macaddress', 25);
+        Schema::table('fontes', function (Blueprint $table) {
+            $table->string('notafiscal', 20);
         });
     }
 
@@ -25,8 +25,8 @@ class AlterModemsTable extends Migration
      */
     public function down()
     {
-        Schema::table('modems', function (Blueprint $table) {
-            $table->dropColumn('macaddress');
+        Schema::table('fontes', function (Blueprint $table) {
+            $table->dropColumn('notafiscal');
         });
     }
 }

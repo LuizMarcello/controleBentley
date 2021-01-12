@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/',['as'=>'admin.home','uses'=>'Admin\EstoquetotalController@index']);
+
 Route::get('/admin/estoquetotal',['as'=>'admin.estoquetotal','uses'=>'Admin\EstoquetotalController@estoquetotal']);
 Route::get('/admin/estoquetotal/adicionar',['as'=>'admin.estoquetotal.adicionar','uses'=>'Admin\EstoquetotalController@adicionar']);
 Route::post('/admin/estoquetotal/salvar',['as'=>'admin.estoquetotal.salvar','uses'=>'Admin\EstoquetotalController@salvar']);
@@ -71,3 +72,24 @@ Route::post('/admin/fontes/salvar',['as'=>'admin.fontes.salvar','uses'=>'Admin\F
 Route::get('/admin/fontes/editar/{id}',['as'=>'admin.fontes.editar','uses'=>'Admin\FonteController@editar']);
 Route::put('/admin/fontes/atualizar/{id}',['as'=>'admin.fontes.atualizar','uses'=>'Admin\FonteController@atualizar']);
 Route::get('/admin/fontes/deletar/{id}',['as'=>'admin.fontes.deletar','uses'=>'Admin\FonteController@deletar']);
+
+Route::get('/admin/cabos',['as'=>'admin.cabos','uses'=>'Admin\CaboController@index']);
+Route::get('/admin/cabos/adicionar',['as'=>'admin.cabos.adicionar','uses'=>'Admin\CaboController@adicionar']);
+Route::post('/admin/cabos/salvar',['as'=>'admin.cabos.salvar','uses'=>'Admin\CaboController@salvar']);
+Route::get('/admin/cabos/editar/{id}',['as'=>'admin.cabos.editar','uses'=>'Admin\CaboController@editar']);
+Route::put('/admin/cabos/atualizar/{id}',['as'=>'admin.cabos.atualizar','uses'=>'Admin\CaboController@atualizar']);
+Route::get('/admin/cabos/deletar/{id}',['as'=>'admin.cabos.deletar','uses'=>'Admin\CaboController@deletar']);
+
+Route::get('/admin/lnbs',['as'=>'admin.lnbs','uses'=>'Admin\LnbController@index']);
+Route::get('/admin/lnbs/adicionar',['as'=>'admin.lnbs.adicionar','uses'=>'Admin\LnbController@adicionar']);
+Route::post('/admin/lnbs/salvar',['as'=>'admin.lnbs.salvar','uses'=>'Admin\LnbController@salvar']);
+Route::get('/admin/lnbs/editar/{id}',['as'=>'admin.lnbs.editar','uses'=>'Admin\LnbController@editar']);
+Route::put('/admin/lnbs/atualizar/{id}',['as'=>'admin.lnbs.atualizar','uses'=>'Admin\LnbController@atualizar']);
+Route::get('/admin/lnbs/deletar/{id}',['as'=>'admin.lnbs.deletar','uses'=>'Admin\LnbController@deletar']);
+
+Route::get('/admin/ilnbs',['as'=>'admin.ilnbs','uses'=>'Admin\iLnbController@index']);
+Route::get('/admin/ilnbs/adicionar',['as'=>'admin.ilnbs.adicionar','uses'=>'Admin\iLnbController@adicionar']);
+Route::post('/admin/ilnbs/salvar',['as'=>'admin.ilnbs.salvar','uses'=>'Admin\iLnbController@salvar']);
+Route::get('/admin/ilnbs/editar/{id}',['as'=>'admin.ilnbs.editar','uses'=>'Admin\iLnbController@editar']);
+Route::put('/admin/ilnbs/atualizar/{id}',['as'=>'admin.ilnbs.atualizar','uses'=>'Admin\iLnbController@atualizar']);
+Route::get('/admin/ilnbs/deletar/{id}',['as'=>'admin.ilnbs.deletar','uses'=>'Admin\iLnbController@deletar']);
