@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="col-md-10">
-                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.trias.adicionar') }}" role="button">
+                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.antenas.adicionar') }}" role="button">
                             Incluir antena
                         </a>
                     </div>
