@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Modem extends Model
 {
     protected $fillable = [
-        'banda','modelo','serial','fabricante','macaddress'
+        'notafiscal','banda','modelo','serial','fabricante','macaddress'
     ];
 }

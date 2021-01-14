@@ -1,4 +1,9 @@
 <div class="input-group mb-3">
+    <input type="text" name="notafiscal" class="form-control" placeholder="Nota fiscal" value="{{ isset($registro->notafiscal) ? $registro->notafiscal : '' }}">
+    {{-- <label for="">Nome</label> --}}
+</div>
+
+<div class="input-group mb-3">
     <input type="text" name="nome" class="form-control" placeholder="Nome" value="{{ isset($registro->nome) ? $registro->nome : '' }}">
     {{-- <label for="">Nome</label> --}}
 </div>

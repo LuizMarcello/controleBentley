@@ -17,6 +17,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
+                            <th scope="col">Nota fiscal</th>
                             <th scope="col">Banda</th>
                             <th scope="col">QtdeMetros</th>
                         </tr>
@@ -26,6 +27,7 @@
                         @foreach ($registros as $registro)
                             <tr>
                                 <td>{{ $registro->id }}</td>
+                                <td>{{ $registro->notafiscal }}</td>
                                 <td>{{ $registro->banda }}</td>
                                 <td>{{ $registro->metros }}</td>
                                 <td>

@@ -17,6 +17,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
+                                    <th scope="col">Nota Fiscal</th>
                                     <th scope="col">Banda</th>
                                     <th scope="col">Fabricante</th>
                                     <th scope="col">Modelo</th>
@@ -28,6 +29,7 @@
                                 @foreach ($registros as $registro)
                                     <tr>
                                         <td>{{ $registro->id }}</td>
+                                        <td>{{ $registro->notafiscal }}</td>
                                         <td>{{ $registro->banda }}</td>
                                         <td>{{ $registro->fabricante }}</td>
                                         <td>{{ $registro->modelo }}</td>

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Fonte extends Model
 {
     protected $fillable = [
-        'banda','fabricante','modelo','serial'
+        'notafiscal','banda','fabricante','modelo','serial'
     ];
 }
