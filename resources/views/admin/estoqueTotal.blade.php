@@ -28,10 +28,9 @@
                         <tr>
                             <td>{{ $registro->id }}</td>
                             <td>{{-- O nome na tabela vira um link --}}
-                                {{-- <a href="{{ route('componente.show', $registro->id) }}">
-                                    {{ $registro->name }}
-                                </a> --}}
-                                {{ $registro->nome }}
+                                <a href="{{ route('admin.show', $registro->id) }}">
+                                    {{ $registro->nome }}
+                                </a>
                             </td>
                             <td>{{ $registro->banda }}</td>
                             <td>
@@ -59,6 +58,7 @@
                 </a>
             </div>
             <br>
+
 
             {{-- <a href="{{ route('componentes.create') }}">Cadastrar novo tipo de componente</a> --}}
 

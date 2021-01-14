@@ -53,7 +53,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="admin/clientes">Clientes</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="admin/designacao">Fornecedores</a>
+                        <a class="dropdown-item" href="admin/fornecedores">Fornecedores</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="admin/distribuidores">Distribuidores</a>
                         <div class="dropdown-divider"></div>

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Estoquetotal extends Model
 {
     protected $fillable = [
-        'nome','banda'
+        'nome','banda','antenas','trias','modens','fontes','cabos','lnbs','ilnbs'
     ];
 }

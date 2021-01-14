@@ -2,13 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-
-
 Route::get('/', function () {
     return view('admin.home');
 });
 
 Route::get('/',['as'=>'admin.home','uses'=>'Admin\EstoquetotalController@index']);
+
+Route::get('/admin/estoquetotal/{id}',['as'=>'admin.show','uses'=>'Admin\EstoquetotalController@show']);
 
 Route::get('/admin/estoquetotal',['as'=>'admin.estoquetotal','uses'=>'Admin\EstoquetotalController@estoquetotal']);
 Route::get('/admin/estoquetotal/adicionar',['as'=>'admin.estoquetotal.adicionar','uses'=>'Admin\EstoquetotalController@adicionar']);
@@ -93,3 +93,14 @@ Route::post('/admin/ilnbs/salvar',['as'=>'admin.ilnbs.salvar','uses'=>'Admin\iLn
 Route::get('/admin/ilnbs/editar/{id}',['as'=>'admin.ilnbs.editar','uses'=>'Admin\iLnbController@editar']);
 Route::put('/admin/ilnbs/atualizar/{id}',['as'=>'admin.ilnbs.atualizar','uses'=>'Admin\iLnbController@atualizar']);
 Route::get('/admin/ilnbs/deletar/{id}',['as'=>'admin.ilnbs.deletar','uses'=>'Admin\iLnbController@deletar']);
+
+Route::get('/admin/fornecedores',['as'=>'admin.fornecedores','uses'=>'Admin\FornecedorController@index']);
+Route::get('/admin/fornecedores/adicionar',['as'=>'admin.fornecedores.adicionar','uses'=>'Admin\FornecedorController@adicionar']);
+Route::post('/admin/fornecedores/salvar',['as'=>'admin.fornecedores.salvar','uses'=>'Admin\FornecedorController@salvar']);
+Route::get('/admin/fornecedores/editar/{id}',['as'=>'admin.fornecedores.editar','uses'=>'Admin\FornecedorController@editar']);
+Route::put('/admin/fornecedores/atualizar/{id}',['as'=>'admin.fornecedores.atualizar','uses'=>'Admin\FornecedorController@atualizar']);
+Route::get('/admin/fornecedores/deletar/{id}',['as'=>'admin.fornecedores.deletar','uses'=>'Admin\FornecedorController@deletar']);
+
+
+
+

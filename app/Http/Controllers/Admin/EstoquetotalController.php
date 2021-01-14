@@ -13,7 +13,34 @@ class estoquetotalController extends Controller
     {
         return view('admin.home');
     }
-     
+
+    /* public function show($id)
+    {
+        switch($id){
+            case 2:
+                return view('admin.antenas');
+                break;
+            case 3:
+                return view('admin.trias');
+                break;
+            case 4:
+                return view('admin.modens');
+                break;
+            case 5:
+                return view('admin.fontes');
+                break;
+            case 6:
+                return view('admin.cabos');
+                break;
+            case 7:
+                return view('admin.lnbs');
+                break;
+            case 8:
+                return view('admin.ilnbs');
+                break;
+        }
+    } */
+
     public function estoquetotal()
     {
         /* $client = \App\estoquetotal::find($id); */
@@ -74,8 +101,9 @@ class estoquetotalController extends Controller
         return redirect()->route('admin.estoquetotal');
     }
 }
-        
-        
-        
-    
-        
+
+
+
+
+
+
