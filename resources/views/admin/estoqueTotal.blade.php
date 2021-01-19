@@ -1,13 +1,13 @@
 @extends('admin.home')
 
 @section('titulo-pagina')
-        Estoque total
+    Estoque total
 @endsection
 
 @section('conteudo')
 
-<div class="row">
-    <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-8">
             <div class="row justify-content-center">
                 <h5>Todos os componentes cadastrados</h5>
 
@@ -41,9 +41,12 @@
                                     href="{{ route('admin.estoquetotal.deletar', $registro->id) }}">Deletar</a>
                             </td>
                         </tr>
-                    {{--  Quando um for estiver vazio, mostrar um valor padrão --}}
+                        {{-- Quando um for estiver vazio, mostrar um valor padrão
+                        --}}
                     @empty
-                        <p><td>Nenhum produto cadastrado</td></p>
+                        <p>
+                            <td>Nenhum produto cadastrado</td>
+                        </p>
                     @endforelse
                 </tbody>
             </table>
@@ -61,35 +64,16 @@
             <br>
 
 
-            {{-- <a href="{{ route('componentes.create') }}">Cadastrar novo tipo de componente</a> --}}
+            {{-- <a href="{{ route('componentes.create') }}">Cadastrar novo tipo de
+                componente</a> --}}
 
             <div class="col-md-10">
                 <a class="btn btn-primary btn-sm mx-auto" href="/" role="button">
                     Voltar a página principal
                 </a>
             </div>
+        </div>
+
     </div>
 
-</div>
-
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
