@@ -14,7 +14,7 @@ class AlterClientesTable extends Migration
     public function up()
     {
         Schema::table('clientes', function (Blueprint $table) {
-            $table->string('telefone', 20);
+            $table->string('cnpj', 30);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterClientesTable extends Migration
     public function down()
     {
         Schema::table('clientes', function (Blueprint $table) {
-            $table->dropColumn('telefone');
+            $table->dropColumn('cnpj');
         });
     }
 }

@@ -50,7 +50,7 @@
 
             <div class="col-md-10">
                 <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.ilnbs.adicionar') }}" role="button">
-                    Incluir Lnb
+                    Incluir Ilnb
                 </a>
             </div>
 

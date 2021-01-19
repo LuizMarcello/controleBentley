@@ -27,11 +27,12 @@
                     @forelse($registros as $registro)
                         <tr>
                             <td>{{ $registro->id }}</td>
-                            <td>{{-- O nome na tabela vira um link --}}
+                            {{-- <td>
                                 <a href="{{ route('admin.show', $registro->id) }}">
                                     {{ $registro->nome }}
                                 </a>
-                            </td>
+                            </td> --}}
+                            <td>{{ $registro->nome }}</td>
                             <td>{{ $registro->banda }}</td>
                             <td>
                                 <a class="btn btn-outline-info btn-sm"
@@ -54,7 +55,7 @@
 
             <div class="col-md-10">
                 <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.estoquetotal.adicionar') }}" role="button">
-                    Cadastrar novo tipo de componente
+                    Cadastrar novo tipo de componentee
                 </a>
             </div>
             <br>

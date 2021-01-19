@@ -4,6 +4,11 @@
 </div>
 
 <div class="input-group mb-3">
+    <input type="text" name="cnpj" class="form-control" placeholder="Cnpj" value="{{ isset($registro->cnpj) ? $registro->cnpj : '' }}">
+    {{-- <label for="">Nome</label> --}}
+</div>
+
+<div class="input-group mb-3">
     <input type="text" name="rua" class="form-control" placeholder="Rua" value="{{ isset($registro->rua) ? $registro->rua : '' }}">
     {{-- <label for="">Rua</label> --}}
 </div>
@@ -33,16 +38,16 @@
     {{-- <label for="">Telefone</label> --}}
 </div>
 
-{{-- <div class="input-group mb-3">
-    <input type="text" name="ativo" class="form-control" placeholder="Ativo" value="{{ isset($registro->ativo) ? $registro->ativo : '' }}">
-    <label for="">Ativo</label>
-</div> --}}
+<div class="input-group mb-3">
+    <input type="text" name="situacao" class="form-control" placeholder="Situação" value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
+    {{-- <label for="">Telefone</label> --}}
+</div>
 
-<div>
+{{-- <div>
     <input  type="checkbox" id="flexCheckChecked" checked {{ isset($registro->ativo) && $registro->ativo == 'sim' ? 'checked' : '' }}  value="true">
     <label  for="flexCheckChecked">
       Cliente Ativo?
     </label>
     <br><br>
-</div>
+</div> --}}
 

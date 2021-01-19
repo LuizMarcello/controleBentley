@@ -35,3 +35,4 @@ class CreateLnbsTable extends Migration
         Schema::dropIfExists('lnbs');
     }
 }
+           
