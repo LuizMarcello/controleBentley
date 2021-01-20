@@ -195,7 +195,7 @@
 
                 #sidebar ul li a {
                     padding: 10px;
-                    font-size: 1.1em;
+                    font-size: 0.9em;
                     display: block;
                 }
 
@@ -231,7 +231,7 @@
                 #content {
                     width: 70%;
                     padding: 20px;
-                    min-height: 100vh;
+                    min-height: 55vh;
                     transition: all 0.3s;
                 }
 
@@ -349,7 +349,7 @@
                 </div>
             </nav>
 
-            <br><br>
+            {{-- <br><br>
             <h3></h3>
 
             <p></p>
@@ -359,7 +359,7 @@
             <div class="line"></div>
             <h3></h3>
 
-            <p></p>
+            <p></p> --}}
 
         </div>
 
@@ -403,3 +403,5 @@
 </body>
 
 </html>
+               
+
