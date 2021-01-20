@@ -28,6 +28,11 @@
     {{-- <label for="">Bairro</label> --}}
 </div>
 
+<div class="input-group mb-3">
+    <input type="text" name="qtde" class="form-control" placeholder="Quantidade" value="{{ isset($registro->qtde) ? $registro->qtde : '' }}">
+    {{-- <label for="">Bairro</label> --}}
+</div>
+
 
 
 

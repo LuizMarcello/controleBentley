@@ -22,7 +22,8 @@
                             <th scope="col">Fabricante</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Serial</th>
-                            <th scope="col">Mac Address></th>
+                            <th scope="col">Mac Address</th>
+                            <th scope="col">Quantidade</th>
                         </tr>
                     </thead>
 
@@ -36,6 +37,7 @@
                                 <td>{{ $registro->modelo }}</td>
                                 <td>{{ $registro->serial }}</td>
                                 <td>{{ $registro->macaddress }}</td>
+                                <td>{{ $registro->qtde }}</td>
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ route('admin.modens.editar', $registro->id) }}">Editar</a>

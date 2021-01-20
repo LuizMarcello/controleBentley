@@ -4,6 +4,8 @@
     Lnbs
 @endsection
 
+
+
 @section('conteudo')
 
     <div class="row d-flex justify-content-center">
@@ -23,6 +25,7 @@
                             <th scope="col">Modelo</th>
                             <th scope="col">Fabricante</th>
                             <th scope="col">Situação</th>
+                            <th scope="col">Quantidade</th>
                         </tr>
                     </thead>
 
@@ -36,6 +39,10 @@
                                 <td>{{ $registro->modelo }}</td>
                                 <td>{{ $registro->fabricante }}</td>
                                 <td>{{ $registro->situacao }}</td>
+
+
+
+                                <td>{{ $registro->qtde }}</td>
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ route('admin.lnbs.editar', $registro->id) }}">Editar</a>

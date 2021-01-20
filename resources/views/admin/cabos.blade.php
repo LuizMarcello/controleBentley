@@ -19,7 +19,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Nota fiscal</th>
                             <th scope="col">Banda</th>
-                            <th scope="col">QtdeMetros</th>
+                            <th scope="col">Metros</th>
                         </tr>
                     </thead>
 

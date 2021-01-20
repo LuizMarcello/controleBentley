@@ -22,6 +22,7 @@
                                     <th scope="col">Fabricante</th>
                                     <th scope="col">Modelo</th>
                                     <th scope="col">Diametro</th>
+                                    <th scope="col">Qtde</th>
                                 </tr>
                             </thead>
 
@@ -34,6 +35,7 @@
                                         <td>{{ $registro->fabricante }}</td>
                                         <td>{{ $registro->modelo }}</td>
                                         <td>{{ $registro->diametro }}</td>
+                                        <td>{{ $registro->qtde }}</td>
                                         <td>
                                             <a class="btn btn-outline-info btn-sm"
                                                 href="{{ route('admin.antenas.editar', $registro->id) }}">Editar</a>

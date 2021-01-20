@@ -9,7 +9,7 @@
 </div>
 
 <div class="input-group mb-3">
-    <input type="text" name="metros" class="form-control" placeholder="QtdeMetros" value="{{ isset($registro->metros) ? $registro->metros : '' }}">
+    <input type="text" name="metros" class="form-control" placeholder="Metros" value="{{ isset($registro->metros) ? $registro->metros : '' }}">
     {{-- <label for="">Rua</label> --}}
 </div>
 

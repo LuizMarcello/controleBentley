@@ -98,7 +98,6 @@
                             <a class="dropdown-item" href="admin/lnbs">Lnb</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="admin/ilnbs">iLnb</a>
-
                         </div>
                     </li>
 
@@ -403,5 +402,3 @@
 </body>
 
 </html>
-               
-

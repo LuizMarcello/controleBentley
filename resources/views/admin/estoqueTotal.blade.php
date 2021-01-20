@@ -7,7 +7,7 @@
 @section('conteudo')
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="row justify-content-center">
                 <h5>Todos os componentes cadastrados</h5>
 
@@ -41,8 +41,7 @@
                                     href="{{ route('admin.estoquetotal.deletar', $registro->id) }}">Deletar</a>
                             </td>
                         </tr>
-                        {{-- Quando um for estiver vazio, mostrar um valor padrão
-                        --}}
+                        {{-- Quando um for estiver vazio, mostrar um valor padrão --}}
                     @empty
                         <p>
                             <td>Nenhum produto cadastrado</td>

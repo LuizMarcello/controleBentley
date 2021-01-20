@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterAntenasTable extends Migration
+class AlterLnbsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AlterAntenasTable extends Migration
      */
     public function up()
     {
-        Schema::table('antenas', function (Blueprint $table) {
-            $table->string('notafiscal', 20);
+        Schema::table('lnbs', function (Blueprint $table) {
+            $table->string('qtde', 5);
         });
     }
 
@@ -25,8 +25,8 @@ class AlterAntenasTable extends Migration
      */
     public function down()
     {
-        Schema::table('antenas', function (Blueprint $table) {
-            $table->dropColumn('notafiscal');
+        Schema::table('lnbs', function (Blueprint $table) {
+            $table->dropColumn('qtde');
         });
     }
 }

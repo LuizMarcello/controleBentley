@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Antena extends Model
 {
     protected $fillable = [
-        'notafiscal','banda','fabricante','modelo','diametro'
+        'notafiscal','banda','fabricante','modelo','diametro','qtde'
     ];
 }
