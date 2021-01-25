@@ -19,12 +19,16 @@
                                     <th scope="col">Id</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Cnpj</th>
-                                    <th scope="col">Rua</th>
-                                    <th scope="col">Numero</th>
-                                    <th scope="col">Bairro</th>
+                                    {{-- <th scope="col">Rua</th>
+                                    --}}
+                                    {{-- <th scope="col">Numero</th>
+                                    --}}
+                                    {{-- <th scope="col">Bairro</th>
+                                    --}}
                                     <th scope="col">Cidade</th>
                                     <th scope="col">Estado</th>
-                                    <th scope="col">Telefone</th>
+                                    {{-- <th scope="col">Telefone</th>
+                                    --}}
                                     <th scope="col">Situação</th>
                                 </tr>
                             </thead>
@@ -35,14 +39,20 @@
                                         <td>{{ $registro->id }}</td>
                                         <td>{{ $registro->nome }}</td>
                                         <td>{{ $registro->cnpj }}</td>
-                                        <td>{{ $registro->rua }}</td>
-                                        <td>{{ $registro->numero }}</td>
-                                        <td>{{ $registro->bairro }}</td>
+                                        {{-- <td>{{ $registro->rua }}</td>
+                                        --}}
+                                        {{-- <td>{{ $registro->numero }}</td>
+                                        --}}
+                                        {{-- <td>{{ $registro->bairro }}</td>
+                                        --}}
                                         <td>{{ $registro->cidade }}</td>
                                         <td>{{ $registro->estado }}</td>
-                                        <td>{{ $registro->telefone }}</td>
+                                        {{-- <td>{{ $registro->telefone }}</td>
+                                        --}}
                                         <td>{{ $registro->situacao }}</td>
                                         <td>
+                                            <a class="btn btn-outline-success btn-sm"
+                                                href="{{ route('admin.clientes.detalhes', $registro->id) }}">Visualizar</a>
                                             <a class="btn btn-outline-info btn-sm"
                                                 href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
                                             <a class="btn btn-outline-danger btn-sm"
@@ -72,5 +82,4 @@
                 </div>
             </div>
 
-            @endsection
-
+        @endsection

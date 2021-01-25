@@ -19,6 +19,7 @@ Route::get('/admin/estoquetotal/deletar/{id}',['as'=>'admin.estoquetotal.deletar
 
 
 Route::get('/admin/clientes',['as'=>'admin.clientes','uses'=>'Admin\ClienteController@index']);
+Route::get('/admin/clientes/detalhes/{id}',['as'=>'admin.clientes.detalhes','uses'=>'Admin\ClienteController@detalhes']);
 Route::get('/admin/clientes/adicionar',['as'=>'admin.clientes.adicionar','uses'=>'Admin\ClienteController@adicionar']);
 Route::post('/admin/clientes/salvar',['as'=>'admin.clientes.salvar','uses'=>'Admin\ClienteController@salvar']);
 Route::get('/admin/clientes/editar/{id}',['as'=>'admin.clientes.editar','uses'=>'Admin\ClienteController@editar']);

@@ -16,7 +16,7 @@
                 <form class="" action="{{ route('admin.antenas.atualizar', $registro->id) }}" method="POST">
                     {{ csrf_field() }}
                     <input type="hidden" name="_method" value="put">
-                    @include('admin._formTria')
+                    @include('admin._formAntena')
                     <button class="btn btn-outline-success">Atualizar</button>
                 </form>
             </div>

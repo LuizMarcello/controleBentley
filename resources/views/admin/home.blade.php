@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+
     {{--Conteudo desse foi incluido no css in-line abaixo--}}
     {{-- link rel="stylesheet" href="css\style.css"> --}}
 
@@ -105,7 +106,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"
                             data-toggle="dropdown">Estoque</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('admin.estoquetotal') }}">Relação dos produtos
+                            <a class="dropdown-item" href="{{ route('admin.estoquetotal') }}">Tipo de produtos
                                 cadastrados</a>
                         </div>
                     </li>
@@ -229,7 +230,7 @@
 
                 #content {
                     width: 70%;
-                    padding: 20px;
+                    padding: 10px;
                     min-height: 55vh;
                     transition: all 0.3s;
                 }
@@ -251,6 +252,8 @@
             </style>
 
 
+
+
             {{-- <div class="sidebar-header">
                 <h4>Bentley Brasil</h4>
             </div> --}}
@@ -262,10 +265,10 @@
                         class="dropdown-toggle">Clientes</a>
                     <ul class="collapse lisst-unstyled" id="clientesSubmenu">
                         <li>
-                            <a href="#">Consultar clientes</a>
+                            <a href={{ route('admin.clientes') }}>Consultar clientes</a>
                         </li>
                         <li>
-                            <a href="#">Cadastrar clientes</a>
+                            <a href={{ route('admin.clientes.adicionar') }}>Cadastrar clientes</a>
                         </li>
                     </ul>
                 </li>
@@ -296,6 +299,19 @@
                         </li>
                         <li>
                             <a href="#">Cadastrar distribuidores</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#instaladoresSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Instaladores</a>
+                    <ul class="collapse lisst-unstyled" id="instaladoresSubmenu">
+                        <li>
+                            <a href="#">Consultar instaladores</a>
+                        </li>
+                        <li>
+                            <a href="#">Cadastrar instaladores</a>
                         </li>
                     </ul>
                 </li>

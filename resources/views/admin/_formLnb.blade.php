@@ -28,23 +28,32 @@
     {{-- <label for="">Rua</label> --}}
 </div>
 
-<div class="input-group mb-3 form-group custom-selectd">
 
-    <input type="text" name="situacao" {{-- id="exampleFormControlSelect1" --}} class="form-control" value="{{ isset($registro->situacao) ? $registro->situacao : '' }}" placeholder="Selecione">
-    <select class="form-control" {{-- id="exampleFormControlSelect1" --}} name="situacao" placeholder="Selecione">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+<div class="form-group custom-selectd">
+    <label for="atual">
+        <p>Situação atual</p>
+    </label>
+
+    <input type="text" readonly="true" name="situacao" id="atual" class="form-control"
+        value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
+
+    <br>
+
+    <label for="alterar">
+        <p>Alterar situação</p>
+    </label>
+
+    <select class="form-control" name="situacao" id="alterar">
+        <option>Estoque</option>
+        <option>Cliente</option>
+        <option>Defeito</option>
+        <option>Devolvido</option>
     </select>
-
 </div>
+
 
 <div class="input-group mb-3">
     <input type="text" name="qtde" class="form-control" placeholder="Quantidade"
         value="{{ isset($registro->qtde) ? $registro->qtde : '' }}">
     {{-- <label for="">Bairro</label> --}}
 </div>
-
-

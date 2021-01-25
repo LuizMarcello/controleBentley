@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterClientesTable extends Migration
+class AlterModemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AlterClientesTable extends Migration
      */
     public function up()
     {
-        Schema::table('clientes', function (Blueprint $table) {
-            $table->string('cnpj', 30);
+        Schema::table('modems', function (Blueprint $table) {
+            $table->string('situacao', 20);
         });
     }
 
@@ -25,8 +25,8 @@ class AlterClientesTable extends Migration
      */
     public function down()
     {
-        Schema::table('clientes', function (Blueprint $table) {
-            $table->dropColumn('cnpj');
+        Schema::table('modems', function (Blueprint $table) {
+            $table->dropColumn('situacao');
         });
     }
 }

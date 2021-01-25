@@ -23,6 +23,9 @@
                                     <th scope="col">Modelo</th>
                                     <th scope="col">Diametro</th>
                                     <th scope="col">Qtde</th>
+                                    <th scope="col">Situação</th>
+                                    
+                                   
                                 </tr>
                             </thead>
 
@@ -36,6 +39,9 @@
                                         <td>{{ $registro->modelo }}</td>
                                         <td>{{ $registro->diametro }}</td>
                                         <td>{{ $registro->qtde }}</td>
+                                        <td>{{ $registro->situacao }}</td>
+                                        
+                                        
                                         <td>
                                             <a class="btn btn-outline-info btn-sm"
                                                 href="{{ route('admin.antenas.editar', $registro->id) }}">Editar</a>
@@ -49,7 +55,8 @@
                     </div>
 
                     <div class="col-md-10">
-                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.antenas.adicionar') }}" role="button">
+                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.antenas.adicionar') }}"
+                            role="button">
                             Incluir antena
                         </a>
                     </div>

@@ -23,14 +23,15 @@ class ClienteController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
+        /* dd($dados); */
 
-        if(isset($dados['ativo']))
+        /* if(isset($dados['ativo']))
         {
             $dados['ativo'] = 'sim';
         }else
         {
             $dados['ativo'] = 'nao';
-        }
+        } */
 
         Cliente::Create($dados);
 
@@ -41,6 +42,12 @@ class ClienteController extends Controller
     {
         $registro = Cliente::find($id);
         return view('admin.editarCliente', compact('registro'));
+    }
+
+    public function detalhes($id)
+    {
+        $registro = Cliente::find($id);
+        return view('admin.detalhesCliente', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)

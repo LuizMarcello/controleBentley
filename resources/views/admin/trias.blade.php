@@ -21,7 +21,8 @@
                             <th scope="col">Banda</th>
                             <th scope="col">Fabricante</th>
                             <th scope="col">Serial</th>
-                            <th scope="col">Qtde</th>
+                           {{--  <th scope="col">Qtde</th> --}}
+                            <th scope="col">Situação</th>
                         </tr>
                     </thead>
 
@@ -33,7 +34,8 @@
                                 <td>{{ $registro->banda }}</td>
                                 <td>{{ $registro->fabricante }}</td>
                                 <td>{{ $registro->serial }}</td>
-                                <td>{{ $registro->qtde }}</td>
+                                {{-- <td>{{ $registro->qtde }}</td> --}}
+                                <td>{{ $registro->situacao }}</td>
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ route('admin.trias.editar', $registro->id) }}">Editar</a>
