@@ -54,13 +54,13 @@ class ClienteController extends Controller
     {
         $dados = $req->all();
 
-        if(isset($dados['ativo']))
+       /*  if(isset($dados['ativo']))
         {
             $dados['ativo'] = 'sim';
         }else
         {
             $dados['ativo'] = 'nao';
-        }
+        } */
 
         Cliente::find($id)->update($dados);
 

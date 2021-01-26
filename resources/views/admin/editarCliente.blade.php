@@ -15,7 +15,7 @@
         {{ csrf_field() }}
         <input type="hidden" name="_method" value="put">
         @include('admin._formLayoutCliente')
-        <button class="btn btn-outline-success">Atualizar</button>
+        <button class="btn btn-outline-success btn-sm">Atualizar</button>
     </form>
 </div>
 
