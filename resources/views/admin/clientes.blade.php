@@ -67,7 +67,7 @@
                     <div class="col-md-10">
                         <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.clientes.adicionar') }}"
                             role="button">
-                            Incluir novo cliente
+                            Incluir novo clienteee
                         </a>
                     </div>
 

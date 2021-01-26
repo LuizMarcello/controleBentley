@@ -50,7 +50,9 @@ class ModemController extends Controller
         return redirect()->route('admin.modens');
     }
 }
-        
+
+
+
 
 
 

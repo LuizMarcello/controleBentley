@@ -33,21 +33,23 @@ class ClienteController extends Controller
             $dados['ativo'] = 'nao';
         } */
 
+        /* dd($dados); */
+
         Cliente::Create($dados);
 
         return redirect()->route('admin.clientes');
-    }
-
-    public function editar($id)
-    {
-        $registro = Cliente::find($id);
-        return view('admin.editarCliente', compact('registro'));
     }
 
     public function detalhes($id)
     {
         $registro = Cliente::find($id);
         return view('admin.detalhesCliente', compact('registro'));
+    }
+
+    public function editar($id)
+    {
+        $registro = Cliente::find($id);
+        return view('admin.editarCliente', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)
@@ -74,3 +76,5 @@ class ClienteController extends Controller
         return redirect()->route('admin.clientes');
     }
 }
+
+
