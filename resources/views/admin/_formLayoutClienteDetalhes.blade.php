@@ -222,7 +222,7 @@
 <br>
 
 
-<form action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="POST">
+{{-- <form action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="POST">
     {{ csrf_field() }}
     <input type="hidden" name="_method" value="put">
 
@@ -232,21 +232,23 @@
         </h6>
     </label>
     <textarea class="form-control rounded-0" id="1234" name="observacao" cols="1" rows="10"
-        value="{{ isset($registro->observacao) ? $registro->observacao : '' }}"></textarea>
+        value="{{ isset($registro->observacao) ? $registro->observacao : '' }}"></textarea> --}}
     {{-- <button type="submit" class="btn btn-outline-success">Atualizar</button>
     --}}
-</form>
+{{-- </form> --}}
+
 <br>
-<div class="row">
-    <div class="form-group col-md-3">
+
+{{-- <div class="row">
+    <div class="form-group col-md-3"> --}}
         <!-- Botão que dispara o Modal -->
-        <br>
+        {{-- <br>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#migClienteModal">
             Migração
-        </button>
+        </button> --}}
 
         <!-- Inicio do Modal -->
-        <div class="modal fade" id="migClienteModal" tabindex="-1" role="dialog" aria-labelledby="migClienteModalLabel">
+        {{-- <div class="modal fade" id="migClienteModal" tabindex="-1" role="dialog" aria-labelledby="migClienteModalLabel">
 
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -262,19 +264,19 @@
                             {{ csrf_field() }}
                             <input type="hidden" name="_method" value="put">
                             <textarea class="form-control rounded-0" name="migracao" cols="4" rows="15"
-                                value="{{ isset($registro->migracao) ? $registro->migracao : '' }}"></textarea>
+                                value="{{ isset($registro->migracao) ? $registro->migracao : '' }}"></textarea> --}}
                             {{-- <button type="submit"
                                 class="btn btn-outline-success">Atualizar</button> --}}
-                        </form>
+                        {{-- </form>
 
-                    </div>
+                    </div> --}}
                     {{-- <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                         <button type="button" class="btn btn-primary">Salvar</button>
                     </div> --}}
-                </div>
+                 {{-- /div>
             </div>
-        </div>>
+        </div>> --}}
         {{-- fim do modal --}}
-    </div>
-</div>
+    {{-- </div>
+</div> --}}

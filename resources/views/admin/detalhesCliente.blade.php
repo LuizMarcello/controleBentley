@@ -1,15 +1,15 @@
 @extends('admin.home')
 
 @section('titulo-pagina')
-    Detalhes do cliente
+    Detalhes dos clientes
 @endsection
 
 @section('conteudo')
 
 <div class="row d-flex justify-content-center">
-    <h3>Detalhes do cliente</h3>
+    <button type="button" class="btn btn-secondary btn-sm btn-block"><h4>Detalhes do Cliente</h4></button>
 </div>
-
+<br>
 <div class="row">
     <form class="" action="{{ route('admin.clientes', $registro->id) }}" method="GET">
         {{ csrf_field() }}

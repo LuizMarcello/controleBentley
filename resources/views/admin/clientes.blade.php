@@ -7,9 +7,9 @@
         @section('conteudo')
 
             <div class="row d-flex justify-content-center">
-                <h3>Lista de Clientes</h3>
+                <button type="button" class="btn btn-secondary btn-sm btn-block"><h4>Lista de Clientes</h4></button>
             </div>
-
+            <br>
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">

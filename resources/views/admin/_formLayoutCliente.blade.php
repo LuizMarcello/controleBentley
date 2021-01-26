@@ -149,10 +149,13 @@
         </label>
 
         <select class="form-control" name="instalador" id="alterar1">
-            <option>João</option>
-            <option>Pedro</option>
-            <option>Paulo</option>
-            <option>José</option>
+            <option>João Pereira da Silva</option>
+            <option>Pedro Fonseca Goulart</option>
+            <option>Paulo Henrique Almorim</option>
+            <option>José da Silva Pacheco</option>
+            <option>Luiz Claudio Goulart</option>
+            <option>Renato da Silva Rogerio</option>
+            <option>Alan Cardeck</option>
         </select>
     </div>
 

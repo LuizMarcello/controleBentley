@@ -16,7 +16,17 @@
                         @include('admin._formLayoutCliente')
                         <button class="btn btn-outline-success btn-sm">Salvarr</button>
                     </form>
+                    <br>
+                    <div class="row">
+                        <a href="{{ route('admin.clientes') }}" class="btn btn-primary btn-sm" role="button"
+                            aria-disabled="true">Voltar</a>
+                    </div>
                 </div>
             </div>
 
         @endsection
+
+
+
+
+
