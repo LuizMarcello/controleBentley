@@ -133,6 +133,39 @@
             value="{{ isset($registro->ufie) ? $registro->ufie : '' }}">
     </div>
 </div>
+{{-- Inicio--------------------------------------------------------------------------------------------------- --}}
+<div class="row">
+    <div class="form-group custom-selectd">
+        <label for="distr">
+            <h6>
+                <p>Distribuidor atual</p>
+            </h6>
+        </label>
+
+        <input type="text" readonly="true" id="distr" name="distribuidor" class="form-control"
+            value="{{ isset($registro->distribuidor) ? $registro->distribuidor : '' }}">
+
+        <br>
+
+        
+    </div>
+
+    <div class="form-group custom-selectd">
+        <label for="design">
+            <h6>
+                <p>Designação</p>
+            </h6>
+        </label>
+
+        <input type="text" readonly="true" id="design" name="designacao" class="form-control"
+            value="{{ isset($registro->designacao) ? $registro->designacao : '' }}">
+
+        <br>
+
+        
+    </div>
+</div>
+{{-- Fim--------------------------------------------------------------------------------------------------- --}}
 
 <div class="row">
     <div class="form-group custom-selectd">

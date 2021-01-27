@@ -128,7 +128,80 @@
         <input type="text" class="form-control" name="ufie" value="{{ isset($registro->ufie) ? $registro->ufie : '' }}">
     </div>
 </div>
+<br>
+{{--
+--------------------------------------------------------------------------------------------
+--}}
+<br>
+<div class="row">
+    <div class="form-group custom-selectd">
+        <label for="distr">
+            <h6>
+                <p>Distribuidor atual</p>
+            </h6>
+        </label>
 
+        <input type="text" readonly="true" id="distr" name="distribuidor" class="form-control"
+            value="{{ isset($registro->distribuidor) ? $registro->distribuidor : '' }}">
+
+        <br>
+
+        <label for="alterar1">
+            <h6>
+                <p>Alterar Distribuidor</p>
+            </h6>
+        </label>
+
+        <select class="form-control" name="distribuidor" id="alterar1">
+            <option value="">Selecione</option>
+            <option>João Pereira da Silva</option>
+            <option>Pedro Fonseca Goulart</option>
+            <option>Paulo Henrique Almorim</option>
+            <option>José da Silva Pacheco</option>
+            <option>Luiz Claudio Goulart</option>
+            <option>Renato da Silva Rogerio</option>
+            <option>Alan Cardeck</option>
+        </select>
+    </div>
+
+    <div class="form-group custom-selectd">
+        <label for="design">
+            <h6>
+                <p>Designação</p>
+            </h6>
+        </label>
+
+        <input type="text" readonly="true" id="design" name="designacao" class="form-control"
+            value="{{ isset($registro->designacao) ? $registro->designacao : '' }}">
+
+        <br>
+
+        <label for="alterar2">
+            <h6>
+                <p>Alterar designação</p>
+            </h6>
+        </label>
+
+        <select class="form-control" name="designacao" id="alterar2">
+            <option value="">Selecione</option>
+            <option>Opção1</option>
+            <option>Opção2</option>
+            <option>Opção3</option>
+            <option>Opção4</option>
+            <option>Opção5</option>
+            <option>Opção6</option>
+            <option>Opção7</option>
+            <option>Opção8</option>
+            <option>Opção9</option>
+            <option>Opção10</option>
+        </select>
+    </div>
+</div>
+<br>
+{{--
+--------------------------------------------------------------------------------------------
+--}}
+<br>
 <div class="row">
     <div class="form-group custom-selectd">
         <label for="">
@@ -149,6 +222,7 @@
         </label>
 
         <select class="form-control" name="instalador" id="alterar1">
+            <option value="">Selecione</option>
             <option>João Pereira da Silva</option>
             <option>Pedro Fonseca Goulart</option>
             <option>Paulo Henrique Almorim</option>
@@ -178,6 +252,7 @@
         </label>
 
         <select class="form-control" name="situacao" id="alterar2">
+            <option value="">Selecione</option>
             <option>Aguardando confirmação de dados</option>
             <option>Cadastro aprovado</option>
             <option>Cancelado</option>
