@@ -128,11 +128,10 @@
         <input type="text" class="form-control" name="ufie" value="{{ isset($registro->ufie) ? $registro->ufie : '' }}">
     </div>
 </div>
+
 <br>
-{{--
---------------------------------------------------------------------------------------------
---}}
 <br>
+
 <div class="row">
     <div class="form-group custom-selectd">
         <label for="distr">
@@ -152,15 +151,51 @@
             </h6>
         </label>
 
+        @php
+        function selected1( $value, $selected ){
+        return $value==$selected ? ' selected="selected"' : '';
+        }
+        @endphp
+
         <select class="form-control" name="distribuidor" id="alterar1">
+
             <option value="">Selecione</option>
-            <option>João Pereira da Silva</option>
-            <option>Pedro Fonseca Goulart</option>
-            <option>Paulo Henrique Almorim</option>
-            <option>José da Silva Pacheco</option>
-            <option>Luiz Claudio Goulart</option>
-            <option>Renato da Silva Rogerio</option>
-            <option>Alan Cardeck</option>
+
+            <option value="Joao Pereira da Silva" 
+            <?php echo selected1('Joao Pereira da Silva', $registro->distribuidor); ?>>
+                  João Pereira da Silva
+            </option>
+
+            <option value="Pedro Fonseca Goulart"
+            <?php echo selected1('Pedro Fonseca Goulart', $registro->distribuidor); ?>>
+                Pedro Fonseca Goulart
+            </option>
+
+
+            <option value="Paulo Henrique Almorim" 
+            <?php echo selected1('Paulo Henrique Almorim', $registro->distribuidor); ?>>
+                Paulo Henrique Almorim
+            </option>
+
+            <option value="José da Silva Pacheco"
+            <?php echo selected1('José da Silva Pacheco', $registro->distribuidor); ?>>
+                José da Silva Pacheco
+            </option>
+
+            <option value="Luiz Claudio Goulart"
+            <?php echo selected1('Luiz Claudio Goulart', $registro->distribuidor); ?>>
+                Luiz Claudio Goulart
+            </option>
+
+            <option value="Renato da Silva Rogerio"
+            <?php echo selected1('Renato da Silva Rogerio', $registro->distribuidor); ?>>
+               Renato da Silva Rogerio
+            </option>
+
+            <option value="Alan Cardeck"
+            <?php echo selected1('Alan Cardeck', $registro->distribuidor); ?>>
+                Alan Cardeck
+            </option>
         </select>
     </div>
 
@@ -182,79 +217,154 @@
             </h6>
         </label>
 
+        @php
+        function selected2( $value, $selected ){
+        return $value==$selected ? ' selected="selected"' : '';
+        }
+        @endphp
+
+
         <select class="form-control" name="designacao" id="alterar2">
+
             <option value="">Selecione</option>
-            <option>Opção1</option>
-            <option>Opção2</option>
-            <option>Opção3</option>
-            <option>Opção4</option>
-            <option>Opção5</option>
-            <option>Opção6</option>
-            <option>Opção7</option>
-            <option>Opção8</option>
-            <option>Opção9</option>
-            <option>Opção10</option>
+            
+            <option value="Opcao1"
+            <?php echo selected2('Opcao1', $registro->designacao); ?>>
+                Opcao1
+            </option>
+
+            <option value="Opcao2"
+            <?php echo selected2('Opcao2', $registro->designacao); ?>>
+                Opcao2
+            </option>
+
+            <option value="Opcao3" 
+            <?php echo selected2('Opcao3', $registro->designacao); ?>>
+                Opcao3
+            </option>
+
+            <option value="Opcao4" 
+            <?php echo selected2('Opcao4', $registro->designacao); ?>>
+                Opcao4
+            </option>
+
+            <option value="Opcao5" 
+            <?php echo selected2('Opcao5', $registro->designacao); ?>>
+                Opcao5
+            </option>
+
         </select>
     </div>
 </div>
+
 <br>
-{{--
---------------------------------------------------------------------------------------------
---}}
 <br>
+
 <div class="row">
     <div class="form-group custom-selectd">
-        <label for="">
+        <label for="inst">
             <h6>
                 <p>Instalador atual</p>
             </h6>
         </label>
 
-        <input type="text" readonly="true" name="instalador" class="form-control"
+        <input type="text" readonly="true" name="instalador" id="inst" class="form-control"
             value="{{ isset($registro->instalador) ? $registro->instalador : '' }}">
 
         <br>
 
-        <label for="alterar1">
+        <label for="alterar3">
             <h6>
                 <p>Alterar Instalador</p>
             </h6>
         </label>
 
-        <select class="form-control" name="instalador" id="alterar1">
+        @php
+        function selected3( $value, $selected ){
+        return $value==$selected ? ' selected="selected"' : '';
+        }
+        @endphp
+
+        <select class="form-control" name="instalador" id="alterar3">
+
             <option value="">Selecione</option>
-            <option>João Pereira da Silva</option>
-            <option>Pedro Fonseca Goulart</option>
-            <option>Paulo Henrique Almorim</option>
-            <option>José da Silva Pacheco</option>
-            <option>Luiz Claudio Goulart</option>
-            <option>Renato da Silva Rogerio</option>
-            <option>Alan Cardeck</option>
+
+            <option value="João Pereira da Silva" 
+            <?php echo selected3('João Pereira da Silva', $registro->instalador); ?>>
+                João Pereira da Silva
+            </option>
+
+            <option value="Pedro Fonseca Goulart" 
+            <?php echo selected3('Pedro Fonseca Goulart', $registro->instalador); ?>>
+                Pedro Fonseca Goulart
+            </option>
+
+            <option value="Paulo Henrique Almorim" 
+            <?php echo selected3('Paulo Henrique Almorim', $registro->instalador); ?>>
+                Paulo Henrique Almorim
+            </option>0
+
+            <option value="José da Silva Pacheco" 
+            <?php echo selected3('José da Silva Pacheco', $registro->instalador); ?>>
+                José da Silva Pacheco
+            </option>
+
+            <option value="Luiz Claudio Goulart" 
+            <?php echo selected3('Luiz Claudio Goulart', $registro->instalador); ?>>
+                Luiz Claudio Goulart
+            </option>
+            
+            <option value="Renato da Silva Rogerio" 
+            <?php echo selected3('Renato da Silva Rogerio', $registro->instalador); ?>>
+                Renato da Silva Rogerio
+            </option>
+            
+            <option value="Alan Cardeck" 
+            <?php echo selected3('Alan Cardeck', $registro->instalador); ?>>
+                Alan Cardeck
+            </option>
         </select>
     </div>
-
+            
     <div class="form-group custom-selectd">
-        <label for="">
+        <label for="sit">
             <h6>
                 <p>Situação/Status</p>
             </h6>
         </label>
 
-        <input type="text" readonly="true" name="situacao" class="form-control"
+        <input type="text" readonly="true" id="sit" name="situacao" class="form-control"
             value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
 
         <br>
 
-        <label for="alterar2">
+        <label for="alterar4">
             <h6>
                 <p>Alterar situação</p>
             </h6>
         </label>
 
-        <select class="form-control" name="situacao" id="alterar2">
+        @php
+        function selected4( $value, $selected ){
+        return $value==$selected ? ' selected="selected"' : '';
+        }
+        @endphp
+
+        <select class="form-control" name="situacao" id="alterar4">
+
             <option value="">Selecione</option>
-            <option>Aguardando confirmação de dados</option>
-            <option>Cadastro aprovado</option>
+
+            <option value="Aguardando confirmação de dados" 
+            <?php echo selected4('Aguardando confirmação de dados', $registro->situacao); ?>>
+                Aguardando confirmação de dados
+            </option>
+
+            <option value="Cadastro aprovado" 
+            <?php echo selected4('Cadastro aprovado', $registro->situacao); ?>>
+                Cadastro aprovado
+            </option>
+            
+           
             <option>Cancelado</option>
             <option>Desinstalado</option>
             <option>Desligado por falta de pagamento</option>
@@ -274,6 +384,11 @@
             <option>Suspensão temporária</option>
         </select>
     </div>
+           
+
+            
+
+
 </div>
 
 <br>
@@ -394,3 +509,12 @@
     </div> --}}
     {{--
 </div> --}}
+           
+            
+
+
+
+
+
+
+
