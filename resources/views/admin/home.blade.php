@@ -334,6 +334,19 @@
                 </li>
 
                 <li>
+                    <a href="#planosSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Planos</a>
+                    <ul class="collapse lisst-unstyled" id="planosSubmenu">
+                        <li>
+                            <a href="#">Consultar planos</a>
+                        </li>
+                        <li>
+                            <a href="#">Cadastrar planos</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Relatórios</a>
                     <ul class="collapse lisst-unstyled" id="relatoriosSubmenu">

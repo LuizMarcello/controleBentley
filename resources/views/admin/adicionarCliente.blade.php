@@ -13,7 +13,7 @@
                     </div>
                     <form class="" action="{{ route('admin.clientes.salvar') }}" method="POST">
                         {{ csrf_field() }}
-                        @include('admin._formLayoutCliente')
+                        @include('admin._formLayoutClienteAdicionar')
                         <button class="btn btn-outline-success btn-sm">Salvarr</button>
                     </form>
                     <br>
