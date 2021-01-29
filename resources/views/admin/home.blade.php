@@ -17,7 +17,7 @@
     <meta charset="utf-8">
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1;shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 </head>
 
 <body>
@@ -251,9 +251,6 @@
 
             </style>
 
-
-
-
             {{-- <div class="sidebar-header">
                 <h4>Bentley Brasil</h4>
             </div> --}}
@@ -320,6 +317,9 @@
                     <a href="#">Policy</a>
                 </li> --}}
 
+
+
+
                 <li>
                     <a href="#vendasSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Vendas</a>
@@ -338,10 +338,10 @@
                         class="dropdown-toggle">Planos</a>
                     <ul class="collapse lisst-unstyled" id="planosSubmenu">
                         <li>
-                            <a href="#">Consultar planos</a>
+                            <a href={{ route('admin.planos') }}>Consultar planos</a>
                         </li>
                         <li>
-                            <a href="#">Cadastrar planos</a>
+                            <a href={{ route('admin.planos.adicionar') }}>Cadastrar planos</a>
                         </li>
                     </ul>
                 </li>

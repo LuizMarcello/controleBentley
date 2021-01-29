@@ -27,7 +27,7 @@
             value="{{ isset($registro->email) ? $registro->email : '' }}">
     </div>
 </div>
-
+ggg
 <div class="row">
     <div class="form-group col-md-5">
         <label for="">

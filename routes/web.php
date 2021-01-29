@@ -17,6 +17,13 @@ Route::get('/admin/estoquetotal/deletar/{id}',['as'=>'admin.estoquetotal.deletar
 
 /* Route::get('/admin/estoquetotal/{id}',['as'=>'admin.show','uses'=>'Admin\EstoquetotalController@show']); */
 
+Route::get('/admin/planos',['as'=>'admin.planos','uses'=>'Admin\PlanoController@index']);
+Route::get('/admin/planos/detalhes/{id}',['as'=>'admin.planos.detalhes','uses'=>'Admin\PlanoController@detalhes']);
+Route::get('/admin/planos/adicionar',['as'=>'admin.planos.adicionar','uses'=>'Admin\PlanoController@adicionar']);
+Route::post('/admin/planos/salvar',['as'=>'admin.planos.salvar','uses'=>'Admin\PlanoController@salvar']);
+Route::get('/admin/planos/editar/{id}',['as'=>'admin.planos.editar','uses'=>'Admin\PlanoController@editar']);
+Route::put('/admin/planos/atualizar/{id}',['as'=>'admin.planos.atualizar','uses'=>'Admin\PlanoController@atualizar']);
+Route::get('/admin/planos/deletar/{id}',['as'=>'admin.planos.deletar','uses'=>'Admin\PlanoController@deletar']);
 
 Route::get('/admin/clientes',['as'=>'admin.clientes','uses'=>'Admin\ClienteController@index']);
 Route::get('/admin/clientes/detalhes/{id}',['as'=>'admin.clientes.detalhes','uses'=>'Admin\ClienteController@detalhes']);
