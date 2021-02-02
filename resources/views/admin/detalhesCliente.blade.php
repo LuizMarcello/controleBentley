@@ -17,6 +17,8 @@
         @include('admin._formLayoutClienteDetalhes')
         <button class="btn btn-outline-success">Voltar</button>
     </form>
+
+    
 </div>
 
 <a href="{{ route('admin.clientes') }}" class="btn btn-primary btn-sm" role="button" aria-disabled="true">Voltar</a>
