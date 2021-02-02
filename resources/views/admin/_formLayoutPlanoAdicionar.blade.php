@@ -85,11 +85,11 @@
         <div class="form-group col-md-3 ">
             <label for="">
                 <h6>
-                    <p>Valor</p>
+                    <p>Valor de custo</p>
                 </h6>
             </label>
             <input type="text" class="form-control" name="valor"
-                value="{{ isset($registro->valor) ? $registro->valor : '' }}">
+                value="{{ isset($registro->valordecusto) ? $registro->valordecusto : '' }}">
         </div>
         <div class="form-group col-md-3 ">
             <label for="">

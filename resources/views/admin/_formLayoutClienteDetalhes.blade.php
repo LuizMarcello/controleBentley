@@ -133,134 +133,65 @@
             value="{{ isset($registro->ufie) ? $registro->ufie : '' }}">
     </div>
 </div>
-{{-- Inicio--------------------------------------------------------------------------------------------------- --}}
+
 <br>
+
 <div class="row">
-    <div class="form-group custom-selectd">
+    <div class="form-group col-md-3 custom-selectd">
         <label for="distr">
             <h6>
                 <p>Distribuidor</p>
             </h6>
         </label>
-
         <input type="text" readonly="true" id="distr" name="distribuidor" class="form-control"
             value="{{ isset($registro->distribuidor) ? $registro->distribuidor : '' }}">
-
-        
-
-        
     </div>
 
-    <div class="form-group custom-selectd">
+    <div class="form-group col-md-2 custom-selectd">
         <label for="design">
             <h6>
                 <p>Designação</p>
             </h6>
         </label>
-
         <input type="text" readonly="true" id="design" name="designacao" class="form-control"
             value="{{ isset($registro->designacao) ? $registro->designacao : '' }}">
-
-       
-
-        
     </div>
-</div>
-{{-- Fim--------------------------------------------------------------------------------------------------- --}}
-<br>
-<div class="row">
-    <div class="form-group custom-selectd">
+
+
+
+    <br>
+
+
+    <div class="form-group col-md-3 custom-selectd">
         <label for="">
             <h6>
                 <p>Instalador</p>
             </h6>
         </label>
-
         <input type="text" readonly="true" readonly="true" name="instalador" class="form-control"
             value="{{ isset($registro->instalador) ? $registro->instalador : '' }}">
-
         <br>
-
-
     </div>
 
-    <div class="form-group custom-selectd">
+    <div class="form-group col-md-4 custom-selectd">
         <label for="">
             <h6>
                 <p>Situação/Status</p>
             </h6>
         </label>
-
         <input type="text" readonly="true" name="situacao" class="form-control"
             value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
-
-        
-
-
     </div>
-
 </div>
 
-
-
-
-
-
-{{-- <form action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="POST">
-    {{ csrf_field() }}
-    <input type="hidden" name="_method" value="put">
-
-    <label for="1234">
-        <h6>
-            <p>Observacões</p>
-        </h6>
-    </label>
-    <textarea class="form-control rounded-0" id="1234" name="observacao" cols="1" rows="10"
-        value="{{ isset($registro->observacao) ? $registro->observacao : '' }}"></textarea> --}}
-    {{-- <button type="submit" class="btn btn-outline-success">Atualizar</button>
-    --}}
-{{-- </form> --}}
-
-
-
-{{-- <div class="row">
-    <div class="form-group col-md-3"> --}}
-        <!-- Botão que dispara o Modal -->
-        {{-- <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#migClienteModal">
-            Migração
-        </button> --}}
-
-        <!-- Inicio do Modal -->
-        {{-- <div class="modal fade" id="migClienteModal" tabindex="-1" role="dialog" aria-labelledby="migClienteModalLabel">
-
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="migClienteModalLabel">Migrações realizadas</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body form-group">
-                        <form action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="POST">
-                            {{ csrf_field() }}
-                            <input type="hidden" name="_method" value="put">
-                            <textarea class="form-control rounded-0" name="migracao" cols="4" rows="15"
-                                value="{{ isset($registro->migracao) ? $registro->migracao : '' }}"></textarea> --}}
-                            {{-- <button type="submit"
-                                class="btn btn-outline-success">Atualizar</button> --}}
-                        {{-- </form>
-
-                    </div> --}}
-                    {{-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
-                    </div> --}}
-                 {{-- /div>
-            </div>
-        </div>> --}}
-        {{-- fim do modal --}}
-    {{-- </div>
-</div> --}}
+<div class="row">
+    <div class="form-group col-md-3 custom-selectd">
+        <label for="">
+            <h6>
+                <p>Plano</p>
+            </h6>
+        </label>
+        <input type="text" readonly="true" name="plano" class="form-control"
+            value="{{ isset($registro->plano) ? $registro->plano : '' }}">
+    </div>
+</div>

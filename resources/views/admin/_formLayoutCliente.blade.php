@@ -137,7 +137,7 @@
 
 <div class="row">
     <br>
-    <div class="form-group col-md-3 custom-selectd">  
+    <div class="form-group col-md-3 custom-selectd">
         <label for="alterar1">
             <h6>
                 <p>Distribuidor</p>
@@ -335,7 +335,7 @@
                 Desinstalado
             </option>
 
-            <option value="Desligado por falta de pagamento" <?php echo selected4( 'Desligado por falta de pagamento', 
+            <option value="Desligado por falta de pagamento" <?php echo selected4( 'Desligado por falta de pagamento',
              $registro->situacao,); ?>>
                 Desligado por falta de pagamento
             </option>
@@ -413,51 +413,58 @@
 </div>
 
 <br>
-   
+
 <div class="row">
-    <div class="form-group col-md-3 custom-selectd">  
+    <div class="form-group col-md-3 custom-selectd">
         <label for="alterar5">
             <h6>
                 <p>Plano</p>
             </h6>
         </label>
 
+        @php
+            function selected5($value, $selected)
+            {
+                return $value == $selected ? ' selected="selected"' : '';
+            }
+        @endphp
+
         <select class="form-control" name="plano" id="alterar5">
 
             <option value="">Selecione</option>
 
-            <option value="Consumer 1 Mbps">
+            <option value="Consumer 1 Mbps" <?php echo selected5('Consumer 1 Mbps', $registro->plano); ?>>
                 Consumer 1 Mbps
             </option>
 
-            <option value="Consumer 2 Mbps">
+            <option value="Consumer 2 Mbps" <?php echo selected5('Consumer 2 Mbps', $registro->plano); ?>>
                  Consumer 2 Mbps
             </option>
 
-            <option value="Consumer 4 Mbps">
+            <option value="Consumer 4 Mbps" <?php echo selected5('Consumer 4 Mbps', $registro->plano); ?>>
                  Consumer 4 Mbps
             </option>
 
-            <option value="Consumer 6 Mbps">
+            <option value="Consumer 6 Mbps" <?php echo selected5('Consumer 6 Mbps', $registro->plano); ?>>
                  Consumer 6 Mbps
             </option>
 
-            <option value="Consumer 10 Mbps">
+            <option value="Consumer 10 Mbps" <?php echo selected5('Consumer 10 Mbps', $registro->plano); ?>>
                  Consumer 10 Mbps
             </option>
 
-            <option value="Plano Bentley Home 2 Mbps">
-               Plano Bentley Home 2 Mbps
+            <option value="Bentley Home" <?php echo selected5('Bentley Home', $registro->plano); ?>>
+               Bentley Home
             </option>
 
-            <option value=" Plano Bentley Gold 4 Mbps">
-                Plano Bentley Gold 4 Mbps
+            <option value=" Bentley Gold" <?php echo selected5('Bentley Gold', $registro->plano); ?>>
+                Bentley Gold
             </option>
         </select>
     </div>
 </div>
 
-    
-        
+
+
 
 
