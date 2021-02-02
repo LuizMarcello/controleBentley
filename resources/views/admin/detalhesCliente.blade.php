@@ -19,6 +19,8 @@
     </form>
 </div>
 
+<a href="{{ route('admin.clientes') }}" class="btn btn-primary btn-sm" role="button" aria-disabled="true">Voltar</a>
+
 @endsection
 
 

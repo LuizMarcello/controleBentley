@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Plano extends Model
 {
     protected $fillable = [
-        'nome','velocmaxdown','velocmaxup','equipamento','velocmindown','velocminup','valor','valormensal','cir','banda'
+        'nome','banda','cir','velocmaxdown','velocmaxup','equipamento',
+        'velocmindown','velocminup','valor','valormensal'
     ];
 }

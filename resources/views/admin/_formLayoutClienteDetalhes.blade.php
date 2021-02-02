@@ -134,18 +134,19 @@
     </div>
 </div>
 {{-- Inicio--------------------------------------------------------------------------------------------------- --}}
+<br>
 <div class="row">
     <div class="form-group custom-selectd">
         <label for="distr">
             <h6>
-                <p>Distribuidor atual</p>
+                <p>Distribuidor</p>
             </h6>
         </label>
 
         <input type="text" readonly="true" id="distr" name="distribuidor" class="form-control"
             value="{{ isset($registro->distribuidor) ? $registro->distribuidor : '' }}">
 
-        <br>
+        
 
         
     </div>
@@ -160,18 +161,18 @@
         <input type="text" readonly="true" id="design" name="designacao" class="form-control"
             value="{{ isset($registro->designacao) ? $registro->designacao : '' }}">
 
-        <br>
+       
 
         
     </div>
 </div>
 {{-- Fim--------------------------------------------------------------------------------------------------- --}}
-
+<br>
 <div class="row">
     <div class="form-group custom-selectd">
         <label for="">
             <h6>
-                <p>Instalador atual</p>
+                <p>Instalador</p>
             </h6>
         </label>
 
@@ -193,66 +194,16 @@
         <input type="text" readonly="true" name="situacao" class="form-control"
             value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
 
-        <br>
+        
 
 
     </div>
 
 </div>
-<br>
 
-<div class="row">
-    <h6>
-        <p>Plano cadastrado</p>
-    </h6>
-</div>
 
-<div class="row">
-    <div class="form-group col-3 offset-0">
-        <label for="">
-            <h6>
-                <p>Banda</p>
-            </h6>
-        </label>
-        <input type="text" readonly="true" class="form-control" name="banda"
-            value="{{ isset($registro->banda) ? $registro->banda : '' }}">
-    </div>
-    <div class="form-group col-md-3">
-        <label for="">
-            <h6>
-                <p>Plano</p>
-            </h6>
-        </label>
-        <input type="text" readonly="true" class="form-control" name="plano"
-            value="{{ isset($registro->plano) ? $registro->plano : '' }}">
-    </div>
-</div>
 
-<div class="row">
-    <div class="form-group col-md-3">
-        <label for="">
-            <h6>
-                <p>Valor</p>
-            </h6>
-        </label>
-        <input type="text" readonly="true" class="form-control" name="valor"
-            value="{{ isset($registro->valor) ? $registro->valor : '' }}">
-    </div>
-    <div class="form-group col-3 offset-0">
-        <label for="">
-            <h6>
-                <p>Data adesão</p>
-            </h6>
-        </label>
-        <input type="text" readonly="true" class="form-control" name="dataAdesao"
-            value="{{ isset($registro->dataAdesao) ? $registro->dataAdesao : '' }}">
-    </div>
 
-    {{-- <input type="text" class="form-control" name="customer['migracao']">
-    --}}
-</div>
-
-<br>
 
 
 {{-- <form action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="POST">
@@ -270,7 +221,7 @@
     --}}
 {{-- </form> --}}
 
-<br>
+
 
 {{-- <div class="row">
     <div class="form-group col-md-3"> --}}

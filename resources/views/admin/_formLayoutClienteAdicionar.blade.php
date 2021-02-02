@@ -27,7 +27,7 @@
             value="{{ isset($registro->email) ? $registro->email : '' }}">
     </div>
 </div>
-ggg
+
 <div class="row">
     <div class="form-group col-md-5">
         <label for="">
@@ -129,128 +129,8 @@ ggg
     </div>
 </div>
 
-<br>
-<br>
 
 
-<br>
-
-<div class="row">
-    <h6>
-        <p>Plano cadastrado</p>
-    </h6>
-</div>
-
-<div class="row">
-    <div class="form-group col-3 offset-0">
-        <label for="">
-            <h6>
-                <p>Banda</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="banda"
-            value="{{ isset($registro->banda) ? $registro->banda : '' }}">
-    </div>
-    <div class="form-group col-md-3">
-        <label for="">
-            <h6>
-                <p>Plano</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="plano"
-            value="{{ isset($registro->plano) ? $registro->plano : '' }}">
-    </div>
-</div>
-
-<div class="row">
-    <div class="form-group col-md-3">
-        <label for="">
-            <h6>
-                <p>Valor</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="valor"
-            value="{{ isset($registro->valor) ? $registro->valor : '' }}">
-    </div>
-    <div class="form-group col-3 offset-0">
-        <label for="">
-            <h6>
-                <p>Data adesão</p>
-            </h6>
-        </label>
-        <input type="text" readonly="true" class="form-control" name="dataAdesao"
-            value="{{ isset($registro->dataAdesao) ? $registro->dataAdesao : '' }}">
-    </div>
-    {{-- <input type="text" class="form-control"
-        name="customer['migracao']">--}}
-</div>
-
-<br>
-
-{{-- <div>
-    <form action="{{ route('admin.clientes.adicionar') }}" method="POST">
-        {{ csrf_field() }}
-        <input type="hidden" name="_method" value="put">
-        <label for="123">
-            <h6>
-                <p>Observacões</p>
-            </h6>
-        </label>
-        <textarea class="form-control rounded-0" id="123" name="observacao" cols="1" rows="10"
-            value="{{ isset($registro->observacao) ? $registro->observacao : '' }}"></textarea>
-        --}}
-        {{-- <button type="submit"
-            class="btn btn-outline-success">Atualizar</button>--}}
-        {{--
-    </form>
-</div> --}}
-
-{{-- <div class="row">
-    <div class="form-group col-md-3"> --}}
-        <!-- Botão que dispara o Modal -->
-        {{-- <br>
-        <button type="button" class="btn btn-primary btn btn-sm" data-toggle="modal" data-target="#migClienteModal">
-            Migrações
-        </button>
-
-        <!-- Inicio do modal -->
-        <div class="modal fade" id="migClienteModal" tabindex="-1" role="dialog" aria-labelledby="migClienteModalLabel">
-
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="migClienteModalLabel">Migrações realizadas</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body form-group">
-                        <form action="{{ route('admin.clientes.adicionar') }}" method="POST">
-                            {{ csrf_field() }} --}}
-                            {{-- <input type="hidden" name="_method"
-                                value="put">--}}
-                            {{-- <textarea class="form-control rounded-0" name="migracao"
-                                cols="4" rows="15"
-                                value="{{ isset($registro->migracao) ? $registro->migracao : '' }}"></textarea>
-                            <button type="submit" class="btn btn-outline-success">Atualizar</button>
-                        </form>
-
-                    </div> --}}
-                    {{-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
-                    </div> --}}
-
-                    {{--
-                </div>
-            </div>
-        </div> --}}
-        {{-- fim do modal --}}
-        {{--
-    </div> --}}
-    {{--
-</div> --}}
 
 
 

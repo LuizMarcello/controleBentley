@@ -7,7 +7,9 @@
         @section('conteudo')
 
             <div class="row d-flex justify-content-center">
-                <button type="button" class="btn btn-secondary btn-sm btn-block"><h4>Lista de Clientes</h4></button>
+                <button type="button" class="btn btn-secondary btn-sm btn-block">
+                    <h4>Lista de Clientes</h4>
+                </button>
             </div>
             <br>
             <div class="row">
@@ -19,16 +21,12 @@
                                     <th scope="col">Id</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Cnpj</th>
-                                    {{-- <th scope="col">Rua</th>
-                                    --}}
-                                    {{-- <th scope="col">Numero</th>
-                                    --}}
-                                    {{-- <th scope="col">Bairro</th>
-                                    --}}
+                                    {{-- <th scope="col">Rua</th> --}}
+                                    {{-- <th scope="col">Numero</th> --}}
+                                    {{-- <th scope="col">Bairro</th> --}}
                                     <th scope="col">Cidade</th>
                                     <th scope="col">Estado</th>
-                                    {{-- <th scope="col">Telefone</th>
-                                    --}}
+                                    {{-- <th scope="col">Telefone</th> --}}
                                     <th scope="col">Situação</th>
                                 </tr>
                             </thead>
@@ -39,25 +37,23 @@
                                         <td>{{ $registro->id }}</td>
                                         <td>{{ $registro->nome }}</td>
                                         <td>{{ $registro->cnpj }}</td>
-                                        {{-- <td>{{ $registro->rua }}</td>
-                                        --}}
-                                        {{-- <td>{{ $registro->numero }}</td>
-                                        --}}
-                                        {{-- <td>{{ $registro->bairro }}</td>
-                                        --}}
+                                        {{-- <td>{{ $registro->rua }}</td> --}}
+                                        {{-- <td>{{ $registro->numero }}</td> --}}
+                                        {{-- <td>{{ $registro->bairro }}</td> --}}
                                         <td>{{ $registro->cidade }}</td>
                                         <td>{{ $registro->estado }}</td>
-                                        {{-- <td>{{ $registro->telefone }}</td>
-                                        --}}
+                                        {{-- <td>{{ $registro->telefone }}</td> --}}
                                         <td>{{ $registro->situacao }}</td>
-                                        <td>
-                                            <a class="btn btn-outline-success btn-sm"
-                                                href="{{ route('admin.clientes.detalhes', $registro->id) }}">Visualizar</a>
-                                            <a class="btn btn-outline-info btn-sm"
-                                                href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
-                                            <a class="btn btn-outline-danger btn-sm"
-                                                href="{{ route('admin.clientes.deletar', $registro->id) }}">Deletar</a>
-                                        </td>
+                                        
+                                            <td>
+                                                <a class="btn btn-outline-success btn-sm"
+                                                    href="{{ route('admin.clientes.detalhes', $registro->id) }}">Visualizar</a>
+                                                <a class="btn btn-outline-info btn-sm"
+                                                    href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
+                                                <a class="btn btn-outline-danger btn-sm"
+                                                    href="{{ route('admin.clientes.deletar', $registro->id) }}">Deletar</a>
+                                            </td>
+                                        
                                     </tr>
                                 @endforeach
                             </tbody>
