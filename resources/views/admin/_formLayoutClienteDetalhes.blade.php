@@ -188,7 +188,7 @@
     <div class="form-group col-md-3 custom-selectd">
         <label for="">
             <h6>
-                <p>Plano</p>
+                <p>Plano contratado</p>
             </h6>
         </label>
         <input type="text" readonly="true" name="plano" class="form-control"

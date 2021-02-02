@@ -83,32 +83,38 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"
-                            data-toggle="dropdown">Produtos</a>
+                            data-toggle="dropdown">Equipamentos</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="admin/antenas">Antena</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="admin/trias">Tria</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="admin/modens">Modem</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="admin/fontes">Fonte</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="admin/cabos">Cabo</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="admin/lnbs">Lnb</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="admin/ilnbs">iLnb</a>
+                            <a class="dropdown-item" href="{{ route('admin.antenas') }}">Antena</a>
+
+                            <a class="dropdown-item" href="{{ route('admin.trias') }}">Tria</a>
+                            {{-- <div class="dropdown-divider"></div> --}}
+                            <a class="dropdown-item" href="{{ route('admin.modens') }}">Modem</a>
+
+                            <a class="dropdown-item" href="{{ route('admin.fontes') }}">Fonte</a>
+
+                            <a class="dropdown-item" href="{{ route('admin.cabos') }}">Cabo</a>
+
+                            <a class="dropdown-item" href="{{ route('admin.lnbs') }}">Lnb</a>
+
+                            <a class="dropdown-item" href="{{ route('admin.ilnbs') }}">iLnb</a>
+
+                            <a class="dropdown-item" href="admin/ilnbs">Roteador</a>
+
+                            <a class="dropdown-item" href="admin/ilnbs">Groove</a>
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown">
+
+
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"
                             data-toggle="dropdown">Estoque</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{ route('admin.estoquetotal') }}">Tipo de produtos
                                 cadastrados</a>
                         </div>
-                    </li>
+                    </li> --}}
 
                     {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"

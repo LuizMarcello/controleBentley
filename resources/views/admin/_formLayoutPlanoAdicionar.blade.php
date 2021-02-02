@@ -88,7 +88,7 @@
                     <p>Valor de custo</p>
                 </h6>
             </label>
-            <input type="text" class="form-control" name="valor"
+            <input type="text" class="form-control" name="valordecusto"
                 value="{{ isset($registro->valordecusto) ? $registro->valordecusto : '' }}">
         </div>
         <div class="form-group col-md-3 ">

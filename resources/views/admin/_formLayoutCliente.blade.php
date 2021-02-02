@@ -144,12 +144,12 @@
             </h6>
         </label>
 
-        @php
+       {{--  @php
             function selected1($value, $selected)
             {
                 return $value == $selected ? ' selected="selected"' : '';
             }
-        @endphp
+        @endphp --}}
 
         <select class="form-control" name="distribuidor" id="alterar1">
 
@@ -201,34 +201,34 @@
             </h6>
         </label>
 
-        @php
+       {{--  @php
             function selected2($value, $selected)
             {
                 return $value == $selected ? ' selected="selected"' : '';
             }
-        @endphp
+        @endphp --}}
 
         <select class="form-control" name="designacao" id="alterar2">
 
             <option value="">Selecione</option>
 
-            <option value="Opcao1" <?php echo selected2('Opcao1', $registro->designacao); ?>>
+            <option value="Opcao1" <?php echo selected1('Opcao1', $registro->designacao); ?>>
                 Opcao1
             </option>
 
-            <option value="Opcao2" <?php echo selected2('Opcao2', $registro->designacao); ?>>
+            <option value="Opcao2" <?php echo selected1('Opcao2', $registro->designacao); ?>>
                 Opcao2
             </option>
 
-            <option value="Opcao3" <?php echo selected2('Opcao3', $registro->designacao); ?>>
+            <option value="Opcao3" <?php echo selected1('Opcao3', $registro->designacao); ?>>
                 Opcao3
             </option>
 
-            <option value="Opcao4" <?php echo selected2('Opcao4', $registro->designacao); ?>>
+            <option value="Opcao4" <?php echo selected1('Opcao4', $registro->designacao); ?>>
                 Opcao4
             </option>
 
-            <option value="Opcao5" <?php echo selected2('Opcao5', $registro->designacao); ?>>
+            <option value="Opcao5" <?php echo selected1('Opcao5', $registro->designacao); ?>>
                 Opcao5
             </option>
 
@@ -247,48 +247,48 @@
             </h6>
         </label>
 
-        @php
+        {{-- @php
             function selected3($value, $selected)
             {
                 return $value == $selected ? ' selected="selected"' : '';
             }
-        @endphp
+        @endphp --}}
 
         <select class="form-control" name="instalador" id="alterar3">
 
             <option value="">Selecione</option>
 
-            <option value="João Pereira da Silva" <?php echo selected3('João Pereira da Silva',
+            <option value="João Pereira da Silva" <?php echo selected1('João Pereira da Silva',
                 $registro->instalador); ?>>
                 João Pereira da Silva
             </option>
 
-            <option value="Pedro Fonseca Goulart" <?php echo selected3('Pedro Fonseca Goulart',
+            <option value="Pedro Fonseca Goulart" <?php echo selected1('Pedro Fonseca Goulart',
                 $registro->instalador); ?>>
                 Pedro Fonseca Goulart
             </option>
 
-            <option value="Paulo Henrique Almorim" <?php echo selected3('Paulo Henrique Almorim',
+            <option value="Paulo Henrique Almorim" <?php echo selected1('Paulo Henrique Almorim',
                 $registro->instalador); ?>>
                 Paulo Henrique Almorim
             </option>0
 
-            <option value="José da Silva Pacheco" <?php echo selected3('José da Silva Pacheco',
+            <option value="José da Silva Pacheco" <?php echo selected1('José da Silva Pacheco',
                 $registro->instalador); ?>>
                 José da Silva Pacheco
             </option>
 
-            <option value="Luiz Claudio Goulart" <?php echo selected3('Luiz Claudio Goulart', $registro->
+            <option value="Luiz Claudio Goulart" <?php echo selected1('Luiz Claudio Goulart', $registro->
                 instalador); ?>>
                 Luiz Claudio Goulart
             </option>
 
-            <option value="Renato da Silva Rogerio" <?php echo selected3('Renato da Silva Rogerio',
+            <option value="Renato da Silva Rogerio" <?php echo selected1('Renato da Silva Rogerio',
                 $registro->instalador); ?>>
                 Renato da Silva Rogerio
             </option>
 
-            <option value="Alan Cardeck" <?php echo selected3('Alan Cardeck', $registro->instalador); ?>>
+            <option value="Alan Cardeck" <?php echo selected1('Alan Cardeck', $registro->instalador); ?>>
                 Alan Cardeck
             </option>
         </select>
@@ -303,109 +303,109 @@
             </h6>
         </label>
 
-        @php
+        {{-- @php
             function selected4($value, $selected)
             {
                 return $value == $selected ? ' selected="selected"' : '';
             }
-        @endphp
+        @endphp --}}
 
         <select class="form-control" name="situacao" id="alterar4">
 
             <option value="">Selecione</option>
 
-            <option value="Aguardando confirmação de dados" <?php echo selected4( 'Aguardando confirmação de dados',
+            <option value="Aguardando confirmação de dados" <?php echo selected1( 'Aguardando confirmação de dados',
              $registro->situacao); ?>>
                 Aguardando confirmação de dados
             </option>
 
-            <option value="Cadastro aprovado" <?php echo selected4('Cadastro aprovado',
+            <option value="Cadastro aprovado" <?php echo selected1('Cadastro aprovado',
              $registro->situacao); ?>>
                 Cadastro aprovado
             </option>
 
 
-            <option value="Cancelado" <?php echo selected4('Cancelado',
+            <option value="Cancelado" <?php echo selected1('Cancelado',
              $registro->situacao); ?>>
                 Cancelado
             </option>
 
-            <option value="Desinstalado" <?php echo selected4('Desinstalado',
+            <option value="Desinstalado" <?php echo selected1('Desinstalado',
              $registro->situacao); ?>>
                 Desinstalado
             </option>
 
-            <option value="Desligado por falta de pagamento" <?php echo selected4( 'Desligado por falta de pagamento',
+            <option value="Desligado por falta de pagamento" <?php echo selected1( 'Desligado por falta de pagamento',
              $registro->situacao,); ?>>
                 Desligado por falta de pagamento
             </option>
 
-            <option value="Em cadastramento" <?php echo selected4('Em cadastramento',
+            <option value="Em cadastramento" <?php echo selected1('Em cadastramento',
              $registro->situacao); ?>>
                 Em cadastramento
             </option>
 
-            <option value="Em cancelamento" <?php echo selected4('Em cancelamento',
+            <option value="Em cancelamento" <?php echo selected1('Em cancelamento',
              $registro->situacao); ?>>
                 Em cancelamento
             </option>
 
-            <option value="Em manutenção" <?php echo selected4('Em manutenção',
+            <option value="Em manutenção" <?php echo selected1('Em manutenção',
              $registro->situacao); ?>>
                 Em manutenção
             </option>
 
-            <option value="Em revisão" <?php echo selected4('Em revisão',
+            <option value="Em revisão" <?php echo selected1('Em revisão',
              $registro->situacao); ?>>
                 Em revisão
             </option>
 
-            <option value="Equipamentos designados" <?php echo selected4('Equipamentos designados',
+            <option value="Equipamentos designados" <?php echo selected1('Equipamentos designados',
                 $registro->situacao); ?>>
                 Equipamentos designados
             </option>
 
-            <option value="Instalação agendada" <?php echo selected4('Instalação agendada',
+            <option value="Instalação agendada" <?php echo selected1('Instalação agendada',
              $registro->situacao); ?>>
                 Instalação agendada
             </option>
 
-            <option value="Instalação realizada" <?php echo selected4('Instalação realizada',
+            <option value="Instalação realizada" <?php echo selected1('Instalação realizada',
              $registro->situacao); ?>>
                 Instalação realizada
             </option>
 
-            <option value="Não aprovado serasa" <?php echo selected4('Não aprovado serasa',
+            <option value="Não aprovado serasa" <?php echo selected1('Não aprovado serasa',
              $registro->situacao); ?>>
                 Não aprovado serasa
             </option>
 
-            <option value="Ponto em operação" <?php echo selected4('Ponto em operação',
+            <option value="Ponto em operação" <?php echo selected1('Ponto em operação',
              $registro->situacao); ?>>
                 Ponto em operaçãoa
             </option>
 
-            <option value="Selecionado para desinstalação" <?php echo selected4( 'Selecionado para desinstalação',
+            <option value="Selecionado para desinstalação" <?php echo selected1( 'Selecionado para desinstalação',
              $registro->situacao,); ?>>
                 Selecionado para desinstalação
             </option>
 
-            <option value="Selecionado para desligamento" <?php echo selected4( 'Selecionado para desligamento',
+            <option value="Selecionado para desligamento" <?php echo selected1( 'Selecionado para desligamento',
              $registro->situacao,); ?>>
                 Selecionado para desligamento
             </option>
 
-            <option value="Selecionado para religamento" <?php echo selected4( 'Selecionado para religamento',
+            <option value="Selecionado para religamento" <?php echo selected1( 'Selecionado para religamento',
              $registro->situacao,); ?>>
                 Selecionado para religamento
             </option>
 
-            <option value="Suspensão administrativa" <?php echo selected4('Suspensão administrativa',
+            <option value="Suspensão administrativa" <?php echo selected1('Suspensão administrativa',
                 $registro->situacao); ?>>
                 Suspensão administrativa
             </option>
 
-            <option value="Suspensão temporária" <?php echo selected4('Suspensão temporária', $registro->situacao); ?>>
+            <option value="Suspensão temporária" <?php echo selected1('Suspensão temporária', $registro->situacao); ?>>
                 Suspensão temporária
             </option>
         </select>
@@ -418,47 +418,47 @@
     <div class="form-group col-md-3 custom-selectd">
         <label for="alterar5">
             <h6>
-                <p>Plano</p>
+                <p>Plano contratado</p>
             </h6>
         </label>
 
-        @php
+        {{-- @phps
             function selected5($value, $selected)
             {
                 return $value == $selected ? ' selected="selected"' : '';
             }
-        @endphp
+        @endphp --}}
 
         <select class="form-control" name="plano" id="alterar5">
 
             <option value="">Selecione</option>
 
-            <option value="Consumer 1 Mbps" <?php echo selected5('Consumer 1 Mbps', $registro->plano); ?>>
-                Consumer 1 Mbps
+            <option value="Consumer 1 Mbps 16:1" <?php echo selected1(' Consumer 1 Mbps 16:1', $registro->plano); ?>>
+                Consumer 1 Mbps 16:1
             </option>
 
-            <option value="Consumer 2 Mbps" <?php echo selected5('Consumer 2 Mbps', $registro->plano); ?>>
-                 Consumer 2 Mbps
+            <option value="Consumer 2 Mbps 16:1" <?php echo selected1(' Consumer 2 Mbps 16:1', $registro->plano); ?>>
+                 Consumer 2 Mbps 16:1
             </option>
 
-            <option value="Consumer 4 Mbps" <?php echo selected5('Consumer 4 Mbps', $registro->plano); ?>>
-                 Consumer 4 Mbps
+            <option value="Consumer 4 Mbps 16:1" <?php echo selected1('Consumer 4 Mbps 16:1', $registro->plano); ?>>
+                 Consumer 4 Mbps 16:1
             </option>
 
-            <option value="Consumer 6 Mbps" <?php echo selected5('Consumer 6 Mbps', $registro->plano); ?>>
-                 Consumer 6 Mbps
+            <option value="Consumer 6 Mbps 16:1" <?php echo selected1('Consumer 6 Mbps 16:1', $registro->plano); ?>>
+                 Consumer 6 Mbps 16:1
             </option>
 
-            <option value="Consumer 10 Mbps" <?php echo selected5('Consumer 10 Mbps', $registro->plano); ?>>
-                 Consumer 10 Mbps
+            <option value="Consumer 10 Mbps 16:1" <?php echo selected1('Consumer 10 Mbps 16:1', $registro->plano); ?>>
+                 Consumer 10 Mbps 16:1
             </option>
 
-            <option value="Bentley Home" <?php echo selected5('Bentley Home', $registro->plano); ?>>
-               Bentley Home
+            <option value="Bentley Home 10:1" <?php echo selected1('Bentley Home 10:1', $registro->plano); ?>>
+               Bentley Home 10:1
             </option>
 
-            <option value=" Bentley Gold" <?php echo selected5('Bentley Gold', $registro->plano); ?>>
-                Bentley Gold
+            <option value=" Bentley Gold 10:1" <?php echo selected1('Bentley Gold 10:1', $registro->plano); ?>>
+                Bentley Gold 10:1
             </option>
         </select>
     </div>

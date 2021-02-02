@@ -25,6 +25,7 @@
         <input type="text" class="form-control" name="cir" value="{{ isset($registro->cir) ? $registro->cir : '' }}">
     </div>
 </div>
+
 <div class="row">
     <div class="form-group col-md-3">
         <label for="">
@@ -62,43 +63,43 @@
         <input type="text" class="form-control" name="velocmindown"
             value="{{ isset($registro->velocmindown) ? $registro->velocmindown : '' }}">
     </div>
-        <div class="form-group col-md-3">
-                <label for="">
-                    <h6>
-                        <p>Veloc mín Up</p>
-                    </h6>
-                </label>
-                <input type="text" class="form-control" name="velocminup"
-                    value="{{ isset($registro->velocminup) ? $registro->velocminup : '' }}">
-        </div>
+    <div class="form-group col-md-3">
+        <label for="">
+            <h6>
+                <p>Veloc mín Up</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="velocminup"
+            value="{{ isset($registro->velocminup) ? $registro->velocminup : '' }}">
     </div>
-        <div class="row">
-        <div class="form-group col-md-3">
-            <label for="">
-                <h6>
-                    <p>Equipamento</p>
-                </h6>
-            </label>
-            <input type="text" class="form-control" name="equipamento"
-                value="{{ isset($registro->equipamento) ? $registro->equipamento : '' }}">
-        </div>
-        <div class="form-group col-md-3 ">
-            <label for="">
-                <h6>
-                    <p>Valor de custo</p>
-                </h6>
-            </label>
-            <input type="text" class="form-control" name="valor"
-                value="{{ isset($registro->valordecusto) ? $registro->valordecusto : '' }}">
-        </div>
-        <div class="form-group col-md-3 ">
-            <label for="">
-                <h6>
-                    <p>Valor mensal</p>
-                </h6>
-            </label>
-            <input type="text" class="form-control" name="valormensal"
-                value="{{ isset($registro->valormensal) ? $registro->valormensal : '' }}">
-        </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-3">
+        <label for="">
+            <h6>
+                <p>Equipamento</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="equipamento"
+            value="{{ isset($registro->equipamento) ? $registro->equipamento : '' }}">
     </div>
-    <br>
+    <div class="form-group col-md-3 ">
+        <label for="">
+            <h6>
+                <p>Valor de custo</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="valordecusto"
+            value="{{ isset($registro->valordecusto) ? $registro->valordecusto : '' }}">
+    </div>
+    <div class="form-group col-md-3 ">
+        <label for="">
+            <h6>
+                <p>Valor mensal</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="valormensal"
+            value="{{ isset($registro->valormensal) ? $registro->valormensal : '' }}">
+    </div>
+</div>

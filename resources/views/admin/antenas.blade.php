@@ -17,15 +17,15 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    <th scope="col">Nota Fiscal</th>
+                                    {{-- <th scope="col">Nota Fiscal</th> --}}
                                     <th scope="col">Banda</th>
                                     <th scope="col">Fabricante</th>
                                     <th scope="col">Modelo</th>
-                                    <th scope="col">Diametro</th>
-                                    <th scope="col">Qtde</th>
-                                    <th scope="col">Situação</th>
-                                    
-                                   
+                                   {{--  <th scope="col">Diametro</th> --}}
+                                    {{-- <th scope="col">Qtde</th> --}}
+                                   {{--  <th scope="col">Situação</th> --}}
+
+
                                 </tr>
                             </thead>
 
@@ -33,15 +33,15 @@
                                 @foreach ($registros as $registro)
                                     <tr>
                                         <td>{{ $registro->id }}</td>
-                                        <td>{{ $registro->notafiscal }}</td>
+                                        {{-- <td>{{ $registro->notafiscal }}</td> --}}
                                         <td>{{ $registro->banda }}</td>
                                         <td>{{ $registro->fabricante }}</td>
                                         <td>{{ $registro->modelo }}</td>
-                                        <td>{{ $registro->diametro }}</td>
-                                        <td>{{ $registro->qtde }}</td>
-                                        <td>{{ $registro->situacao }}</td>
-                                        
-                                        
+                                       {{--  <td>{{ $registro->diametro }}</td> --}}
+                                        {{-- <td>{{ $registro->qtde }}</td> --}}
+                                        {{-- <td>{{ $registro->situacao }}</td> --}}
+
+
                                         <td>
                                             <a class="btn btn-outline-info btn-sm"
                                                 href="{{ route('admin.antenas.editar', $registro->id) }}">Editar</a>
