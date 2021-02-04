@@ -272,6 +272,9 @@
                             <li>
                                 <a href={{ route('admin.clientes.adicionar') }}>Cadastrar clientes</a>
                             </li>
+                            <li>
+                                <a href="#">Controle de boletos</a>
+                            </li>
                         </ul>
                     </li>
 

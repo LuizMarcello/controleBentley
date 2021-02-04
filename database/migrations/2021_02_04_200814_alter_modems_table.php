@@ -14,7 +14,7 @@ class AlterModemsTable extends Migration
     public function up()
     {
         Schema::table('modems', function (Blueprint $table) {
-            $table->string('situacao', 20);
+            $table->string('datanota', 20);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterModemsTable extends Migration
     public function down()
     {
         Schema::table('modems', function (Blueprint $table) {
-            $table->dropColumn('situacao');
+            $table->dropColumn('datanota');
         });
     }
 }

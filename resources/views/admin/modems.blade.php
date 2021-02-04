@@ -1,14 +1,14 @@
         @extends('admin.home')
 
         @section('titulo-pagina')
-            Antenas
+            Modens
         @endsection
 
         @section('conteudo')
 
             <div class="row d-flex justify-content-center">
                 <button type="button" class="btn btn-secondary btn-sm btn-block">
-                    <h4>Listagem de Antenas</h4>
+                    <h4>Listagem de modens</h4>
                 </button>
             </div>
             <br>
@@ -20,15 +20,13 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    {{-- <th scope="col">Nota Fiscal</th> --}}
-                                    <th scope="col">Banda</th>
+                                    {{-- <th scope="col">Nota fiscal</th>
+                                    <th scope="col">Data da nota</th> --}}
                                     <th scope="col">Fabricante</th>
                                     <th scope="col">Modelo</th>
-                                    {{-- <th scope="col">Diametro</th> --}}
-                                    {{-- <th scope="col">Qtde</th> --}}
-                                    {{-- <th scope="col">Situação</th> --}}
-
-
+                                    <th scope="col">Banda</th>
+                                    {{-- <th scope="col">Serial</th>
+                                    <th scope="col">Mac Address</th> --}}
                                 </tr>
                             </thead>
 
@@ -36,22 +34,20 @@
                                 @foreach ($registros as $registro)
                                     <tr>
                                         <td>{{ $registro->id }}</td>
-                                        {{-- <td>{{ $registro->notafiscal }}</td> --}}
-                                        <td>{{ $registro->banda }}</td>
+                                       {{--  <td>{{ $registro->notafiscal }}</td>
+                                        <td>{{ $registro->datanota }}</td> --}}
                                         <td>{{ $registro->fabricante }}</td>
                                         <td>{{ $registro->modelo }}</td>
-                                        {{-- <td>{{ $registro->diametro }}</td> --}}
-                                        {{-- <td>{{ $registro->qtde }}</td> --}}
-                                        {{-- <td>{{ $registro->situacao }}</td> --}}
-
-
+                                        <td>{{ $registro->banda }}</td>
+                                       {{--  <td>{{ $registro->serial }}</td>
+                                        <td>{{ $registro->macaddress }}</td> --}}
                                         <td>
-                                            <a class="btn btn-outline-success btn-sm"
-                                                href="{{ route('admin.antenas.detalhes', $registro->id) }}">Visualizar</a>
+                                           {{--  <a class="btn btn-outline-success btn-sm"
+                                                href="{{ route('admin.modems.detalhes', $registro->id) }}">Visualizar</a>
                                             <a class="btn btn-outline-info btn-sm"
-                                                href="{{ route('admin.antenas.editar', $registro->id) }}">Editar</a>
+                                                href="{{ route('admin.modems.editar', $registro->id) }}">Editar</a>
                                             <a class="btn btn-outline-danger btn-sm"
-                                                href="{{ route('admin.antenas.deletar', $registro->id) }}">Deletar</a>
+                                                href="{{ route('admin.modems.deletar', $registro->id) }}">Deletar</a> --}}
                                         </td>
                                     </tr>
                                 @endforeach
@@ -60,9 +56,9 @@
                     </div>
 
                     <div class="col-md-10">
-                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.antenas.adicionar') }}"
+                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.modens.adicionar') }}"
                             role="button">
-                            Incluir antena
+                            Incluir modem
                         </a>
                     </div>
 
@@ -73,7 +69,20 @@
                             Voltar a página principal
                         </a>
                     </div>
-
                 </div>
             </div>
+
         @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+

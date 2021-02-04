@@ -48,6 +48,7 @@ Route::put('/admin/distribuidores/atualizar/{id}',['as'=>'admin.distribuidores.a
 Route::get('/admin/distribuidores/deletar/{id}',['as'=>'admin.distribuidores.deletar','uses'=>'Admin\DistribuidorController@deletar']);
 
 Route::get('/admin/modens',['as'=>'admin.modens','uses'=>'Admin\ModemController@index']);
+Route::get('/admin/antenas/detalhes/{id}',['as'=>'admin.antenas.detalhes','uses'=>'Admin\AntenaController@detalhes']);
 Route::get('/admin/modens/adicionar',['as'=>'admin.modens.adicionar','uses'=>'Admin\ModemController@adicionar']);
 Route::post('/admin/modens/salvar',['as'=>'admin.modens.salvar','uses'=>'Admin\ModemController@salvar']);
 Route::get('/admin/modens/editar/{id}',['as'=>'admin.modens.editar','uses'=>'Admin\ModemController@editar']);
@@ -62,6 +63,7 @@ Route::put('/admin/tecnicos/atualizar/{id}',['as'=>'admin.tecnicos.atualizar','u
 Route::get('/admin/tecnicos/deletar/{id}',['as'=>'admin.tecnicos.deletar','uses'=>'Admin\TecnicoController@deletar']);
 
 Route::get('/admin/antenas',['as'=>'admin.antenas','uses'=>'Admin\AntenaController@index']);
+Route::get('/admin/antenas/detalhes/{id}',['as'=>'admin.antenas.detalhes','uses'=>'Admin\AntenaController@detalhes']);
 Route::get('/admin/antenas/adicionar',['as'=>'admin.antenas.adicionar','uses'=>'Admin\AntenaController@adicionar']);
 Route::post('/admin/antenas/salvar',['as'=>'admin.antenas.salvar','uses'=>'Admin\AntenaController@salvar']);
 Route::get('/admin/antenas/editar/{id}',['as'=>'admin.antenas.editar','uses'=>'Admin\AntenaController@editar']);
@@ -69,6 +71,7 @@ Route::put('/admin/antenas/atualizar/{id}',['as'=>'admin.antenas.atualizar','use
 Route::get('/admin/antenas/deletar/{id}',['as'=>'admin.antenas.deletar','uses'=>'Admin\AntenaController@deletar']);
 
 Route::get('/admin/trias',['as'=>'admin.trias','uses'=>'Admin\TriaController@index']);
+Route::get('/admin/trias/detalhes/{id}',['as'=>'admin.trias.detalhes','uses'=>'Admin\TriaController@detalhes']);
 Route::get('/admin/trias/adicionar',['as'=>'admin.trias.adicionar','uses'=>'Admin\TriaController@adicionar']);
 Route::post('/admin/trias/salvar',['as'=>'admin.trias.salvar','uses'=>'Admin\TriaController@salvar']);
 Route::get('/admin/trias/editar/{id}',['as'=>'admin.trias.editar','uses'=>'Admin\TriaController@editar']);

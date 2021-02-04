@@ -36,6 +36,12 @@ class AntenaController extends Controller
         return redirect()->route('admin.antenas');
     }
 
+    public function detalhes($id)
+    {
+        $registro = Antena::find($id);
+        return view('admin.detalhesAntena', compact('registro'));
+    }
+
     public function editar($id)
     {
         $registro = Antena::find($id);

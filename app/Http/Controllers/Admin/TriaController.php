@@ -36,6 +36,12 @@ class TriaController extends Controller
         return redirect()->route('admin.trias');
     }
 
+    public function detalhes($id)
+    {
+        $registro = Tria::find($id);
+        return view('admin.detalhesTria', compact('registro'));
+    }
+
     public function editar($id)
     {
         $registro = Tria::find($id);

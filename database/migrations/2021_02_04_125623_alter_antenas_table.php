@@ -14,7 +14,7 @@ class AlterAntenasTable extends Migration
     public function up()
     {
         Schema::table('antenas', function (Blueprint $table) {
-            $table->string('situacao', 20);
+            $table->string('datanota', 15);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterAntenasTable extends Migration
     public function down()
     {
         Schema::table('antenas', function (Blueprint $table) {
-            $table->dropColumn('situacao');
+            $table->dropColumn('datanota');
         });
     }
 }

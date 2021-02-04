@@ -1,67 +1,79 @@
-@extends('admin.home')
+        @extends('admin.home')
 
-@section('titulo-pagina')
-    Trias
-@endsection
+        @section('titulo-pagina')
+            Trias
+        @endsection
 
-@section('conteudo')
+        @section('conteudo')
 
-    <div class="row d-flex justify-content-center">
-        <h3>Listagem de Trias</h3>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nota Fiscal</th>
-                            <th scope="col">Banda</th>
-                            <th scope="col">Fabricante</th>
-                            <th scope="col">Serial</th>
-                           {{--  <th scope="col">Qtde</th> --}}
-                            <th scope="col">Situação</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @foreach ($registros as $registro)
-                            <tr>
-                                <td>{{ $registro->id }}</td>
-                                <td>{{ $registro->notafiscal }}</td>
-                                <td>{{ $registro->banda }}</td>
-                                <td>{{ $registro->fabricante }}</td>
-                                <td>{{ $registro->serial }}</td>
-                                {{-- <td>{{ $registro->qtde }}</td> --}}
-                                <td>{{ $registro->situacao }}</td>
-                                <td>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="{{ route('admin.trias.editar', $registro->id) }}">Editar</a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="{{ route('admin.trias.deletar', $registro->id) }}">Deletar</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+            <div class="row d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm btn-block">
+                    <h4>Listagem de trias</h4>
+                </button>
             </div>
-
-            <div class="col-md-10">
-                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.trias.adicionar') }}" role="button">
-                    Incluir tria
-                </a>
-            </div>
-
             <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Fabricante</th>
+                                    <th scope="col">Modelo</th>
+                                    <th scope="col">Banda</th>
+                                </tr>
+                            </thead>
 
-            <div class="col-md-10">
-                <a class="btn btn-primary btn-sm mx-auto" href="/" role="button">
-                    Voltar a página principal
-                </a>
+                            <tbody>
+                                @foreach ($registros as $registro)
+                                    <tr>
+                                        <td>{{ $registro->id }}</td>
+                                        <td>{{ $registro->fabricante }}</td>
+                                        <td>{{ $registro->modelo }}</td>
+                                        <td>{{ $registro->banda }}</td>
+                                        <td>
+                                            <a class="btn btn-outline-success btn-sm"
+                                                href="{{ route('admin.trias.detalhes', $registro->id) }}">Visualizar</a>
+                                            <a class="btn btn-outline-info btn-sm"
+                                                href="{{ route('admin.trias.editar', $registro->id) }}">Editar</a>
+                                            <a class="btn btn-outline-danger btn-sm"
+                                                href="{{ route('admin.trias.deletar', $registro->id) }}">Deletar</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-md-10">
+                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.trias.adicionar') }}"
+                            role="button">
+                            Incluir tria
+                        </a>
+                    </div>
+
+                    <br>
+
+                    <div class="col-md-10">
+                        <a class="btn btn-primary btn-sm mx-auto" href="/" role="button">
+                            Voltar a página principal
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        @endsection
 
-@endsection
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,7 +14,7 @@ class AlterTriasTable extends Migration
     public function up()
     {
         Schema::table('trias', function (Blueprint $table) {
-            $table->string('situacao', 20);
+            $table->string('modelo', 20);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterTriasTable extends Migration
     public function down()
     {
         Schema::table('trias', function (Blueprint $table) {
-            $table->dropColumn('situacao');
+            $table->dropColumn('modelo');
         });
     }
 }

@@ -6,21 +6,29 @@
 
 @section('conteudo')
 
-    <div class="row">
-        <div class="col-md-10">
-            <div class="row d-flex justify-content-center">
-                <h3>Editando antena</h3>
-            </div>
-
-            <div class="col-md-10">
-                <form class="" action="{{ route('admin.antenas.atualizar', $registro->id) }}" method="POST">
-                    {{ csrf_field() }}
-                    <input type="hidden" name="_method" value="put">
-                    @include('admin._formAntena')
-                    <button class="btn btn-outline-success">Atualizar</button>
-                </form>
-            </div>
-        </div>
+    <div class="row d-flex justify-content-center">
+        <button type="button" class="btn btn-secondary btn-sm btn-block">
+            <h4>Adicionando Antena</h4>
+        </button>
     </div>
+    <br>
+    <br>
+
+    <form class="" action="{{ route('admin.antenas.atualizar', $registro->id) }}" method="POST">
+        {{ csrf_field() }}
+        <input type="hidden" name="_method" value="put">
+        @include('admin._formLayoutAntena')
+        <button class="btn btn-outline-success btn-sm">Atualizar</button>
+        <a href="{{ route('admin.antenas') }}" class="btn btn-primary btn-sm" role="button"
+            aria-disabled="true">Voltar</a>
+    </form>
+
+    {{-- Função para registrar o ultimo registro nos select --}}
+    @php
+    function selected1($value, $selected)
+    {
+        return $value == $selected ? ' selected="selected"' : '';
+    }
+    @endphp
 
 @endsection
