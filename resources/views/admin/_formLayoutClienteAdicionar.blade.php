@@ -5,7 +5,8 @@
                 <p>Nome/Razão Social</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="nome" value="{{ isset($registro->nome) ? $registro->nome : '' }}">
+        <input type="text" class="form-control" name="nome" value="{{ isset($registro->nome)
+         ? $registro->nome : '' }}">
     </div>
 
     <div class="form-group col-md-3">
@@ -14,7 +15,8 @@
                 <p>CNPJ/CPF</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="cnpj" value="{{ isset($registro->cnpj) ? $registro->cnpj : '' }}">
+        <input type="text" class="form-control" name="cnpj" value="{{ isset($registro->cnpj)
+         ? $registro->cnpj : '' }}">
     </div>
 
     <div class="form-group col-md-2">
@@ -55,7 +57,8 @@
                 <p>CEP</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="cep" value="{{ isset($registro->cep) ? $registro->cep : '' }}">
+        <input type="text" class="form-control" name="cep" value="{{ isset($registro->cep)
+         ? $registro->cep : '' }}">
     </div>
 
     <div class="form-group col-md-2">
@@ -116,7 +119,8 @@
                 <p>IE</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="ie" value="{{ isset($registro->ie) ? $registro->ie : '' }}">
+        <input type="text" class="form-control" name="ie" value="{{ isset($registro->ie)
+         ? $registro->ie : '' }}">
     </div>
 
     <div class="form-group col-md-2">
@@ -125,7 +129,8 @@
                 <p>UF IE</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="ufie" value="{{ isset($registro->ufie) ? $registro->ufie : '' }}">
+        <input type="text" class="form-control" name="ufie" value="{{ isset($registro->ufie)
+         ? $registro->ufie : '' }}">
     </div>
 </div>
 
