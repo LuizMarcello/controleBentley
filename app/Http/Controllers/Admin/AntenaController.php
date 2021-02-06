@@ -21,9 +21,22 @@ class AntenaController extends Controller
 
     public function salvar(Request $req)
     {
+        /* ------Validação-------------------------------------------------------------- */
+        $req->validate([
+            'modelo' => ['required', 'max:20', 'min:3']/* ,
+            'email' => ['required', 'email', 'unique:antenas'] */,
+            'notafiscal' => ['required', 'integer'],
+            'banda' => ['required', 'alpha', 'max:2', 'min:2']/* ,
+            'photo' => ['required', 'mimes:jpeg,bmp,png'] */,
+            'datanota' => ['required', 'date_format:d/m/Y'],
+            'fabricante' => ['required', 'alpha_num', 'max:50', 'min:3'],
+            'diametro'=>['required', 'integer']
+        ]);
+        /* ------Validação-------------------------------------------------------------- */
+
         $dados = $req->all();
 
-       /*  if(isset($dados['ativo']))
+        /*  if(isset($dados['ativo']))
         {
             $dados['ativo'] = 'sim';
         }else

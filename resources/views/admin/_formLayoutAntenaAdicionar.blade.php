@@ -20,7 +20,7 @@
     <div class="form-group col-md-3">
         <label for="">
             <h6>
-                <p>Data da nota</p>
+                <p>Data da nota fiscal</p>
             </h6>
         </label>
         <input type="text" class="form-control" name="datanota"
@@ -74,7 +74,7 @@
             value="{{ isset($registro->diametro) ? $registro->diametro : '' }}">
     </div>
 
-    <div class="form-group col-md-4">
+    {{-- <div class="form-group col-md-4">
         <label for="">
             <h6>
                 <p>Situação</p>
@@ -82,7 +82,14 @@
         </label>
         <input type="text" class="form-control" name="situacao"
             value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
-    </div>
+    </div> --}}
+
 </div>
+
+
+   
+        
+    
+
 
 
