@@ -30,7 +30,7 @@
                                 <td>{{ $registro->modelo }}</td>
                                 <td>
                                     <a class="btn btn-outline-success btn-sm"
-                                        href="{{ route('admin.modens.detalhes', $registro->id) }}">Visualizar</a>
+                                        href="{{ route('admin.fontes.detalhes', $registro->id) }}">Visualizar</a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ route('admin.fontes.editar', $registro->id) }}">Editar</a>
                                     <a class="btn btn-outline-danger btn-sm"
@@ -60,8 +60,8 @@
     </div>
 
 @endsection
-                                
-                               
-                           
-                            
-                            
+
+
+
+
+

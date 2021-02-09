@@ -44,6 +44,12 @@ class FonteController extends Controller
         return redirect()->route('admin.fontes');
     }
 
+    public function detalhes($id)
+    {
+        $registro = Fonte::find($id);
+        return view('admin.detalhesFonte', compact('registro'));
+    }
+
     public function editar($id)
     {
         $registro = Fonte::find($id);
@@ -53,14 +59,6 @@ class FonteController extends Controller
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
-
-        /* if(isset($dados['ativo']))
-        {
-            $dados['ativo'] = 'sim';
-        }else
-        {
-            $dados['ativo'] = 'nao';
-        } */
 
         Fonte::find($id)->update($dados);
 
@@ -74,3 +72,5 @@ class FonteController extends Controller
         return redirect()->route('admin.fontes');
     }
 }
+
+

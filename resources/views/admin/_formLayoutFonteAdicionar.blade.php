@@ -42,7 +42,7 @@
             value="{{ old('fabricante') }}">
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-4">
         <label for="modelo">
             <h6>
                 <p>Modelo</p>
@@ -53,7 +53,7 @@
             value="{{ old('modelo') }}">
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="voltagem">
             <h6>
                 <p>Voltagem</p>
@@ -64,7 +64,7 @@
             value="{{ old('voltagem') }}">
     </div>
 
-   <div class="form-group col-md-4">
+   <div class="form-group col-md-5">
         <label for="serial">
             <h6>
                 <p>Serial</p>
@@ -77,19 +77,7 @@
 
 </div>
 
-{{-- <div class="row">
 
-    <div class="form-group col-md-4">
-        <label for="">
-            <h6>
-                <p>Situação</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="situacao"
-            value="{{ isset($registro->situacao) ? $registro->situacao : '' }}">
-    </div>
-
-</div> --}}
 
 
 

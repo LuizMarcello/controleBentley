@@ -150,7 +150,16 @@ return [
         'diametro'=> '"Diâmetro"',
         'datanota'=> '"Data da nota"',
         'macaddress'=> '"Mac Address"',
-        'voltagem'=> '"Voltagem"'
+        'voltagem'=> '"Voltagem"',
+        'nome' => '"Nome do plano"',
+        'velocmaxdown' => '"Veloc máx Down"',
+        'velocmaxup' => '"Veloc máx Up"',
+        'equipamento' => '"Equipamento"',
+        'velocmindown' => '"Veloc mín Down"',
+        'velocminup' => '"Veloc mín Up"',
+        'valordecusto' => '"Valor de custo"',
+        'valormensal' => '"Valor mensal"',
+        'cir' => '"cir"'
     ],
 
 ];

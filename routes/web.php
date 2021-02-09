@@ -79,6 +79,7 @@ Route::put('/admin/trias/atualizar/{id}',['as'=>'admin.trias.atualizar','uses'=>
 Route::get('/admin/trias/deletar/{id}',['as'=>'admin.trias.deletar','uses'=>'Admin\TriaController@deletar']);
 
 Route::get('/admin/fontes',['as'=>'admin.fontes','uses'=>'Admin\FonteController@index']);
+Route::get('/admin/fontes/detalhes/{id}',['as'=>'admin.fontes.detalhes','uses'=>'Admin\FonteController@detalhes']);
 Route::get('/admin/fontes/adicionar',['as'=>'admin.fontes.adicionar','uses'=>'Admin\FonteController@adicionar']);
 Route::post('/admin/fontes/salvar',['as'=>'admin.fontes.salvar','uses'=>'Admin\FonteController@salvar']);
 Route::get('/admin/fontes/editar/{id}',['as'=>'admin.fontes.editar','uses'=>'Admin\FonteController@editar']);

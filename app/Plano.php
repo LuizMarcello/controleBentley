@@ -8,6 +8,6 @@ class Plano extends Model
 {
     protected $fillable = [
         'nome','banda','cir','velocmaxdown','velocmaxup','equipamento',
-        'velocmindown','velocminup','valor','valormensal'
+        'velocmindown','velocminup','valor','valormensal','valordecusto'
     ];
 }
