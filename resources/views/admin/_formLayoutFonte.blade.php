@@ -1,74 +1,74 @@
 <div class="row">
     <div class="form-group col-md-3">
-        <label for="">
+        <label for="created_at">
             <h6>
                 <p>Data</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="created_at"
+        <input type="text" class="form-control" name="created_at" id="created_at"
             value="{{ isset($registro->created_at) ? $registro->created_at : '' }}" disabled>
     </div>
 
     <div class="form-group col-md-3">
-        <label for="">
+        <label for="notafiscal">
             <h6>
                 <p>Nota fiscal</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="notafiscal"
+        <input type="text" class="form-control" name="notafiscal" id="notafiscal"
             value="{{ isset($registro->notafiscal) ? $registro->notafiscal : '' }}">
     </div>
 
     <div class="form-group col-md-3">
-        <label for="">
+        <label for="datanota">
             <h6>
                 <p>Data da nota</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="datanota"
+        <input type="text" class="form-control" name="datanota" id="datanota"
             value="{{ isset($registro->datanota) ? $registro->datanota : '' }}">
     </div>
 
     <div class="form-group col-md-3">
-        <label for="">
+        <label for="fabricante">
             <h6>
-                <p>Modelo da antena</p>
+                <p>Fabricante</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="modelo"
-            value="{{ isset($registro->modelo) ? $registro->modelo : '' }}">
+        <input type="text" class="form-control" name="fabricante" id="fabricante"
+            value="{{ isset($registro->fabricante) ? $registro->fabricante : '' }}">
     </div>
 </div>
 
 <div class="row">
     <div class="form-group col-md-1">
-        <label for="">
+        <label for="modelo">
             <h6>
-                <p>Banda</p>
+                <p>Modelo</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="banda"
-            value="{{ isset($registro->banda) ? $registro->banda : '' }}">
+        <input type="text" class="form-control" name="modelo" id="modelo"
+            value="{{ isset($registro->modelo) ? $registro->modelo : '' }}">
     </div>
 
     <div class="form-group col-md-5">
-        <label for="">
+        <label for="serial">
             <h6>
-                <p>Fabricante</p>
+                <p>Serial</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="fabricante"
-            value="{{ isset($registro->fabricante) ? $registro->fabricante : '' }}">
+        <input type="text" class="form-control" name="serial" id="serial"
+            value="{{ isset($registro->serial) ? $registro->serial : '' }}">
     </div>
 
     <div class="form-group col-md-2">
-        <label for="">
+        <label for="macaddress">
             <h6>
-                <p>Diâmetro</p>
+                <p>Mac address</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="diametro"
-            value="{{ isset($registro->diametro) ? $registro->diametro : '' }}">
+        <input type="text" class="form-control" name="macaddress" id="macaddress"
+            value="{{ isset($registro->macaddress) ? $registro->macaddress : '' }}">
     </div>
 
     <div class="form-group col-md-3 custom-selectd">

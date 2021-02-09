@@ -148,7 +148,9 @@ return [
         'banda'=> '"Banda"',
         'fabricante'=> '"Fabricante"',
         'diametro'=> '"Diâmetro"',
-        'datanota'=> '"Data da nota fiscal"'
+        'datanota'=> '"Data da nota"',
+        'macaddress'=> '"Mac Address"',
+        'voltagem'=> '"Voltagem"'
     ],
 
 ];

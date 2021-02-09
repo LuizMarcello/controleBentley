@@ -48,7 +48,7 @@ Route::put('/admin/distribuidores/atualizar/{id}',['as'=>'admin.distribuidores.a
 Route::get('/admin/distribuidores/deletar/{id}',['as'=>'admin.distribuidores.deletar','uses'=>'Admin\DistribuidorController@deletar']);
 
 Route::get('/admin/modens',['as'=>'admin.modens','uses'=>'Admin\ModemController@index']);
-Route::get('/admin/antenas/detalhes/{id}',['as'=>'admin.antenas.detalhes','uses'=>'Admin\AntenaController@detalhes']);
+Route::get('/admin/modens/detalhes/{id}',['as'=>'admin.modens.detalhes','uses'=>'Admin\ModemController@detalhes']);
 Route::get('/admin/modens/adicionar',['as'=>'admin.modens.adicionar','uses'=>'Admin\ModemController@adicionar']);
 Route::post('/admin/modens/salvar',['as'=>'admin.modens.salvar','uses'=>'Admin\ModemController@salvar']);
 Route::get('/admin/modens/editar/{id}',['as'=>'admin.modens.editar','uses'=>'Admin\ModemController@editar']);

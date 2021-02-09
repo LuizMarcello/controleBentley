@@ -9,7 +9,7 @@
     <div class="row d-flex justify-content-center">
         <h3>Listagem de Fontes</h3>
     </div>
-
+    <br>
     <div class="row">
         <div class="col-md-12">
             <div class="row">
@@ -17,12 +17,8 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Nota Fiscal</th>
-                            <th scope="col">Banda</th>
                             <th scope="col">Fabricante</th>
                             <th scope="col">Modelo</th>
-                            <th scope="col">Serial</th>
-                            <th scope="col">Quantidade</th>
                         </tr>
                     </thead>
 
@@ -30,13 +26,11 @@
                         @foreach ($registros as $registro)
                             <tr>
                                 <td>{{ $registro->id }}</td>
-                                <td>{{ $registro->notafiscal }}</td>
-                                <td>{{ $registro->banda }}</td>
                                 <td>{{ $registro->fabricante }}</td>
                                 <td>{{ $registro->modelo }}</td>
-                                <td>{{ $registro->serial }}</td>
-                                <td>{{ $registro->qtde }}</td>
                                 <td>
+                                    <a class="btn btn-outline-success btn-sm"
+                                        href="{{ route('admin.modens.detalhes', $registro->id) }}">Visualizar</a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ route('admin.fontes.editar', $registro->id) }}">Editar</a>
                                     <a class="btn btn-outline-danger btn-sm"
@@ -49,7 +43,8 @@
             </div>
 
             <div class="col-md-10">
-                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.fontes.adicionar') }}" role="button">
+                <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.fontes.adicionar') }}"
+                 role="button">
                     Incluir fonte
                 </a>
             </div>
@@ -65,3 +60,8 @@
     </div>
 
 @endsection
+                                
+                               
+                           
+                            
+                            

@@ -25,7 +25,7 @@
 
     {{-- Função para registrar o ultimo registro nos select --}}
     @php
-    function selected1($value, $selected)
+    function selected($value, $selected)
     {
         return $value == $selected ? ' selected="selected"' : '';
     }

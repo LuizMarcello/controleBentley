@@ -17,7 +17,7 @@
             </h6>
         </label>
         <input type="text" class="form-control" name="notafiscal" id="notafiscal"
-            {{-- value="{{ isset($registro->notafiscal) ? $registro->notafiscal : '' }}"> --}}
+           {{--  value="{{ isset($registro->notafiscal) ? $registro->notafiscal : '' }}"> --}}
             value="{{ old('notafiscal') }}">
     </div>
 
@@ -28,7 +28,8 @@
             </h6>
         </label>
         <input type="text" class="form-control" name="datanota" id="datanota"
-            value="{{ old( isset($registro->datanota) ? $registro->datanota : '') }}">
+            {{-- value="{{ isset($registro->datanota) ? $registro->datanota : '') }}"> --}}
+            value="{{ old('datanota') }}">
     </div>
 
     <div class="form-group col-md-2">
@@ -38,7 +39,8 @@
             </h6>
         </label>
         <input type="text" class="form-control" name="banda" id="banda"
-            value="{{ old( isset($registro->banda) ? $registro->banda : '') }}">
+           {{--  value="{{ old( isset($registro->banda) ? $registro->banda : '') }}"> --}}
+            value="{{ old('banda') }}">
     </div>
 
     <div class="form-group col-md-4">
@@ -49,7 +51,7 @@
         </label>
         <input type="text" class="form-control" name="serial" id="serial"
             {{-- value="{{ isset($registro->serial) ? $registro->serial : '' }}"> --}}
-            value="{{ old('serial') }}">
+            value="{{ old('notafiscal') }}">
     </div>
 </div>
 
@@ -61,7 +63,8 @@
             </h6>
         </label>
         <input type="text" class="form-control" name="fabricante" id="fabricante"
-            value="{{ old(isset($registro->fabricante) ? $registro->fabricante : '') }}">
+            {{-- value="{{ isset($registro->fabricante) ? $registro->fabricante : '') }}"> --}}
+            value="{{ old('fabricante') }}">
     </div>
 
     <div class="form-group col-md-2">
@@ -71,7 +74,8 @@
             </h6>
         </label>
         <input type="text" class="form-control" name="modelo" id="modelo"
-            value="{{ old(isset($registro->modelo) ? $registro->modelo : '') }}">
+            {{-- value="{{ isset($registro->modelo) ? $registro->modelo : '') }}"> --}}
+            value="{{ old('modelo') }}">
     </div>
 
     {{-- <div class="form-group col-md-4">

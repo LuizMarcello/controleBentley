@@ -23,8 +23,9 @@ class AntenaController extends Controller
     {
         /* ------Validação-------------------------------------------------------------- */
         $req->validate([
-            'modelo' => ['required', 'max:20', 'min:3']/* ,
-            'email' => ['required', 'email', 'unique:antenas'] */,
+         /* 'serial' => ['required', 'max:20', 'min:3'], */
+            'modelo' => ['required', 'max:20', 'min:3'],
+         /* 'email' => ['required', 'email', 'unique:antenas'], */
             'notafiscal' => ['required', 'integer'],
             'banda' => ['required', 'alpha', 'max:2', 'min:2']/* ,
             'photo' => ['required', 'mimes:jpeg,bmp,png'] */,

@@ -54,17 +54,17 @@
     </div>
 
     <div class="form-group col-md-2">
-        <label for="banda">
+        <label for="voltagem">
             <h6>
-                <p>Banda</p>
+                <p>Voltagem</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="banda" id="banda"
-            {{-- value="{{ isset($registro->banda) ? $registro->banda : '' }}"> --}}
-            value="{{ old('banda') }}">
+        <input type="text" class="form-control" name="voltagem" id="voltagem"
+            {{-- value="{{ isset($registro->modelo) ? $registro->modelo : '' }}"> --}}
+            value="{{ old('voltagem') }}">
     </div>
 
-    <div class="form-group col-md-4">
+   <div class="form-group col-md-4">
         <label for="serial">
             <h6>
                 <p>Serial</p>
@@ -75,16 +75,6 @@
             value="{{ old('serial') }}">
     </div>
 
-    <div class="form-group col-md-4">
-        <label for="macaddress">
-            <h6>
-                <p>Mac Address</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="macaddress" id="macaddress"
-           {{--  value="{{ isset($registro->macaddress) ? $registro->macaddress : '' }}"> --}}
-            value="{{ old('macaddress') }}">
-    </div>
 </div>
 
 {{-- <div class="row">

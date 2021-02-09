@@ -14,7 +14,7 @@ class AlterFontesTable extends Migration
     public function up()
     {
         Schema::table('fontes', function (Blueprint $table) {
-            $table->string('qtde', 5);
+            $table->string('datanota', 20);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterFontesTable extends Migration
     public function down()
     {
         Schema::table('fontes', function (Blueprint $table) {
-            $table->dropColumn('qtde');
+            $table->dropColumn('datanota');
         });
     }
 }

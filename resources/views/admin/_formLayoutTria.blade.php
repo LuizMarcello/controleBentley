@@ -8,6 +8,7 @@
         <input type="text" class="form-control" name="created_at"
             value="{{ isset($registro->created_at) ? $registro->created_at : '' }}" disabled>
     </div>
+
     <div class="form-group col-md-2">
         <label for="">
             <h6>
@@ -17,6 +18,7 @@
         <input type="text" class="form-control" name="notafiscal"
             value="{{ isset($registro->notafiscal) ? $registro->notafiscal : '' }}">
     </div>
+
     <div class="form-group col-md-2">
         <label for="">
             <h6>
@@ -68,44 +70,27 @@
         <input type="text" class="form-control" name="modelo"
             value="{{ isset($registro->modelo) ? $registro->modelo : '' }}">
     </div>
-
     
-
     <div class="form-group col-md-3 custom-selectd">
         <label for="alterarSituacao">
             <h6>
                 <p>Situação</p>
             </h6>
         </label>
-
-        @php
-            function selected($value, $selected)
-            {
-                return $value == $selected ? ' selected="selected"' : '';
-            }
-        @endphp
-
         <select class="form-control" name="situacao" id="alterarSituacao">
-
             <option value="">Selecione</option>
-
             <option value="Estoque" <?php echo selected('Estoque', $registro->situacao); ?>>
                 Estoque
             </option>
-
             <option value="Cliente" <?php echo selected('Cliente', $registro->situacao); ?>>
                 Cliente
             </option>
-
             <option value=" Defeito" <?php echo selected(' Defeito', $registro->situacao); ?>>
                 Defeito
             </option>
-
             <option value="Devolvido" <?php echo selected('Devolvido', $registro->situacao); ?>>
                 Devolvido
             </option>
         </select>
     </div>
-
 </div>
-

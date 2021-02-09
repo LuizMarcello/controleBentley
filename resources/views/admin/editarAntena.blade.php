@@ -8,7 +8,7 @@
 
     <div class="row d-flex justify-content-center">
         <button type="button" class="btn btn-secondary btn-sm btn-block">
-            <h4>Adicionando Antena</h4>
+            <h4>Editando Antena</h4>
         </button>
     </div>
     <br>
@@ -25,7 +25,7 @@
 
     {{-- Função para registrar o ultimo registro nos select --}}
     @php
-    function selected1($value, $selected)
+    function selected($value, $selected)
     {
         return $value == $selected ? ' selected="selected"' : '';
     }
