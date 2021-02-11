@@ -87,6 +87,7 @@ Route::put('/admin/fontes/atualizar/{id}',['as'=>'admin.fontes.atualizar','uses'
 Route::get('/admin/fontes/deletar/{id}',['as'=>'admin.fontes.deletar','uses'=>'Admin\FonteController@deletar']);
 
 Route::get('/admin/cabos',['as'=>'admin.cabos','uses'=>'Admin\CaboController@index']);
+Route::get('/admin/cabos/detalhes/{id}',['as'=>'admin.cabos.detalhes','uses'=>'Admin\CaboController@detalhes']);
 Route::get('/admin/cabos/adicionar',['as'=>'admin.cabos.adicionar','uses'=>'Admin\CaboController@adicionar']);
 Route::post('/admin/cabos/salvar',['as'=>'admin.cabos.salvar','uses'=>'Admin\CaboController@salvar']);
 Route::get('/admin/cabos/editar/{id}',['as'=>'admin.cabos.editar','uses'=>'Admin\CaboController@editar']);
@@ -94,6 +95,7 @@ Route::put('/admin/cabos/atualizar/{id}',['as'=>'admin.cabos.atualizar','uses'=>
 Route::get('/admin/cabos/deletar/{id}',['as'=>'admin.cabos.deletar','uses'=>'Admin\CaboController@deletar']);
 
 Route::get('/admin/lnbs',['as'=>'admin.lnbs','uses'=>'Admin\LnbController@index']);
+Route::get('/admin/lnbs/detalhes/{id}',['as'=>'admin.lnbs.detalhes','uses'=>'Admin\LnbController@detalhes']);
 Route::get('/admin/lnbs/adicionar',['as'=>'admin.lnbs.adicionar','uses'=>'Admin\LnbController@adicionar']);
 Route::post('/admin/lnbs/salvar',['as'=>'admin.lnbs.salvar','uses'=>'Admin\LnbController@salvar']);
 Route::get('/admin/lnbs/editar/{id}',['as'=>'admin.lnbs.editar','uses'=>'Admin\LnbController@editar']);
@@ -101,6 +103,7 @@ Route::put('/admin/lnbs/atualizar/{id}',['as'=>'admin.lnbs.atualizar','uses'=>'A
 Route::get('/admin/lnbs/deletar/{id}',['as'=>'admin.lnbs.deletar','uses'=>'Admin\LnbController@deletar']);
 
 Route::get('/admin/ilnbs',['as'=>'admin.ilnbs','uses'=>'Admin\iLnbController@index']);
+Route::get('/admin/ilnbs/detalhes/{id}',['as'=>'admin.ilnbs.detalhes','uses'=>'Admin\LnbController@detalhes']);
 Route::get('/admin/ilnbs/adicionar',['as'=>'admin.ilnbs.adicionar','uses'=>'Admin\iLnbController@adicionar']);
 Route::post('/admin/ilnbs/salvar',['as'=>'admin.ilnbs.salvar','uses'=>'Admin\iLnbController@salvar']);
 Route::get('/admin/ilnbs/editar/{id}',['as'=>'admin.ilnbs.editar','uses'=>'Admin\iLnbController@editar']);

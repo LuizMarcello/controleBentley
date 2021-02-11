@@ -16,9 +16,12 @@
                 @include('admin._formLayoutPlano')
                 <button class="btn btn-outline-success btn-sm">Atualizar</button>
             </form>
-            <a href="{{ route('admin.planos') }}" class="btn btn-primary btn-sm" role="button"
-                aria-disabled="true">Voltar</a>
+
+            <div class="col">
+                <a href="{{ route('admin.planos') }}" class="btn btn-primary btn-sm" role="button"
+                    aria-disabled="true">Voltar</a>
+            </div>
         </div>
     </div>
-    
+
 @endsection

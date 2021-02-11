@@ -1,23 +1,31 @@
-@extends('admin.home')
+        @extends('admin.home')
 
-@section('titulo-pagina')
-    Adicionar Lnbs
-@endsection
+        @section('titulo-pagina')
+            Adicionar lnbs
+        @endsection
 
-@section('conteudo')
+        @section('conteudo')
 
-    <div class="row">
-        <div class="col-md-10">
-            <div class="row d-flex justify-content-center">
-                <h3>Adicionando lnb</h3>
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="row d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary btn-sm btn-block">
+                            <h4>Adicionando lnb</h4>
+                        </button>
+                    </div>
+                    <br>
+                    <form class="" action="{{ route('admin.lnbs.salvar') }}" method="POST">
+                        {{ csrf_field() }}
+                        @include('admin._formLayoutLnbAdicionar')
+
+                        <button class="btn btn-outline-success btn-sm">Salvarr</button>
+                        <a href="{{ route('admin.lnbs') }}" class="btn btn-primary btn-sm" role="button"
+                            aria-disabled="true">Voltar</a>
+                    </form>
+                    <br>
+                </div>
             </div>
-            <form class="" action="{{ route('admin.lnbs.salvar') }}" method="POST">
-                {{ csrf_field() }}
-                @include('admin._formLnb')
 
-                <button class="btn btn-outline-success">Salvar</button>
-            </form>
-        </div>
-    </div>
+        @endsection
 
-@endsection
+

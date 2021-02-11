@@ -17,12 +17,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    {{-- <th scope="col">Nota fiscal</th>
-                                    <th scope="col">Data da nota</th> --}}
                                     <th scope="col">Marca</th>
                                     <th scope="col">Modelo</th>
-                                   {{--  <th scope="col">Serial</th>
-                                    <th scope="col">Mac address</th> --}}
                                     <th scope="col">Banda</th>
                                 </tr>
                             </thead>
@@ -61,7 +57,9 @@
                 </div>
             </div>
         @endsection
-                                    
-                                   
-                                        
-                                        
+
+
+
+
+
+

@@ -94,7 +94,7 @@
                     color: #999;
                 }
 
-                
+
 
                 a,
                 a:hover,
@@ -325,8 +325,6 @@
             </div>
         </div>
     </main>
-
-
 
     </div>
     <!--JavaScript at end of body for optimized loading-->

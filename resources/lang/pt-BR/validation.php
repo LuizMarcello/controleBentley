@@ -149,6 +149,7 @@ return [
         'fabricante'=> '"Fabricante"',
         'diametro'=> '"Diâmetro"',
         'datanota'=> '"Data da nota"',
+        'datadanota'=> '"Data da nota"',
         'macaddress'=> '"Mac Address"',
         'voltagem'=> '"Voltagem"',
         'nome' => '"Nome do plano"',
@@ -159,7 +160,9 @@ return [
         'velocminup' => '"Veloc mín Up"',
         'valordecusto' => '"Valor de custo"',
         'valormensal' => '"Valor mensal"',
-        'cir' => '"cir"'
+        'cir' => '"cir"',
+        'metros' => '"Metros"',
+        'tipodecabo' => '"Tipo de cabo"'
     ],
 
 ];
