@@ -7,7 +7,10 @@
 @section('conteudo')
 
     <div class="row d-flex justify-content-center">
-        <h3>Listagem de Ilnbs</h3>
+        <button type="button" class="btn btn-secondary btn-sm btn-block">
+            <h4>Listagem de Ilnbs</h4>
+        </button>
+
     </div>
 
     <div class="row">
@@ -17,13 +20,9 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">NotaFiscal</th>
                             <th scope="col">Banda</th>
-                            <th scope="col">Serial</th>
-                            <th scope="col">Modelo</th>
                             <th scope="col">Fabricante</th>
-                            <th scope="col">Situação</th>
-                            <th scope="col">Quantidade</th>
+                            <th scope="col">Modelo</th>
                         </tr>
                     </thead>
 
@@ -31,14 +30,12 @@
                         @foreach ($registros as $registro)
                             <tr>
                                 <td>{{ $registro->id }}</td>
-                                <td>{{ $registro->notafiscal }}</td>
                                 <td>{{ $registro->banda }}</td>
-                                <td>{{ $registro->serial }}</td>
-                                <td>{{ $registro->modelo }}</td>
                                 <td>{{ $registro->fabricante }}</td>
-                                <td>{{ $registro->situacao }}</td>
-                                <td>{{ $registro->qtde }}</td>
+                                <td>{{ $registro->modelo }}</td>
                                 <td>
+                                    <a class="btn btn-outline-success btn-sm"
+                                        href="{{ route('admin.ilnbs.detalhes', $registro->id) }}">Visualizar</a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ route('admin.ilnbs.editar', $registro->id) }}">Editar</a>
                                     <a class="btn btn-outline-danger btn-sm"
@@ -52,7 +49,7 @@
 
             <div class="col-md-10">
                 <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.ilnbs.adicionar') }}" role="button">
-                    Incluir Ilnb
+                    Incluir Lnb
                 </a>
             </div>
 

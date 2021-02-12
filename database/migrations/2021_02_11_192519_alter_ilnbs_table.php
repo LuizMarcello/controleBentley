@@ -14,7 +14,7 @@ class AlterIlnbsTable extends Migration
     public function up()
     {
         Schema::table('ilnbs', function (Blueprint $table) {
-            $table->string('qtde', 5);
+            $table->string('datadanota', 12);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterIlnbsTable extends Migration
     public function down()
     {
         Schema::table('ilnbs', function (Blueprint $table) {
-            $table->dropColumn('qtde');
+            $table->dropColumn('datadanota');
         });
     }
 }

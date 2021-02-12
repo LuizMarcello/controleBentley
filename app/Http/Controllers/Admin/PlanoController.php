@@ -70,14 +70,6 @@ class PlanoController extends Controller
     {
         $dados = $req->all();
 
-       /*  if(isset($dados['ativo']))
-        {
-            $dados['ativo'] = 'sim';
-        }else
-        {
-            $dados['ativo'] = 'nao';
-        } */
-
         Plano::find($id)->update($dados);
 
         return redirect()->route('admin.planos');
@@ -90,3 +82,5 @@ class PlanoController extends Controller
         return redirect()->route('admin.planos');
     }
 }
+
+
