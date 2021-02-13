@@ -14,7 +14,7 @@ class AlterCabosTable extends Migration
     public function up()
     {
         Schema::table('cabos', function (Blueprint $table) {
-            $table->string('fabricante', 20);
+            $table->string('tipodecabo', 20);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterCabosTable extends Migration
     public function down()
     {
         Schema::table('cabos', function (Blueprint $table) {
-            $table->dropColumn('fabricante');
+            $table->dropColumn('tipodecabo');
         });
     }
 }

@@ -57,7 +57,7 @@
                             <a class="dropdown-item" href="{{ route('admin.cabos') }}">Cabo</a>
                             <a class="dropdown-item" href="{{ route('admin.lnbs') }}">Lnb</a>
                             <a class="dropdown-item" href="{{ route('admin.ilnbs') }}">iLnb</a>
-                            <a class="dropdown-item" href="admin/ilnbs">Roteador</a>
+                            <a class="dropdown-item" href="{{ route('admin.roteadores') }}">Roteador</a>
                             <a class="dropdown-item" href="admin/ilnbs">Groove</a>
                         </div>
                     </li>

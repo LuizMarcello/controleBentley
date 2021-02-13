@@ -130,6 +130,7 @@ return [
         ],
     ],
 
+   
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -141,6 +142,7 @@ return [
     |
     */
 
+    //--------Validação-Traduzindo para modo amigável------------------------------------------------
     'attributes' => [
         'modelo' => '"Modelo"',
         'notafiscal'=> '"Nota fiscal"',
@@ -162,7 +164,8 @@ return [
         'valormensal' => '"Valor mensal"',
         'cir' => '"cir"',
         'metros' => '"Metros"',
-        'tipodecabo' => '"Tipo de cabo"'
+        'tipodecabo' => '"Tipo de cabo"',
+        'serial' => '"Serial"'
     ],
-
+    //--------Validação-Exibindo as mensagens------------------------------------------------
 ];

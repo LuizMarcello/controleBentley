@@ -4,37 +4,37 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Cabo;
+use App\Roteador;
 
-class CaboController extends Controller
+class RoteadorController extends Controller
 {
     public function index()
     {
-        $registros = Cabo::all();
-        return view('admin.cabos', compact('registros'));
+        $registros = Roteador::all();
+        return view('admin.roteadores', compact('registros'));
     }
 
     public function adicionar()
     {
-        return view('admin.adicionarCabo');
+        return view('admin.adicionarRoteador');
     }
 
     public function salvar(Request $req)
     {
         /* ------Validação-------------------------------------------------------------- */
-        $req->validate([
-            /* 'serial' => ['required', 'max:20', 'min:3'], */
-            /* 'modelo' => ['required', 'max:20', 'min:3'], */
+        /* $req->validate([ */
+          /*   'serial' => ['required', 'max:20', 'min:3'], */
+           /*  'modelo' => ['required', 'max:20', 'min:3'], */
             /* 'email' => ['required', 'email', 'unique:antenas'], */
-               'notafiscal' => ['required', 'integer'],
-               'banda' => ['required', 'alpha', 'max:2', 'min:2'],
+            /*    'notafiscal' => ['required', 'integer'], */
+             /*   'banda' => ['required', 'alpha', 'max:2', 'min:2'], */
            /*  'photo' => ['required', 'mimes:jpeg,bmp,png'], */
-               'datanota' => ['required', 'date_format:d/m/Y'],
-               'fabricante' => ['required', 'alpha_num', 'max:50', 'min:3'],
-               'metros' => ['required'],
-               'tipodecabo' => ['required']
+              /*  'datanota' => ['required', 'date_format:d/m/Y'], */
+             /*   'fabricante' => ['required', 'alpha_num', 'max:50', 'min:3'], */
+              /*  'metros' => ['required'], */
+              /*  'tipodecabo' => ['required'], */
            /*  'diametro'=>['required', 'integer'], */
-           /*  'macaddress' =>['required', 'max:12', 'min:12'] */
+          /*   'macaddress' =>['required', 'max:12', 'min:12'], */
            /*  'voltagem' => ['required', 'integer', 'max:220', 'min:110'], */
            /*  'nome' => ['required'], */
            /*  'velocmaxdown' => ['required'], */
@@ -45,41 +45,41 @@ class CaboController extends Controller
            /*  'valordecusto' => ['required'], */
            /*  'valormensal' => ['required'], */
            /*  'cir' => ['required'] */
-           ]);
+         /*   ]); */
            /* ------Validação-------------------------------------------------------------- */
 
         $dados = $req->all();
 
-        Cabo::Create($dados);
+        Roteador::Create($dados);
 
-        return redirect()->route('admin.cabos');
+        return redirect()->route('admin.roteadores');
     }
 
     public function detalhes($id)
     {
-        $registro = Cabo::find($id);
-        return view('admin.detalhesCabo', compact('registro'));
+        $registro = Roteador::find($id);
+        return view('admin.detalhesRoteador', compact('registro'));
     }
 
     public function editar($id)
     {
-        $registro = Cabo::find($id);
-        return view('admin.editarCabo', compact('registro'));
+        $registro = Roteador::find($id);
+        return view('admin.editarRoteador', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
 
-        Cabo::find($id)->update($dados);
+        Roteador::find($id)->update($dados);
 
-        return redirect()->route('admin.cabos');
+        return redirect()->route('admin.roteadores');
     }
 
     public function deletar($id)
     {
-        Cabo::find($id)->delete();
+        Roteador::find($id)->delete();
 
-        return redirect()->route('admin.cabos');
+        return redirect()->route('admin.roteadores');
     }
 }

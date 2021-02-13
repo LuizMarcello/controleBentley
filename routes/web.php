@@ -103,7 +103,7 @@ Route::put('/admin/lnbs/atualizar/{id}',['as'=>'admin.lnbs.atualizar','uses'=>'A
 Route::get('/admin/lnbs/deletar/{id}',['as'=>'admin.lnbs.deletar','uses'=>'Admin\LnbController@deletar']);
 
 Route::get('/admin/ilnbs',['as'=>'admin.ilnbs','uses'=>'Admin\iLnbController@index']);
-Route::get('/admin/ilnbs/detalhes/{id}',['as'=>'admin.ilnbs.detalhes','uses'=>'Admin\LnbController@detalhes']);
+Route::get('/admin/ilnbs/detalhes/{id}',['as'=>'admin.ilnbs.detalhes','uses'=>'Admin\IlnbController@detalhes']);
 Route::get('/admin/ilnbs/adicionar',['as'=>'admin.ilnbs.adicionar','uses'=>'Admin\iLnbController@adicionar']);
 Route::post('/admin/ilnbs/salvar',['as'=>'admin.ilnbs.salvar','uses'=>'Admin\iLnbController@salvar']);
 Route::get('/admin/ilnbs/editar/{id}',['as'=>'admin.ilnbs.editar','uses'=>'Admin\iLnbController@editar']);
@@ -116,6 +116,15 @@ Route::post('/admin/fornecedores/salvar',['as'=>'admin.fornecedores.salvar','use
 Route::get('/admin/fornecedores/editar/{id}',['as'=>'admin.fornecedores.editar','uses'=>'Admin\FornecedorController@editar']);
 Route::put('/admin/fornecedores/atualizar/{id}',['as'=>'admin.fornecedores.atualizar','uses'=>'Admin\FornecedorController@atualizar']);
 Route::get('/admin/fornecedores/deletar/{id}',['as'=>'admin.fornecedores.deletar','uses'=>'Admin\FornecedorController@deletar']);
+
+Route::get('/admin/roteadores',['as'=>'admin.roteadores','uses'=>'Admin\RoteadorController@index']);
+Route::get('/admin/roteadores/detalhes/{id}',['as'=>'admin.roteadores.detalhes','uses'=>'Admin\RoteadorController@detalhes']);
+Route::get('/admin/roteadores/adicionar',['as'=>'admin.roteadores.adicionar','uses'=>'Admin\RoteadorController@adicionar']);
+Route::post('/admin/roteadores/salvar',['as'=>'admin.roteadores.salvar','uses'=>'Admin\RoteadorController@salvar']);
+Route::get('/admin/roteadores/editar/{id}',['as'=>'admin.roteadores.editar','uses'=>'Admin\RoteadorController@editar']);
+Route::put('/admin/roteadores/atualizar/{id}',['as'=>'admin.roteadores.atualizar','uses'=>'Admin\RoteadorController@atualizar']);
+Route::get('/admin/roteadores/deletar/{id}',['as'=>'admin.roteadores.deletar','uses'=>'Admin\RoteadorController@deletar']);
+
 
 
 

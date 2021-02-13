@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\iLnb;
+use App\Ilnb;
 
 class IlnbController extends Controller
 {
     public function index()
     {
-        $registros = iLnb::all();
+        $registros = Ilnb::all();
         return view('admin.ilnbs', compact('registros'));
     }
 
@@ -56,9 +56,15 @@ class IlnbController extends Controller
         return redirect()->route('admin.ilnbs');
     }
 
+    public function detalhes($id)
+     {
+         $registro = Ilnb::find($id);
+         return view('admin.detalhesIlnb', compact('registro'));
+     }
+
     public function editar($id)
     {
-        $registro = iLnb::find($id);
+        $registro = Ilnb::find($id);
         return view('admin.editarIlnb', compact('registro'));
     }
 
@@ -66,14 +72,14 @@ class IlnbController extends Controller
     {
         $dados = $req->all();
 
-        iLnb::find($id)->update($dados);
+        Ilnb::find($id)->update($dados);
 
         return redirect()->route('admin.ilnbs');
     }
 
     public function deletar($id)
     {
-        iLnb::find($id)->delete();
+        Ilnb::find($id)->delete();
 
         return redirect()->route('admin.ilnbs');
     }

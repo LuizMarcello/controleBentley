@@ -1,11 +1,11 @@
         @extends('admin.home')
         @section('titulo-pagina')
-            Modens
+            Roteadores
         @endsection
         @section('conteudo')
             <div class="row d-flex justify-content-center">
                 <button type="button" class="btn btn-secondary btn-sm btn-block">
-                    <h4>Listagem de modens</h4>
+                    <h4>Listagem de roteadores</h4>
                 </button>
             </div>
             <br>
@@ -31,11 +31,11 @@
                                         <td>{{ $registro->banda }}</td>
                                         <td>
                                             <a class="btn btn-outline-success btn-sm"
-                                                href="{{ route('admin.modens.detalhes', $registro->id) }}">Visualizar</a>
+                                                href="{{ route('admin.roteadores.detalhes', $registro->id) }}">Visualizar</a>
                                             <a class="btn btn-outline-info btn-sm"
-                                                href="{{ route('admin.modens.editar', $registro->id) }}">Editar</a>
+                                                href="{{ route('admin.roteadores.editar', $registro->id) }}">Editar</a>
                                                 <a class="btn btn-outline-danger btn-sm"
-                                                href="{{ route('admin.modens.deletar', $registro->id) }}">Deletar</a>
+                                                href="{{ route('admin.roteadores.deletar', $registro->id) }}">Deletar</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -43,9 +43,9 @@
                         </table>
                     </div>
                     <div class="col-md-10">
-                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.modens.adicionar') }}"
+                        <a class="btn btn-primary btn-sm mx-auto" href="{{ route('admin.roteadores.adicionar') }}"
                             role="button">
-                            Incluir modem
+                            Incluir roteador
                         </a>
                     </div>
                     <br>
