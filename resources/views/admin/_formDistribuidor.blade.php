@@ -32,8 +32,3 @@
     <input type="text" name="telefone" class="form-control" placeholder="Telefone" value="{{ isset($registro->telefone) ? $registro->telefone : '' }}">
     {{-- <label for="">Estado</label> --}}
 </div>
-
-
-
-
-

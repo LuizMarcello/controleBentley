@@ -1,9 +1,11 @@
         @extends('admin.home')
+
         @section('titulo-pagina')
             Antenas
         @endsection
+        
         @section('conteudo')
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center col-10">
                 <button type="button" class="btn btn-secondary btn-sm btn-block">
                     <h4>Listagem de Antenas</h4>
                 </button>
@@ -17,26 +19,18 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    {{-- <th scope="col">Nota Fiscal</th> --}}
                                     <th scope="col">Banda</th>
                                     <th scope="col">Fabricante</th>
                                     <th scope="col">Modelo</th>
-                                    {{-- <th scope="col">Diametro</th> --}}
-                                    {{-- <th scope="col">Qtde</th> --}}
-                                    {{-- <th scope="col">Situação</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($registros as $registro)
                                     <tr>
                                         <td>{{ $registro->id }}</td>
-                                        {{-- <td>{{ $registro->notafiscal }}</td> --}}
                                         <td>{{ $registro->banda }}</td>
                                         <td>{{ $registro->fabricante }}</td>
                                         <td>{{ $registro->modelo }}</td>
-                                        {{-- <td>{{ $registro->diametro }}</td> --}}
-                                        {{-- <td>{{ $registro->qtde }}</td> --}}
-                                        {{-- <td>{{ $registro->situacao }}</td> --}}
                                         <td>
                                             <a class="btn btn-outline-success btn-sm"
                                                 href="{{ route('admin.antenas.detalhes', $registro->id) }}">Visualizar</a>

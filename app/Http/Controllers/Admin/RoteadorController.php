@@ -48,7 +48,7 @@ class RoteadorController extends Controller
             /*  'valormensal' => ['required'], */
             /*  'cir' => ['required'] */
         ]);
-        /* ------Validação-------------------------------------------------------------------- */
+        /* ------Validação------------------------------------------------------------ */
 
         $dados = $req->all();
 
@@ -71,7 +71,7 @@ class RoteadorController extends Controller
 
     public function atualizar(Request $req, $id)
     {
-        /* ----Validação---Outra maneira de validar-----(Usando "editar/atualizar")----------- */
+        /* ----Validação---Outra maneira de validar-----(Usando "editar/atualizar")---- */
         /*  Método make() é que faz a validação */
         /*  1º parâmetro: Teria que ser um array, mas o método */
         /*  all() vai retornar todos os campos, em formato de array */
@@ -84,7 +84,7 @@ class RoteadorController extends Controller
             'fabricante' => ['required', 'alpha_num', 'max:50', 'min:3'],
             'macaddress' => ['required', 'max:12', 'min:12']
         ])->validate();
-        /* ------Validação----------------------------------------------------------------- */
+        /* ------Validação------------------------------------------------------------- */
 
         $dados = $req->all();
 

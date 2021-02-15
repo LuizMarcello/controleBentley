@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Antena;
@@ -37,14 +38,6 @@ class AntenaController extends Controller
 
         $dados = $req->all();
 
-        /*  if(isset($dados['ativo']))
-        {
-            $dados['ativo'] = 'sim';
-        }else
-        {
-            $dados['ativo'] = 'nao';
-        } */
-
         Antena::Create($dados);
 
         return redirect()->route('admin.antenas');
@@ -64,15 +57,22 @@ class AntenaController extends Controller
 
     public function atualizar(Request $req, $id)
     {
-        $dados = $req->all();
+        /* ----Validação---Outra maneira de validar-----(Usando "editar/atualizar")----------- */
+        /*  Método make() é que faz a validação */
+        /*  1º parâmetro: Teria que ser um array, mas o método */
+        /*  all() vai retornar todos os campos, em formato de array */
+        /*  2º parâmetro, as regras de validação */
+        Validator::make($req->all(), [
+            'modelo' => ['required', 'max:20', 'min:3'],
+            'notafiscal' => ['required', 'integer'],
+            'banda' => ['required', 'alpha', 'max:2', 'min:2'],
+            'datanota' => ['required', 'date_format:d/m/Y'],
+            'fabricante' => ['required', 'alpha_num', 'max:50', 'min:3'],
+            'diametro'=>['required', 'integer']
+        ])->validate();
+        /* ------Validação----------------------------------------------------------------- */
 
-        /* if(isset($dados['ativo']))
-        {
-            $dados['ativo'] = 'sim';
-        }else
-        {
-            $dados['ativo'] = 'nao';
-        } */
+        $dados = $req->all();
 
         Antena::find($id)->update($dados);
 
@@ -86,3 +86,7 @@ class AntenaController extends Controller
         return redirect()->route('admin.antenas');
     }
 }
+       
+
+        
+
