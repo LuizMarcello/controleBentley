@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="">
             <h6>
                 <p>Data</p>
@@ -9,24 +9,25 @@
             value="{{ isset($registro->created_at) ? $registro->created_at : '' }}" disabled>
     </div>
 
-    <div class="form-group col-md-2">
-        <label for="">
+    <div class="form-group col-md-4">
+        <label for="notafiscal">
             <h6>
                 <p>Nota fiscal</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="notafiscal"
+        <input type="text" class="form-control" name="notafiscal" id="notafiscal"
             value="{{ isset($registro->notafiscal) ? $registro->notafiscal : '' }}">
     </div>
 
-    <div class="form-group col-md-2">
-        <label for="">
+    <div class="form-group col-md-3">
+        <label for="datanota">
             <h6>
                 <p>Data da nota</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="datanota"
+        <input type="text" class="form-control" name="datanota" id="datanota"
             value="{{ isset($registro->datanota) ? $registro->datanota : '' }}">
+
     </div>
 
     <div class="form-group col-md-2">
@@ -37,8 +38,11 @@
         </label>
         <input type="text" class="form-control" name="banda"
             value="{{ isset($registro->banda) ? $registro->banda : '' }}">
-    </div>
 
+    </div>
+</div>
+
+<div class="row">
     <div class="form-group col-md-4">
         <label for="">
             <h6>
@@ -48,9 +52,7 @@
         <input type="text" class="form-control" name="serial"
             value="{{ isset($registro->serial) ? $registro->serial : '' }}">
     </div>
-</div>
 
-<div class="row">
     <div class="form-group col-md-6">
         <label for="">
             <h6>
@@ -70,7 +72,9 @@
         <input type="text" class="form-control" name="modelo"
             value="{{ isset($registro->modelo) ? $registro->modelo : '' }}">
     </div>
-    
+</div>
+
+<div class="row">
     <div class="form-group col-md-3 custom-selectd">
         <label for="alterarSituacao">
             <h6>
@@ -94,3 +98,4 @@
         </select>
     </div>
 </div>
+
