@@ -25,6 +25,9 @@ class RoteadorRequest extends FormRequest
     /* Este método será injetado no RoteadorController: */
     public function rules()
     {
+        /* Fazendo satinização(Limpando traços,barras,etc) */
+        $this->sanitize();
+
         /* Por padrão, já é criado este retôrno com um array vazio: */
         return [
             'serial' => ['required', 'max:20', 'min:3'],
@@ -37,7 +40,17 @@ class RoteadorRequest extends FormRequest
         ];
     }
 
+    public function sanitize()
+    {
+        /* Pegando todos os dados da Request */
+        $data = $this->all();
+        $data['modelo'] = str_replace('-', ' ', $data['modelo']);
+        /* Depois, atualizando os dados */
+        $this->replace($data);
+    }
+
    /*  Define descrições manuais das regras de validação */
+   /*  Mensagem diferenciada para uma das regras */
     public function messages() {
         return [
             'notafiscal.required' => "O campo nota fiscal deve mesmo ser preenchido"

@@ -32,5 +32,46 @@ class GrooveRequest extends FormRequest
             'marca' => ['required', 'alpha_num', 'max:50', 'min:3']
         ];
     }
+
+   /**
+    * Injetando neste método o Validator, que é a instância da classe de validação,
+    * daí podem ser executados os métodos do Validator, através do FormRequest.
+    *
+    * Pega a instancia do $validator
+    * @param [type] $validator
+    * @return void
+    */
+    public function withValidator($validator)
+    {
+        $validator->after(function($validator){
+            if($this->hasDash()) {
+                $validator->errors()->add('modelo', 'O campo modelo não pode ter -');
+            }
+        });
+    }
+
+    /**
+     * Verifica se tem -
+     *
+     * @return boolean
+     */
+    public function hasDash()
+    {
+        return strpos($this->modelo, '-');
+    }
+
+    /**
+     * Define descrições manuais das regras de validação
+     * Mensagem diferenciada para uma das regras
+     *
+     *
+    */
+    public function messages() {
+        return [
+            'notafiscal.required' => "O campo nota fiscal deve mesmo ser preenchido"
+        ];
+    }
 }
+
+
 
