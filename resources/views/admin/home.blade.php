@@ -62,6 +62,23 @@
                         </div>
                     </li>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"
+                            data-toggle="dropdown">Ferramentas</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Multimetro</a>
+                            <a class="dropdown-item" href="#">Alicate</a>
+                            {{-- <div class="dropdown-divider"></div> --}}
+                            <a class="dropdown-item" href="#">Chave de fenda</a>
+                            <a class="dropdown-item" href="#">Chave philipps</a>
+                            <a class="dropdown-item" href="#">Chave de boca</a>
+                            <a class="dropdown-item" href="#">Crimpador RJ-45</a>
+                            <a class="dropdown-item" href="#">Testador de cabos</a>
+                            <a class="dropdown-item" href="#">Caixa de ferramentas</a>
+                            <a class="dropdown-item" href="#">Kit de ferramentas</a>
+                        </div>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sair</a>
                     </li>

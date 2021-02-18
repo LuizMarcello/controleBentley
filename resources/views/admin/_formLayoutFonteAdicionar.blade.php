@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="">
             <h6>
                 <p>Data</p>
@@ -9,7 +9,7 @@
             value="{{ isset($registro->created_at) ? $registro->created_at : '' }}" disabled>
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="notafiscal">
             <h6>
                 <p>Nota fiscal</p>
@@ -20,7 +20,7 @@
             value="{{ old('notafiscal') }}">
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="datanota">
             <h6>
                 <p>Data da nota</p>
@@ -31,7 +31,20 @@
             value="{{ old('datanota') }}">
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-3">
+        <label for="serial">
+            <h6>
+                <p>serial</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="serial" id="serial"
+            {{-- value="{{ isset($registro->serial) ? $registro->serial : '' }}"> --}}
+            value="{{ old('serial') }}">
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-5">
         <label for="fabricante">
             <h6>
                 <p>Fabricante</p>
@@ -63,19 +76,11 @@
             {{-- value="{{ isset($registro->modelo) ? $registro->modelo : '' }}"> --}}
             value="{{ old('voltagem') }}">
     </div>
-
-   <div class="form-group col-md-5">
-        <label for="serial">
-            <h6>
-                <p>Serial</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="serial" id="serial"
-            {{-- value="{{ isset($registro->serial) ? $registro->serial : '' }}"> --}}
-            value="{{ old('serial') }}">
-    </div>
-
 </div>
+
+   
+
+
 
 
 

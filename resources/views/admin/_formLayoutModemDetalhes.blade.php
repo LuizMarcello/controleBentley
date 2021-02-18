@@ -9,7 +9,7 @@
             value="{{ isset($registro->created_at) ? $registro->created_at : '' }}" disabled>
     </div>
 
-    <div class="form-group col-md-3">
+    <div class="form-group col-md-4">
         <label for="notafiscal">
             <h6>
                 <p>Nota fiscal</p>
@@ -29,19 +29,19 @@
             value="{{ isset($registro->datanota) ? $registro->datanota : '' }}" disabled>
     </div>
 
-    <div class="form-group col-md-3">
-        <label for="fabricante">
+    <div class="form-group col-md-2">
+        <label for="banda">
             <h6>
-                <p>Marca</p>
+                <p>Banda</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="fabricante"
-            value="{{ isset($registro->fabricante) ? $registro->fabricante : '' }}" disabled>
+        <input type="text" class="form-control" name="banda" id="banda"
+            value="{{ isset($registro->banda) ? $registro->banda : '' }}" disabled>
     </div>
 </div>
 
 <div class="row">
-    <div class="form-group col-md-1">
+    <div class="form-group col-md-3">
         <label for="modelo">
             <h6>
                 <p>Modelo</p>
@@ -51,7 +51,17 @@
             value="{{ isset($registro->modelo) ? $registro->modelo : '' }}" disabled>
     </div>
 
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-4">
+        <label for="fabricante">
+            <h6>
+                <p>Fabricante</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="fabricante"
+            value="{{ isset($registro->fabricante) ? $registro->fabricante : '' }}" disabled>
+    </div>
+
+    <div class="form-group col-md-2">
         <label for="serial">
             <h6>
                 <p>Serial</p>
@@ -61,26 +71,18 @@
             value="{{ isset($registro->serial) ? $registro->serial : '' }}" disabled>
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="macaddress">
             <h6>
                 <p>Mac Address</p>
             </h6>
-        </label> 
+        </label>
         <input type="text" class="form-control" name="macaddress" id="macaddress"
             value="{{ isset($registro->macaddress) ? $registro->macaddress : '' }}" disabled>
     </div>
+</div>
 
-    <div class="form-group col-md-2">
-        <label for="banda">
-            <h6>
-                <p>Banda</p>
-            </h6>
-        </label> 
-        <input type="text" class="form-control" name="banda" id="banda"
-            value="{{ isset($registro->banda) ? $registro->banda : '' }}" disabled>
-    </div>
-
+<div class="row">
     <div class="form-group col-md-3 custom-selectd">
         <label for="">
             <h6>

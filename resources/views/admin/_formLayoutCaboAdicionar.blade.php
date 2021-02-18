@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="form-group col-md-7">
+    <div class="form-group col-md-5">
         <label for="notafiscal">
             <h6>
                 <p>Nota fiscal</p>
@@ -10,7 +10,7 @@
          value="{{ old('notafiscal') }}">
     </div>
 
-    <div class="form-group col-md-3">
+    <div class="form-group col-md-4">
         <label for="datanota">
             <h6>
                 <p>Data da nota</p>
@@ -21,7 +21,7 @@
           value="{{ old('datanota') }}">
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="tipodecabo">
             <h6>
                 <p>Tipo de cabo</p>

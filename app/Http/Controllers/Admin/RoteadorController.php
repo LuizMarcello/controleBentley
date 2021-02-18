@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Roteador;
+use App\Http\Requests\RoteadorRequest;
 use Illuminate\Validation\Validator as ValidationValidator;
 
 class RoteadorController extends Controller
@@ -21,35 +22,10 @@ class RoteadorController extends Controller
         return view('admin.adicionarRoteador');
     }
 
-    public function salvar(Request $req)
+    /* ----Validação--3º maneira, usando a classe "RoteadorRequest" criada-------- */
+    /* Alterando a classe "Request" injetada no parâmetro, para "RoteadorRequest": */
+    public function salvar(RoteadorRequest $req)
     {
-        /* ------Validação---(Usando "adicionar/salvar"---------------------------------------- */
-        $req->validate([
-            'serial' => ['required', 'max:20', 'min:3'],
-            'modelo' => ['required', 'max:20', 'min:3'],
-            /* 'email' => ['required', 'email', 'unique:antenas'], */
-            'notafiscal' => ['required', 'integer'],
-            /*   'banda' => ['required', 'alpha', 'max:2', 'min:2'], */
-            /*  'photo' => ['required', 'mimes:jpeg,bmp,png'], */
-            'datanota' => ['required', 'date_format:d/m/Y'],
-            'fabricante' => ['required', 'alpha_num', 'max:50', 'min:3'],
-            /*  'metros' => ['required'], */
-            /*  'tipodecabo' => ['required'], */
-            /*  'diametro'=>['required', 'integer'], */
-            'macaddress' => ['required', 'max:12', 'min:12']
-            /*  'voltagem' => ['required', 'integer', 'max:220', 'min:110'], */
-            /*  'nome' => ['required'], */
-            /*  'velocmaxdown' => ['required'], */
-            /*  'velocmaxup' => ['required'], */
-            /*  'equipamento' => ['required'], */
-            /*  'velocmindown' => ['required'], */
-            /*  'velocminup' => ['required'], */
-            /*  'valordecusto' => ['required'], */
-            /*  'valormensal' => ['required'], */
-            /*  'cir' => ['required'] */
-        ]);
-        /* ------Validação------------------------------------------------------------ */
-
         $dados = $req->all();
 
         Roteador::Create($dados);

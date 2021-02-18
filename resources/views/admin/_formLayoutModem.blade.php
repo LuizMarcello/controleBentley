@@ -30,18 +30,6 @@
     </div>
 
     <div class="form-group col-md-3">
-        <label for="fabricante">
-            <h6>
-                <p>Fabricante</p>
-            </h6>
-        </label>
-        <input type="text" class="form-control" name="fabricante" id="fabricante"
-            value="{{ isset($registro->fabricante) ? $registro->fabricante : '' }}">
-    </div>
-</div>
-
-<div class="row">
-    <div class="form-group col-md-1">
         <label for="modelo">
             <h6>
                 <p>Modelo</p>
@@ -50,8 +38,31 @@
         <input type="text" class="form-control" name="modelo" id="modelo"
             value="{{ isset($registro->modelo) ? $registro->modelo : '' }}">
     </div>
+</div>
 
-    <div class="form-group col-md-5">
+<div class="row">
+
+    <div class="form-group col-md-2">
+        <label for="banda">
+            <h6>
+                <p>Banda</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="banda" id="banda"
+            value="{{ isset($registro->banda) ? $registro->banda : '' }}">
+    </div>
+
+    <div class="form-group col-md-4">
+        <label for="fabricante">
+            <h6>
+                <p>Fabricante</p>
+            </h6>
+        </label>
+        <input type="text" class="form-control" name="fabricante" id="fabricante"
+            value="{{ isset($registro->fabricante) ? $registro->fabricante : '' }}">
+    </div>
+
+    <div class="form-group col-md-3">
         <label for="serial">
             <h6>
                 <p>Serial</p>
@@ -61,7 +72,7 @@
             value="{{ isset($registro->serial) ? $registro->serial : '' }}">
     </div>
 
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
         <label for="macaddress">
             <h6>
                 <p>Mac address</p>
@@ -70,8 +81,10 @@
         <input type="text" class="form-control" name="macaddress" id="macaddress"
             value="{{ isset($registro->macaddress) ? $registro->macaddress : '' }}">
     </div>
+</div>
 
-    <div class="form-group col-md-3 custom-selectd">
+<div class="row">
+    <div class="form-group col-md-5 custom-selectd">
         <label for="situacao">
             <h6>
                 <p>Situação</p>

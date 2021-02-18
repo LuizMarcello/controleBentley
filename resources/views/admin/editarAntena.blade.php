@@ -9,7 +9,7 @@
         <div class="col-md-11">
             <div class="row d-flex justify-content-center">
                 <button type="button" class="btn btn-secondary btn-sm btn-block col-md-10">
-                    <h4>Editando Antena</h4>
+                    <h4>Editando antena</h4>
                 </button>
             </div>
             <br>
@@ -18,14 +18,17 @@
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="put">
                 @include('admin._formLayoutAntena')
-                <button class="btn btn-outline-success btn-sm">Atualizar</button>
-                <a href="{{ route('admin.antenas') }}" class="btn btn-primary btn-sm" role="button"
-                    aria-disabled="true">Voltar</a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-outline-success btn-sm">Atualizar</button>
+                        <a href="{{ route('admin.antenas') }}" class="btn btn-primary btn-sm" role="button"
+                            aria-disabled="true">Voltar</a>
+                    </div>
+                </div>
             </form>
             <br>
         </div>
     </div>
-
     {{-- Função para registrar o ultimo registro nos select --}}
     @php
     function selected($value, $selected)
