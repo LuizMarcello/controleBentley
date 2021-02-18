@@ -130,7 +130,7 @@ return [
         ],
     ],
 
-   
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -165,7 +165,8 @@ return [
         'cir' => '"cir"',
         'metros' => '"Metros"',
         'tipodecabo' => '"Tipo de cabo"',
-        'serial' => '"Serial"'
+        'serial' => '"Serial"',
+        'marca' => '"Marca"'
     ],
     //--------Validação-Exibindo as mensagens------------------------------------------------
 ];

@@ -1,11 +1,11 @@
 <div class="row">
     <div class="form-group col-md-2">
-        <label for="">
+        <label for="created_at">
             <h6>
                 <p>Data</p>
             </h6>
         </label>
-        <input type="text" class="form-control" name="created_at"
+        <input type="text" class="form-control" name="created_at" id="created_at"
             value="{{ isset($registro->created_at) ? $registro->created_at : '' }}" disabled>
     </div>
 

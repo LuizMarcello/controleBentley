@@ -125,9 +125,10 @@ Route::get('/admin/roteadores/editar/{id}',['as'=>'admin.roteadores.editar','use
 Route::put('/admin/roteadores/atualizar/{id}',['as'=>'admin.roteadores.atualizar','uses'=>'Admin\RoteadorController@atualizar']);
 Route::get('/admin/roteadores/deletar/{id}',['as'=>'admin.roteadores.deletar','uses'=>'Admin\RoteadorController@deletar']);
 
-
-
-
-
-
-
+Route::get('/admin/grooves',['as'=>'admin.grooves','uses'=>'Admin\GrooveController@index']);
+Route::get('/admin/grooves/detalhes/{id}',['as'=>'admin.grooves.detalhes','uses'=>'Admin\GrooveController@detalhes']);
+Route::get('/admin/grooves/adicionar',['as'=>'admin.grooves.adicionar','uses'=>'Admin\GrooveController@adicionar']);
+Route::post('/admin/grooves/salvar',['as'=>'admin.grooves.salvar','uses'=>'Admin\GrooveController@salvar']);
+Route::get('/admin/grooves/editar/{id}',['as'=>'admin.grooves.editar','uses'=>'Admin\GrooveController@editar']);
+Route::put('/admin/grooves/atualizar/{id}',['as'=>'admin.grooves.atualizar','uses'=>'Admin\GrooveController@atualizar']);
+Route::get('/admin/grooves/deletar/{id}',['as'=>'admin.grooves.deletar','uses'=>'Admin\GrooveController@deletar']);
